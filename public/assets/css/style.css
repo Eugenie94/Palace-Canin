@@ -32,7 +32,7 @@
     border-radius: 25px;
     background: #D2A532;
     padding: 20px;
-    width: 100px;
+    width: 120px;
     height: 8px;
 }
 
@@ -52,7 +52,7 @@
     width: 38px;
     margin-top: auto;
     margin-bottom: auto;
-    margin-right: 8px;
+    margin-left: 50px; /* (pas la bonne technique a changer */
 
 }
 
