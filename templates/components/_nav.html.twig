@@ -1,0 +1,71 @@
+<header>
+    <div class="image-index">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="{{ path('index') }}"><img class="img-fluid logo"
+                                                                        src="{{ asset('assets/image/logo-palace.png') }}"
+                                                                        alt="logo">PALACE CANIN</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarNavDropdown"
+                        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <div class="navbar-nav me-auto">
+                        <a class="nav-link" href="">Chambres</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                               data-bs-toggle="dropdown" aria-expanded="false">
+                                Services
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a class="dropdown-item" href="">Complexe</a></li>
+                                <li><a class="dropdown-item" href="#">Bien-être</a></li>
+                                <li><a class="dropdown-item" href="#">Toilettage</a></li>
+                                <li><a class="dropdown-item" href="#">Dressage</a></li>
+                                <li><a class="dropdown-item" href="#">Transport Animalier</a></li>
+                                <li><a class="dropdown-item" href="#">Boutique</a></li>
+                            </ul>
+                        </li>
+                    </div>
+                    <div class="navbar-nav ms-auto">
+                        {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+
+                        <a class="nav-link" href="#">
+                            Bonjour {{ app.user.firstname }} {{ app.user.lastname }}
+                        </a>
+
+                        {% if is_granted('ROLE_ADMIN') %}
+                            <a class="nav-link" href="{{ path('create/room') }}">Ajouter une catégorie de chambre</a>
+                        {% endif %}
+
+                        <a class="nav-link" href="{{ path('app_logout') }}">Déconnexion</a>
+                        {% else %}
+                        <div class="row">
+                            <div class="col-md-3">
+                                <a class="nav-link button" href="{{ path('user_register') }}">Inscription</a>
+                            </div>
+                            <div class="col-md-3">
+                                <a class="nav-link button" href="{{ path('app_login') }}">Connexion</a>
+                            </div>
+                            {% endif %}
+                            <div class="col-md-2">
+                                <a class="nav-link button" href="{{ path('user_contact') }}">Contact</a>
+                            </div>
+                            <div class="col-md-2">
+                                <img class="img-fluid drapeau-français"
+                                     src="{{ asset('assets/image/drapeau-france.jpg') }}"
+                                     alt="français">
+                            </div>
+                            <div class="col-md-2">
+                                <img class="img-fluid drapeau-anglais"
+                                     src="{{ asset('assets/image/drapeau-usa-angleterre.jpg') }}"
+                                     alt="anglais">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+</header>
