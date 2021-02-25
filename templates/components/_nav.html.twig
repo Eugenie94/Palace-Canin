@@ -1,5 +1,11 @@
+<!-- DEBUT HEADER -->
+
 <header>
+
+    <!-- Image fond Hotel qui prend tout LE HEADER -->
     <div class="image-index">
+
+        <!-- DEBUT NAVBAR -->
         <nav class="navbar navbar-expand-lg navbar-light">
             <div class="container-fluid">
                 <a class="navbar-brand titre" href="{{ path('index') }}"><img class="img-fluid logo"
@@ -54,18 +60,48 @@
                                 <a class="nav-link button contact" href="{{ path('user_contact') }}">Contact</a>
                             </div>
                             <div class="col-md-1">
-                                <img class="img-fluid drapeau-français"
+                                <a href="{{ path('index') }}"><img class="img-fluid drapeau-français"
                                      src="{{ asset('assets/image/drapeau-france.jpg') }}"
-                                     alt="français">
+                                     alt="français"></a>
                             </div>
                             <div class="col-md-1">
-                                <img class="img-fluid drapeau-anglais"
+                                <a href="{{ path('index') }}"><img class="img-fluid drapeau-anglais"
                                      src="{{ asset('assets/image/drapeau-usa-angleterre.jpg') }}"
-                                     alt="anglais">
+                                     alt="anglais"></a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </nav>
+
+        <!-- FIN NAVBAR -->
+
+
+        <!-- DEBUT CONTENU HEADER -->
+
+        <div class="row">
+            <div class="col-sm-12 text-center">
+                <span class="phrase-accroche">Bienvenue au Palace Canin</span>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-md-12 text-center">
+                <span class="petite-phrase-accroche">Là où votre chien sera Roi</span>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <a href="{{ path('booking_reservation') }}"><button class="reservation button">Reservation</button></a>
+            </div>
+        </div>
+
+    </div>
+
+        <!-- FIN CONTENU HEADER -->
 </header>
+
+
+<!-- FIN HEADER -->

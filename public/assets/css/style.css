@@ -9,14 +9,33 @@
     box-sizing: border-box;
 
 }
+/* _________________________________________________________________________________________________________
+DEBUT HEADER
+____________________________________________________________________________________________________________
+ */
 
+
+
+
+/* ___________________
+DEBUT  NAVBAR
+______________________
+ */
 .logo {    /* logo de l'hotel */
 
     height: 120px;
     width: auto;
     margin-right: 7%;
-    margin-left: 2%;
+    margin-left: 3%;
 
+}
+
+@media screen and (min-width: 200px) and (max-width: 1100px) {     /* JUSQUA 1200 LE TEXTE EST CENTRER ET IL Y A DES MARGIN */
+
+
+    .logo {
+        height: 100px;
+    }
 }
 
 .titre{ /* vas me permettre de manier "PALACE CANIN" */
@@ -24,24 +43,34 @@
     font-family: 'Raleway';
     font-weight: 800;
     color: black !important;
-    font-size: 3.2vh;
+    font-size: 3.5vh;
     margin-right: 5%;
 
 }
 
 .navbar{
-    background-color: rgba(232, 232, 230, 0.4); /* 0.5 - semi-transparent */
-    height: 140px; /* leur montrer */
+
+    background-color: rgba(232, 232, 230, 0.6); /* 0.5 - semi-transparent */
+    height: 150px; /* hauteur de la navbar */
+    margin-bottom: 14%;
+
 }
 
 .navbar-light .navbar-nav .nav-link{ /* me permet de mettre en blanc mes buttons marron  cette nav est pour touts les liens*/
 
     color: white;
     font-family: Raleway;
-    font-weight: 700;
+    font-weight: 600;
     font-size: 2.5vh;
 
 }
+
+.navbar-light .navbar-nav .nav-link:hover{  /* couleur grise foncée survol des bouttons marron */
+
+    color: #3c3636;
+
+}
+
 
 .chambres, .services{  /* manier couleur chambres service except les 3 blanc a coté */
 
@@ -49,6 +78,25 @@
     font-weight: 800;
     color: black !important;
     font-size: 2.8vh !important;
+
+}
+
+.chambres:hover, .services:hover{  /* manier couleur chambres service except les 3 blanc a coté */
+
+    color: #D2A532 !important;
+
+}
+
+.dropdown-item {      /* lien menu dropdown */
+    font-size: 2.8vh;
+    color: #D2A532;
+    font-family: Helvetica;
+}
+
+.dropdown-item:hover {  /* lien dropdown au survol de la souris */
+
+    background: #D2A532;
+    color: white;
 
 }
 
@@ -63,7 +111,7 @@
 
 }
 
-.register, .login, .contact, .deconnexion, .ajouter{ /* qui permet de centrer mes boutons bold au milieu de leur div */
+.register, .login, .contact, .deconnexion, .ajouter { /* qui permet de centrer mes boutons bold au milieu de leur div */
 
     text-align: center;
     display: table-cell;
@@ -74,15 +122,20 @@
 
 @media screen and (min-width: 200px) and (max-width: 900px) {     /* JUSQUA 1200 LE TEXTE EST CENTRER ET IL Y A DES MARGIN */
 
-    .navbar{
-
-        background: none; /* supprimer le margin des 3 boutons marron quand menu hamburger */
-
-    }
 
     .navbar-light .navbar-nav .nav-link{ /* permet de colorer en black quand les 3 passent en menu hamburger car fond blanc */
 
         color: black;
+
+    }
+
+    .button {   /* boutons dorés */
+
+        border-radius: 26px;
+        background: none;
+        padding: 0 !important;
+        width: 0 !important;
+        height: 0 !important;
 
     }
 }
@@ -115,6 +168,103 @@
     width: 100%;
     height: 100%;;
     opacity: 0.9;
-    padding-top: 114px;
+    padding-top: 1%;
 
 }
+
+/* _________________________________________________________________________________________________________
+FIN NAVBAR
+____________________________________________________________________________________________________________
+ */
+
+
+/* ______________________________________________________
+DEBUT CONTENU HEADER ( PHRASE ACCROCHE ET RESERVATION )
+_________________________________________________________
+ */
+
+
+.phrase-accroche{ /* Bienvenue au Palace Canin */
+
+    color: white;
+    font-size: 67px;
+    text-transform: uppercase;
+    font-family: Raleway;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-align: center;
+    margin-top: 28%;
+
+
+}
+
+@media screen and (min-width: 200px) and (max-width: 1100px) {
+    /* JUSQUA 1200 LE TEXTE EST CENTRER ET IL Y A DES MARGIN */
+
+    .phrase-accroche{ /* Bienvenue au Palace Canin */
+
+        color: white;
+        font-size: 45px;
+        text-transform: uppercase;
+        font-family: Raleway;
+        font-weight: 500;
+        text-align: center;
+        margin-top: 26%;
+
+    }
+}
+
+
+    .petite-phrase-accroche{ /* La ou votre chien sera Roi */
+
+    font-family: Raleway;
+    font-weight: 500;
+    font-size: 24px;
+    color: white;
+    letter-spacing: 1px;
+    align-items: center;
+
+}
+
+
+.bouton-reservation{ /* bouton reservation */
+
+    border-radius: 26px;
+    background: #D2A532;
+    padding: 17px;
+    height: 8px;
+
+}
+
+.reservation{   /* bouton reservation doré */
+
+    font-family: Raleway;
+    font-weight: 600;
+    font-size: 2vh;
+    color: white;
+    width: 200px;
+    margin-top: 4%;
+    text-transform: uppercase;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* _____________________________________________________
+FIN CONTENU HEADER ( PHRASE ACCROCHE ET RESERVATION )
+________________________________________________________
+ */
+
+
+/* _________________________________________________________________________________________________________
+FIN HEADER
+____________________________________________________________________________________________________________
+ */
