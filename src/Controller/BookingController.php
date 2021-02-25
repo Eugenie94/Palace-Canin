@@ -2,13 +2,17 @@
 
 namespace App\Controller;
 
+use App\Entity\Booking;
 use App\Entity\Category;
 use App\Entity\Room;
 
+use App\Repository\BookingRepository;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
+use Symfony\Component\Form\Extension\Core\Type\TelType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\HttpFoundation\File\Exception\FileException;
@@ -120,6 +124,81 @@ class BookingController extends AbstractController
 
         # Passer le formulaire à la vue
         return $this->render('booking/create.html.twig', [
+            'form' => $form->createView()
+        ]);
+    }
+
+
+
+    /**
+     * Page COMPLEXE : Affiche le service boutique
+     * http://localhost:8000/boutique
+     * @Route("/boutique", name="default_boutique", methods={"GET"})
+     * le alias du dessus agira sur la fonction d'apres
+     */
+    public function booking(BookingRepository $serviceRepository)
+    {
+
+        return $this->render('booking/reservation.html.twig', [
+            'reservation' => $serviceRepository->findOneBy(['name' => 'reservation'])
+
+        ]);
+
+    }
+
+    /**
+     * Page Reservation
+     * @Route ("/reservation", name="booking_reservation", methods={"GET|POST"})
+     * ex. http://localhost:8000/reservation
+     * @param Request $request
+     * @return Response
+     */
+    public function reservation(Request $request, SluggerInterface $slugger): Response
+    {
+        # Création d'un nouveau user VIDE
+        $booking = new Booking();
+
+        # Création d'un Formulaire
+        $form = $this->createFormBuilder( $booking )
+            ->add('checkIn', TextType::class, [
+                'label' => 'Prénom',
+            ])
+            ->add('checkOut', TextType::class, [
+                'label' => 'Nom',
+            ])
+            ->add('days', EmailType::class, [
+                'label' => "E-mail"
+            ])
+            ->add('status', TelType::class, [
+                'label' => "Téléphone",
+            ])
+            ->add('total', TextType::class, [
+                'label' => "Sujet",
+            ])
+            ->add('submit', SubmitType::class, [
+                'label' => "Reservez",
+            ])
+            ->getForm();
+
+        # Permet à Symfony de gérer les données saisies par l'utilisateur
+        $form->handleRequest( $request );
+
+        # Si le formulaire est soumis et valide => C'est comme en procédural quand on écrit if Post(empty) etc etc
+        if($form->isSubmitted() && $form->isValid()) {
+
+
+            # Insertion dans la BDD
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($booking);
+            $em->flush();
+
+
+            # Redirection
+            return $this->redirectToRoute('booking_reservation'); #alert message a bien été envoyé
+        }
+
+        # Passer le formulaire à la vue
+        return $this->render('booking/reservation.html.twig', [
             'form' => $form->createView()
         ]);
     }
