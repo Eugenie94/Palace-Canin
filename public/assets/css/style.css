@@ -80,6 +80,22 @@
         color: black;
 
     }
+
+.nav-link {         /*lien sans le survol */
+    font-size: 2vh;
+    font-family: 'Raleway';
+    font-weight: bold;
+    color: black;
+
+}
+
+.button {   /* boutons dorés */
+
+    border-radius: 25px;
+    background: #D2A532;
+    padding: 20px;
+    width: 120px;
+    height: 8px;
 }
 
 
@@ -98,7 +114,7 @@
     width: 38px;
     margin-top: auto;
     margin-bottom: auto;
-
+    margin-left: 50px; /* (pas la bonne technique a changer */
 
 }
 
@@ -112,5 +128,13 @@
     opacity: 0.9;
     padding-top: 114px;
 
+    background-color: mediumpurple;
+    height: 600px;
+    /* background-image: url('../image/image-index.jpg');
+    background-size: cover!important;
+    width: 100%;
+    height: 100%;;
+    opacity: 0.8;
+     */
 }
 
