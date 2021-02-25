@@ -39,6 +39,11 @@ class Service
      */
     private $rooms;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $alias;
+
     public function __construct()
     {
         $this->rooms = new ArrayCollection();
@@ -108,6 +113,18 @@ class Service
         if ($this->rooms->removeElement($room)) {
             $room->removeService($this);
         }
+
+        return $this;
+    }
+
+    public function getAlias(): ?string
+    {
+        return $this->alias;
+    }
+
+    public function setAlias(string $alias): self
+    {
+        $this->alias = $alias;
 
         return $this;
     }

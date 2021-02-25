@@ -12,9 +12,10 @@
 
 .logo {    /* logo de l'hotel */
 
-    height: 200px;
+    height: 120px;
     width: auto;
-    padding: 0 !important;
+    margin-right: 7%;
+    margin-left: 2%;
 
 }
 
@@ -23,27 +24,31 @@
     font-family: 'Raleway';
     font-weight: 800;
     color: black !important;
-    font-size: 3vh;
+    font-size: 3.2vh;
+    margin-right: 5%;
+
 }
 
 .navbar{
-    background-color : rgba(191,170,143,0.06);
-    height: 100px; /* leur montrer */
+    background-color: rgba(232, 232, 230, 0.4); /* 0.5 - semi-transparent */
+    height: 140px; /* leur montrer */
 }
 
 .navbar-light .navbar-nav .nav-link{ /* me permet de mettre en blanc mes buttons marron  cette nav est pour touts les liens*/
 
     color: white;
     font-family: Raleway;
-    font-weight: 900;
+    font-weight: 700;
     font-size: 2.5vh;
 
 }
 
 .chambres, .services{  /* manier couleur chambres service except les 3 blanc a coté */
 
+    font-family: Raleway;
+    font-weight: 800;
     color: black !important;
-    font-size: 3vh !important;
+    font-size: 2.8vh !important;
 
 }
 
@@ -58,7 +63,7 @@
 
 }
 
-.register, .login, .contact{ /* qui permet de centrer mes boutons bold au milieu de leur div */
+.register, .login, .contact, .deconnexion, .ajouter{ /* qui permet de centrer mes boutons bold au milieu de leur div */
 
     text-align: center;
     display: table-cell;

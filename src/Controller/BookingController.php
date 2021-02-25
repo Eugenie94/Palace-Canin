@@ -18,16 +18,13 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\String\Slugger\SluggerInterface;
 
-/**
- * @Route("/room")
- */
 
 class BookingController extends AbstractController
 {
     /**
      * Créer une chambre via un Formulaire
-     * @Route ("/create", name="room_create", methods={"GET|POST"})
-     * ex. http://localhost:8000/room/create
+     * @Route ("/create", name="booking_create", methods={"GET|POST"})
+     * ex. http://localhost:8000/create
      * @param Request $request
      * @param SluggerInterface $slugger
      * @return Response
@@ -113,7 +110,7 @@ class BookingController extends AbstractController
 
 
             # Redirection vers la nouvelle chambre
-            return $this->redirectToRoute('default_room', [
+            return $this->redirectToRoute('booking_create', [
                 'category' => $room->getCategory()->getAlias(),
                 'alias' => $room->getAlias(),
                 'id' => $room->getId()
@@ -122,23 +119,10 @@ class BookingController extends AbstractController
         }
 
         # Passer le formulaire à la vue
-        return $this->render('room/create.html.twig', [
+        return $this->render('booking/create.html.twig', [
             'form' => $form->createView()
         ]);
     }
 
-    /**
-     * Page afficher les catégories de chambres
-     * http://localhost:8000/room
-     * @Route("/{category}/{alias}.html", name="default_room", methods={"GET"})
-     * le alias du dessus agira sur la fonction d'apres
-     */
-    public function room(Room $room)
-    {
-        # return new Response("<h1>PAGE ARTICLE : $alias - $id</h1>");
-        return $this->render('default/room.html.twig', [
-            'room' => $room
-        ]);
-    }
 
 }
