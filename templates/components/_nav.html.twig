@@ -1,8 +1,8 @@
 <header>
     <div class="image-index">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar navbar-expand-lg navbar-light">
             <div class="container-fluid">
-                <a class="navbar-brand" href="{{ path('index') }}"><img class="img-fluid logo"
+                <a class="navbar-brand titre" href="{{ path('index') }}"><img class="img-fluid logo"
                                                                         src="{{ asset('assets/image/logo-palace.png') }}"
                                                                         alt="logo">PALACE CANIN</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -13,19 +13,19 @@
 
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
                     <div class="navbar-nav me-auto">
-                        <a class="nav-link" href="">Chambres</a>
+                        <a class="nav-link chambres" href="{{ path('default_room') }}">Chambres</a>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            <a class="nav-link dropdown-toggle services" href="#" id="navbarDropdownMenuLink" role="button"
                                data-bs-toggle="dropdown" aria-expanded="false">
                                 Services
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <li><a class="dropdown-item" href="">Complexe</a></li>
-                                <li><a class="dropdown-item" href="#">Bien-être</a></li>
-                                <li><a class="dropdown-item" href="#">Toilettage</a></li>
-                                <li><a class="dropdown-item" href="#">Dressage</a></li>
-                                <li><a class="dropdown-item" href="#">Transport Animalier</a></li>
-                                <li><a class="dropdown-item" href="#">Boutique</a></li>
+                                <li><a class="dropdown-item" href="{{ path('default_complexe') }}">Complexe</a></li>
+                                <li><a class="dropdown-item" href="{{ path('default_bien-etre') }}">Bien-être</a></li>
+                                <li><a class="dropdown-item" href="{{ path('default_toilettage') }}">Toilettage</a></li>
+                                <li><a class="dropdown-item" href="{{ path('default_dressage') }}">Dressage</a></li>
+                                <li><a class="dropdown-item" href="{{ path('default_transport-animalier') }}">Transport Animalier</a></li>
+                                <li><a class="dropdown-item" href="{{ path('default_boutique') }}">Boutique</a></li>
                             </ul>
                         </li>
                     </div>
@@ -37,28 +37,28 @@
                         </a>
 
                         {% if is_granted('ROLE_ADMIN') %}
-                            <a class="nav-link" href="{{ path('create/room') }}">Ajouter une catégorie de chambre</a>
+                            <a class="nav-link button ajouter" href="{{ path('booking_create') }}">Ajouter une catégorie de chambre</a>
                         {% endif %}
 
-                        <a class="nav-link" href="{{ path('app_logout') }}">Déconnexion</a>
+                        <a class="nav-link button deconnexion" href="{{ path('app_logout') }}">Déconnexion</a>
                         {% else %}
-                        <div class="row">
+                        <div class="row justify-content-center align-items-center">
                             <div class="col-md-3">
-                                <a class="nav-link button" href="{{ path('user_register') }}">Inscription</a>
+                                <a class="nav-link button register" href="{{ path('user_register') }}">Inscription</a>
                             </div>
                             <div class="col-md-3">
-                                <a class="nav-link button" href="{{ path('app_login') }}">Connexion</a>
+                                <a class="nav-link button login" href="{{ path('app_login') }}">Connexion</a>
                             </div>
                             {% endif %}
-                            <div class="col-md-2">
-                                <a class="nav-link button" href="{{ path('user_contact') }}">Contact</a>
+                            <div class="col-md-3">
+                                <a class="nav-link button contact" href="{{ path('user_contact') }}">Contact</a>
                             </div>
-                            <div class="col-md-2">
+                            <div class="col-md-1">
                                 <img class="img-fluid drapeau-français"
                                      src="{{ asset('assets/image/drapeau-france.jpg') }}"
                                      alt="français">
                             </div>
-                            <div class="col-md-2">
+                            <div class="col-md-1">
                                 <img class="img-fluid drapeau-anglais"
                                      src="{{ asset('assets/image/drapeau-usa-angleterre.jpg') }}"
                                      alt="anglais">

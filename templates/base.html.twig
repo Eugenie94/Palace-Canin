@@ -11,12 +11,14 @@
               integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
               crossorigin="anonymous">
         <!-- IMPORT POLICE -->
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@800&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Raleway:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
         <!-- FONT AWESOME ICONS -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/brands.min.css" integrity="sha512-dBL5cY4qTt42J1cfabCHTYR7KMztyd+n4t2GhD6EH/MKWJIIHuEYckJ1nHEpTwIaiDkrjzbc6WyiSkdLP+3INQ==" crossorigin="anonymous" />
         <!-- CSS -->
-        <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}"
+        <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
     {% endblock %}
+    {% block final_stylesheets %}{% endblock %}
 </head>
 <body>
 {% include 'components/_nav.html.twig' %}

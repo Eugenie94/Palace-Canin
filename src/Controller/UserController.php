@@ -41,8 +41,8 @@ class UserController extends AbstractController
         $user = new User();
         $user->setRoles(['ROLE_USER']);
 
-        $user = new User();
-        $user->setRoles(['ROLE_ADMIN']);
+        # $user = new User(); A VOIR COMMENT ON PEUT AUSSI CREER DES ADMIN VIA FORMULAIRE OU PAS
+        # $user->setRoles(['ROLE_ADMIN']);
 
         # Création d'un Formulaire d'Inscription
         $form = $this->createFormBuilder( $user )
@@ -51,6 +51,9 @@ class UserController extends AbstractController
             ])
             ->add('lastname', TextType::class, [
                 'label' => 'Nom',
+            ])
+            ->add('dog_name', TextType::class, [
+                'label' => 'Nom du chien',
             ])
             ->add('address', TextType::class, [
                 'label' => "Adresse"

@@ -4,6 +4,7 @@ namespace App\DataFixtures;
 
 use App\Entity\Category;
 use App\Entity\Room;
+use App\Entity\Service;
 use App\Entity\User;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Persistence\ObjectManager;
@@ -27,13 +28,42 @@ class AppFixtures extends Fixture
         $penthouse->setName('Penthouse')->setAlias('penthouse');
 
 
+        # Création des services
+
+        $complexe = new Service();
+        $complexe->setName('Complexe')->setAlias('complexe')->setContent('complexe')->setImage('https://via.placeholder.com/500');
+
+        $bienetre = new Service();
+        $bienetre->setName('Bien-Etre')->setAlias('bienetre')->setContent('bienetre')->setImage('https://via.placeholder.com/500');
+
+        $toilettage = new Service();
+        $toilettage->setName('Toilettage')->setAlias('toilettage')->setContent('toilettage')->setImage('https://via.placeholder.com/500');
+
+        $dressage = new Service();
+        $dressage->setName('Dressage')->setAlias('dressage')->setContent('dressage')->setImage('https://via.placeholder.com/500');
+
+        $transportanimalier = new Service();
+        $transportanimalier->setName('Transport Animalier')->setAlias('transportanimalier')->setContent('dressage')->setImage('https://via.placeholder.com/500');
+
+        $boutique = new Service();
+        $boutique->setName('Boutique')->setAlias('boutique')->setContent('boutique')->setImage('https://via.placeholder.com/500');
+
 
 
         # Je souhaite sauvegarder dans ma BDD les catégories
         $manager->persist( $chambresuperieure );
-        $manager->persist(  $chambreprestige );
+        $manager->persist( $chambreprestige );
         $manager->persist( $suitedeluxe );
-        $manager->persist(  $penthouse );
+        $manager->persist( $penthouse );
+
+
+        # Je souhaite sauvegarder dans ma BDD les services
+        $manager->persist( $complexe );
+        $manager->persist( $bienetre );
+        $manager->persist( $toilettage );
+        $manager->persist( $dressage );
+        $manager->persist( $transportanimalier );
+        $manager->persist( $boutique);
 
         # J'execute ma requete d'enregistrement
         $manager->flush();
@@ -47,7 +77,7 @@ class AppFixtures extends Fixture
             ->setCity('Paris')
             ->setZipcode('75008')
             ->setEmail('palacecanin@gmail.com')
-            ->setTelephone('')
+            ->setTelephone('0672903588')
             ->setPassword('toutou91')
             ->setRoles(['ROLE_USER']);
 
@@ -56,14 +86,18 @@ class AppFixtures extends Fixture
         $manager->persist( $user );
         $manager->flush();
 
+
+        # CREATION DES CHAMBRES
+
         # Création des Chambres | Chambre supérieure
         for($i = 0; $i < 25; $i++) {
 
             $room = new Room();
             $room->setName('Praline est la grande poupée de maman' . $i)
-                ->setAlias('Praline est le gros poulet dodu de maman'. $i)
+                ->setAlias('praline-est-le-gros-poulet-doudu-de-maman'. $i)
                 ->setContent('<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A dolor magnam nemo numquam, quae quo repellendus. A amet doloremque fuga fugit hic libero, nobis repellendus, saepe sapiente sit ullam vel.</p>')
                 ->setImage('https://via.placeholder.com/500')
+                ->setPrice('1200')
                 ->setCreatedAt(new \DateTime())
                 ->setUser($user)
                 ->setCategory($chambresuperieure);
@@ -80,9 +114,10 @@ class AppFixtures extends Fixture
 
             $room = new Room();
             $room->setName('Praline est la grande poupée de maman' . $i)
-                ->setAlias('Praline est le gros poulet dodu de maman'. $i)
+                ->setAlias('praline-est-le-gros-poulet-doudu-de-maman'. $i)
                 ->setContent('<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A dolor magnam nemo numquam, quae quo repellendus. A amet doloremque fuga fugit hic libero, nobis repellendus, saepe sapiente sit ullam vel.</p>')
                 ->setImage('https://via.placeholder.com/500')
+                ->setPrice('1200')
                 ->setCreatedAt(new \DateTime())
                 ->setUser($user)
                 ->setCategory($chambreprestige);
@@ -99,9 +134,10 @@ class AppFixtures extends Fixture
 
             $room = new Room();
             $room->setName('Praline est la grande poupée de maman' . $i)
-                ->setAlias('Praline est le gros poulet dodu de maman'. $i)
+                ->setAlias('praline-est-le-gros-poulet-doudu-de-maman'. $i)
                 ->setContent('<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A dolor magnam nemo numquam, quae quo repellendus. A amet doloremque fuga fugit hic libero, nobis repellendus, saepe sapiente sit ullam vel.</p>')
                 ->setImage('https://via.placeholder.com/500')
+                ->setPrice('1200')
                 ->setCreatedAt(new \DateTime())
                 ->setUser($user)
                 ->setCategory($suitedeluxe);
@@ -118,9 +154,10 @@ class AppFixtures extends Fixture
 
             $room = new Room();
             $room->setName('Praline est la grande poupée de maman' . $i)
-                ->setAlias('Praline est le gros poulet dodu de maman'. $i)
+                ->setAlias('praline-est-le-gros-poulet-doudu-de-maman'. $i)
                 ->setContent('<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A dolor magnam nemo numquam, quae quo repellendus. A amet doloremque fuga fugit hic libero, nobis repellendus, saepe sapiente sit ullam vel.</p>')
                 ->setImage('https://via.placeholder.com/500')
+                ->setPrice('1200')
                 ->setCreatedAt(new \DateTime())
                 ->setUser($user)
                 ->setCategory($penthouse);
@@ -131,7 +168,9 @@ class AppFixtures extends Fixture
 
 
         }
-        # On execute la demande d'enregistrement dans la BDD
+
+
+            # On execute la demande d'enregistrement dans la BDD
         $manager->flush();
 
     }

@@ -40,7 +40,7 @@ class Room
     private $image;
 
     /**
-     * @ORM\Column(type="datetime")
+     * @ORM\Column(type="datetime", nullable=true)
      */
     private $createdAt;
 
@@ -78,7 +78,7 @@ class Room
 
     /**
      * @ORM\ManyToOne(targetEntity=Booking::class, inversedBy="rooms")
-     * @ORM\JoinColumn(nullable=false)
+     * @ORM\JoinColumn(nullable=true)
      */
     private $bookings;
 

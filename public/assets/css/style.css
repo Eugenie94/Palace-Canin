@@ -12,28 +12,79 @@
 
 .logo {    /* logo de l'hotel */
 
-    height: 200px;
+    height: 120px;
     width: auto;
-    padding: 0 !important;
+    margin-right: 7%;
+    margin-left: 2%;
 
 }
 
+.titre{ /* vas me permettre de manier "PALACE CANIN" */
 
-.nav-link {         /*lien sans le survol */
-    font-size: 2vh;
     font-family: 'Raleway';
-    font-weight: bold;
-    color: black;
+    font-weight: 800;
+    color: black !important;
+    font-size: 3.2vh;
+    margin-right: 5%;
 
 }
+
+.navbar{
+    background-color: rgba(232, 232, 230, 0.4); /* 0.5 - semi-transparent */
+    height: 140px; /* leur montrer */
+}
+
+.navbar-light .navbar-nav .nav-link{ /* me permet de mettre en blanc mes buttons marron  cette nav est pour touts les liens*/
+
+    color: white;
+    font-family: Raleway;
+    font-weight: 700;
+    font-size: 2.5vh;
+
+}
+
+.chambres, .services{  /* manier couleur chambres service except les 3 blanc a coté */
+
+    font-family: Raleway;
+    font-weight: 800;
+    color: black !important;
+    font-size: 2.8vh !important;
+
+}
+
 
 .button {   /* boutons dorés */
 
-    border-radius: 25px;
+    border-radius: 26px;
     background: #D2A532;
-    padding: 20px;
-    width: 120px;
+    padding: 13px;
+    width: 170px;
     height: 8px;
+
+}
+
+.register, .login, .contact, .deconnexion, .ajouter{ /* qui permet de centrer mes boutons bold au milieu de leur div */
+
+    text-align: center;
+    display: table-cell;
+
+
+}
+
+
+@media screen and (min-width: 200px) and (max-width: 900px) {     /* JUSQUA 1200 LE TEXTE EST CENTRER ET IL Y A DES MARGIN */
+
+    .navbar{
+
+        background: none; /* supprimer le margin des 3 boutons marron quand menu hamburger */
+
+    }
+
+    .navbar-light .navbar-nav .nav-link{ /* permet de colorer en black quand les 3 passent en menu hamburger car fond blanc */
+
+        color: black;
+
+    }
 }
 
 
@@ -52,20 +103,18 @@
     width: 38px;
     margin-top: auto;
     margin-bottom: auto;
-    margin-left: 50px; /* (pas la bonne technique a changer */
+
 
 }
 
 
 .image-index{  /* image qui dépasse sur la navbar */
 
-    background-color: mediumpurple;
-    height: 600px;
-    /* background-image: url('../image/image-index.jpg');
+    background-image: url('../image/image-index.jpg');
     background-size: cover!important;
     width: 100%;
     height: 100%;;
-    opacity: 0.8;
-     */
-}
+    opacity: 0.9;
+    padding-top: 114px;
 
+}
