@@ -30,13 +30,6 @@ ______________________
 
 }
 
-@media screen and (min-width: 200px) and (max-width: 1100px) {     /* JUSQUA 1200 LE TEXTE EST CENTRER ET IL Y A DES MARGIN */
-
-
-    .logo {
-        height: 100px;
-    }
-}
 
 .titre{ /* vas me permettre de manier "PALACE CANIN" */
 
@@ -48,7 +41,86 @@ ______________________
 
 }
 
-.navbar{
+@media screen and (min-width: 450px) and (max-width: 500px) {     /* media queries pour gerer logo et titre selon taille ecran jusqu'a 500 */
+
+
+    .titre {
+        font-size: 3.3vh;
+    }
+
+    .logo {
+        height: 85px;
+    }
+}
+
+
+
+@media screen and (min-width: 400px) and (max-width: 450px) {     /* media queries pour gerer logo et titre selon taille ecran jusqu'a 450 */
+
+
+    .titre {
+        font-size: 3vh;
+    }
+
+    .logo {
+        height: 75px;
+    }
+}
+
+
+@media screen and (min-width: 360px) and (max-width: 400px) {     /* media queries pour gerer logo et titre selon taille ecran jusqu'a 400 */
+
+
+    .titre {
+        font-size: 2.8vh;
+    }
+
+    .logo {
+        height: 70px;
+    }
+}
+
+@media screen and (min-width: 340px) and (max-width: 360px) {  /* media queries pour gerer logo et titre selon taille ecran jusqu'a 360 */
+
+
+    .titre {
+        font-size: 2.7vh;
+    }
+
+    .logo {
+        height: 65px;
+    }
+}
+
+@media screen and (min-width: 330px) and (max-width: 340px) {    /* media queries pour gerer logo et titre selon taille ecran jusqu'a 330 */
+
+
+    .titre {
+        font-size: 2.5vh;
+    }
+
+    .logo {
+        height: 60px;
+    }
+}
+
+
+@media screen and (min-width: 300px) and (max-width: 330px) {    /* media queries pour gerer logo et titre selon taille ecran a partir de 300 jusqu'a 330 */
+
+
+    .titre {
+        font-size: 2.3vh;
+    }
+
+    .logo {
+        height: 50px;
+    }
+}
+
+
+
+
+.navbar{ /* NAVBAR arriere blanc de navbar */
 
     background-color: rgba(232, 232, 230, 0.6); /* 0.5 - semi-transparent */
     height: 150px; /* hauteur de la navbar */
@@ -56,12 +128,205 @@ ______________________
 
 }
 
+
+@media screen and (min-width: 750px) and (max-width: 800px) { /* media queries margin-bottom navbar pour décaler texte contenu image en bas grace a margin bottom ca nous evite creer plusieur margin top sur chacun de nos element dans contenu */
+
+    .navbar{
+
+        margin-bottom: 8%;
+
+    }
+
+
+}
+
+@media screen and (min-width: 570px) and (max-width: 750px) { /* media queries margin-bottom navbar pour décaler texte contenu image en bas grace a margin bottom */
+
+    .navbar{
+
+        margin-bottom: 15%;
+
+    }
+
+
+}
+
+
+@media screen and (min-width: 400px) and (max-width: 450px) { /* media queries margin-bottom navbar pour décaler texte contenu image en bas grace a margin bottom ca nous evite creer plusieur margin top sur chacun de nos element dans contenu */
+
+    .navbar{
+
+        margin-bottom: 40%;
+
+    }
+
+
+}
+
+@media screen and (min-width: 300px) and (max-width: 400px) { /* media queries margin-bottom navbar pour décaler texte contenu image en bas grace a margin bottom ca nous evite creer plusieur margin top sur chacun de nos element dans contenu */
+
+    .navbar{
+
+        margin-bottom: 30%;
+
+    }
+
+
+}
+
+/* **** DEBUT DE TOUT CE QUI CONCERNE LE MENU HAMBURGER **** */
+
+.navbar-toggler { /* Nous permet de gerer l'icone menu hamburger */
+
+    padding: .25rem .55rem;
+    font-size: 1.25rem;
+    line-height: 1;
+    border: 3px solid;
+    border-radius: .25rem;
+    background-color: rgba(60, 54, 54, 0.3);
+
+}
+
+@media screen and (min-width: 370px) and (max-width: 400px) { /* media queries taille hamburger jusqua 400 */
+
+    .navbar-toggler {
+
+        padding: .18rem .48rem;
+        font-size: 1.25rem;
+
+    }
+
+}
+
+@media screen and (min-width: 340px) and (max-width: 370px) { /* media queries taille hamburger jusqua 370 */
+
+    .navbar-toggler {
+
+        padding: .08rem .30rem;
+        font-size: 1.20rem;
+
+    }
+
+}
+
+@media screen and (min-width: 320px) and (max-width: 340px) {
+    /* media queries taille hamburger jusqua 340 */
+    .navbar-toggler {
+
+        padding: .06rem .25rem;
+        font-size: 1.15rem;
+
+    }
+
+}
+
+@media screen and (min-width: 300px) and (max-width: 320px) { /* media queries taille hamburger jusqua 320 */
+
+    .navbar-toggler {
+
+        padding: .02rem .18rem;
+        font-size: 1rem;
+    }
+
+}
+
+
+
+@media screen and (min-width: 300px) and (max-width: 992px) { /* media queries qui permet d'afficher fond gris sur link uniquement en mode hamburger */
+
+    #navbarNavDropdown { /* id qui nous permet de manipuler le fond de notre menu hamburger déroulé */
+
+        background-color: rgba(232, 232, 230, 0.6); /* 0.5 - semi-transparent */
+
+    }
+
+}
+
+.dropdown-menu{ /* manipuler le menu deroulant service */
+
+    background-color: rgba(232, 232, 230, 0.6); /* 0.5 - semi-transparent */
+
+}
+
+.dropdown-item {  /* lien dropdown taille couleur etc  */
+
+    font-family: Raleway;
+    font-weight: 600;
+    font-size: 2.4vh;
+
+}
+
+.dropdown-item:hover {  /* lien dropdown au survol de la souris pareil qu'en haut */
+
+
+    background: #D2A532;
+    color: white;
+
+}
+
+@media screen and (min-width: 200px) and (max-width: 992px) {     /* JUSQUA 1200 LE TEXTE EST CENTRER ET IL Y A DES MARGIN */
+
+
+    .navbar-light .navbar-nav .nav-link{ /* permet de colorer en black quand les 3 passent en menu hamburger car fond blanc */
+
+        font-family: Raleway;
+        font-weight: 500;
+        color: black !important;
+        font-size: 3.4vh !important;
+
+    }
+
+
+    .navbar-light .navbar-nav .nav-link:hover{  /* couleur grise foncée survol des bouttons marron */
+
+        color: #3c3636 !important;
+        font-size: 3.4vh !important;
+        padding: 0 !important;
+        margin: 0 !important;
+
+    }
+
+    .register, .login, .contact, .deconnexion, .ajouter{ /* qui permet de centrer mes boutons bold au milieu de leur div */
+
+        text-align: center;
+        display: table-cell;
+        font-family: Raleway;
+        font-weight: 500;
+        margin-top: 15px;
+
+
+    }
+
+
+    .button {   /* boutons dorés */
+
+        border-radius: 0 !important;
+        background: none !important;
+        padding: 0 !important;
+        width: 0 !important;
+        height: 0 !important;
+
+    }
+
+
+
+}
+
+
+
+
+
+/* **** FIN DE TOUT CE QUI CONCERNE LE MENU HAMBURGER **** */
+
+
+
 .navbar-light .navbar-nav .nav-link{ /* me permet de mettre en blanc mes buttons marron  cette nav est pour touts les liens*/
 
     color: white;
     font-family: Raleway;
     font-weight: 600;
     font-size: 2.5vh;
+    text-decoration: none;
 
 }
 
@@ -69,8 +334,8 @@ ______________________
 
     color: #3c3636;
 
-}
 
+}
 
 .chambres, .services{  /* manier couleur chambres service except les 3 blanc a coté */
 
@@ -81,22 +346,19 @@ ______________________
 
 }
 
+@media screen and (min-width: 300px) and (max-width: 992px) {
+
+    .chambres, .services{ /* stylisation des link chambre et service pour menu hamburger */
+
+        font-size: 3.4vh !important;
+
+    }
+
+
+}
 .chambres:hover, .services:hover{  /* manier couleur chambres service except les 3 blanc a coté */
 
     color: #D2A532 !important;
-
-}
-
-.dropdown-item {      /* lien menu dropdown */
-    font-size: 2.8vh;
-    color: #D2A532;
-    font-family: Helvetica;
-}
-
-.dropdown-item:hover {  /* lien dropdown au survol de la souris */
-
-    background: #D2A532;
-    color: white;
 
 }
 
@@ -111,7 +373,7 @@ ______________________
 
 }
 
-.register, .login, .contact, .deconnexion, .ajouter { /* qui permet de centrer mes boutons bold au milieu de leur div */
+.register, .login, .contact, .deconnexion, .ajouter{ /* qui permet de centrer mes boutons bold au milieu de leur div */
 
     text-align: center;
     display: table-cell;
@@ -119,26 +381,6 @@ ______________________
 
 }
 
-
-@media screen and (min-width: 200px) and (max-width: 900px) {     /* JUSQUA 1200 LE TEXTE EST CENTRER ET IL Y A DES MARGIN */
-
-
-    .navbar-light .navbar-nav .nav-link{ /* permet de colorer en black quand les 3 passent en menu hamburger car fond blanc */
-
-        color: black;
-
-    }
-
-    .button {   /* boutons dorés */
-
-        border-radius: 26px;
-        background: none;
-        padding: 0 !important;
-        width: 0 !important;
-        height: 0 !important;
-
-    }
-}
 
 
 .drapeau-anglais{ /* drapeau france */
@@ -183,6 +425,37 @@ DEBUT CONTENU HEADER ( PHRASE ACCROCHE ET RESERVATION )
 _________________________________________________________
  */
 
+.parent1-texte { /* englobe mon petit parent */
+
+    display: table-cell;
+    position: absolute;
+    vertical-align: middle;
+    width: 100%;
+    top: 50vh;
+
+}
+
+.parent-texte {  /* englobe mes span */
+
+    text-align: center;
+    vertical-align: middle;
+
+}
+
+
+/* The typing effect */
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange; }
+}
+
+
 
 .phrase-accroche{ /* Bienvenue au Palace Canin */
 
@@ -198,24 +471,105 @@ _________________________________________________________
 
 }
 
-@media screen and (min-width: 200px) and (max-width: 1100px) {
-    /* JUSQUA 1200 LE TEXTE EST CENTRER ET IL Y A DES MARGIN */
 
-    .phrase-accroche{ /* Bienvenue au Palace Canin */
+@media screen and (min-width: 800px) and (max-width: 1100px) {
 
-        color: white;
+    /* media queries contenu sur image */
+    .phrase-accroche { /* media queries "Bienvenue au Palace Canin" */
+
         font-size: 45px;
-        text-transform: uppercase;
-        font-family: Raleway;
-        font-weight: 500;
-        text-align: center;
+        font-weight: 600;
         margin-top: 26%;
+
+    }
+
+}
+
+
+
+@media screen and (min-width: 570px) and (max-width: 800px) {
+    /* media queries contenu sur image */
+    .phrase-accroche { /* Bienvenue au Palace Canin */
+
+        font-size: 35px;
+        font-weight: 700;
 
     }
 }
 
 
-    .petite-phrase-accroche{ /* La ou votre chien sera Roi */
+
+@media screen and (min-width: 449px) and (max-width: 570px) {
+
+    /* media queries contenu sur image */
+    .phrase-accroche { /* Bienvenue au Palace Canin */
+
+        font-size: 28px;
+        font-weight: 700;
+
+    }
+
+}
+
+
+@media screen and (min-width: 404px) and (max-width: 449px) {
+
+    /* media queries contenu sur image */
+    .phrase-accroche { /* Bienvenue au Palace Canin */
+
+        font-size: 26px;
+        font-weight: 700;
+
+    }
+
+}
+
+
+@media screen and (min-width: 434px) and (max-width: 449px) {
+
+    /* media queries contenu sur image */
+    .phrase-accroche{ /* Bienvenue au Palace Canin */
+
+        font-size: 28px;
+        font-weight: 700;
+
+    }
+
+}
+
+@media screen and (min-width: 379px) and (max-width: 434px) {
+
+    /* media queries contenu sur image */
+    .phrase-accroche{ /* Bienvenue au Palace Canin */
+
+        font-size: 24px;
+        font-weight: 700;
+
+    }
+
+}
+
+
+
+
+
+@media screen and (min-width: 200px) and (max-width: 379px) {
+
+    /* media queries contenu sur image */
+    .phrase-accroche{ /* Bienvenue au Palace Canin */
+
+        font-size: 30px;
+        font-weight: 700;
+
+    }
+
+}
+
+
+
+
+
+.petite-phrase-accroche{ /* La ou votre chien sera Roi */
 
     font-family: Raleway;
     font-weight: 500;
@@ -227,38 +581,170 @@ _________________________________________________________
 }
 
 
-.bouton-reservation{ /* bouton reservation */
+.reservation{ /* bouton reservation doré */
 
-    border-radius: 26px;
-    background: #D2A532;
-    padding: 17px;
-
-}
-
-.reservation{   /* bouton reservation doré */
-
+    text-align: center;
+    display: table-cell;
     font-family: Raleway;
     font-weight: 600;
     font-size: 2vh;
     color: white;
-    width: 200px;
-    padding-top: 22px;
-    padding-bottom: 22px;
-    margin-top: 4%;
+    margin-top: 5%;
     text-transform: uppercase;
-    align-items: center;
+    background: #D2A532;
+    width: 200px;
+    letter-spacing: 0.5px;
+}
+
+
+@media screen and (min-width: 350px) and (max-width: 570px) { /* choix de placer bouton reservation a part car il a fallut qu'on gere la responsivité de l'espacement du bouton avec la phrase du haut car a un petit point de cassure le bouton était bcp trop collé*/
+
+    .reservation{ /* media queries bouton reservation doré */
+
+        text-align: center;
+        display: table-cell;
+        font-family: Raleway;
+        font-weight: 600;
+        font-size: 2vh;
+        color: white;
+        margin-top: 7%;
+        text-transform: uppercase;
+        background: #D2A532;
+        width: 155px;
+        letter-spacing: 0.5px;
+    }
+}
+
+@media screen and (min-width: 300px) and (max-width: 350px) { /* media queries point de cassure où gerer l'espacement du bouton qui ne se faisait pas
+a cause du pourcentage margin-top. Plus on descend de px d'ecran plus le pourcentage descend avec lui logique. Donc il a fallut qu'on se réappropri ce format pour moduler comme on souhaite l'espacement bouton */
+
+    .reservation{ /* media queries bouton reservation doré */
+
+        margin-top: 13%;
+        font-weight: 600;
+
+    }
+}
+
+.bouton-reservation {   /* boutons reservation doré */
+
+    border-radius: 26px;
+    background: #D2A532;
+    padding: 16px;
+    height: 8px;
+    text-decoration: none;
+
+}
+
+.reservation:hover{ /* survol de la souris reservation change de couleur comme les 3 boutons dorés au dessus */
+
+    color: #3c3636;
 
 }
 
 
 
 
+@media screen and (min-width: 800px) and (max-width: 1100px) { /* media queries contenu sur image */
 
 
+    .petite-phrase-accroche{ /* media queries "La ou votre chien sera Roi" */
+
+        font-size: 22px;
+        font-weight: 600;
+
+    }
+
+    .reservation{ /* media queries bouton reservation doré */
+
+        text-align: center;
+        display: table-cell;
+        font-family: Raleway;
+        font-weight: 600;
+        font-size: 2vh;
+        color: white;
+        margin-top: 5%;
+        text-transform: uppercase;
+        background: #D2A532;
+        width: 200px;
+        letter-spacing: 0.5px;
+    }
 
 
+    .bouton-reservation {   /* media queries boutons reservation doré */
+
+        border-radius: 26px;
+        background: #D2A532;
+        padding: 16px;
+        height: 8px;
+        text-decoration: none;
+
+    }
 
 
+}
+
+
+@media screen and (min-width: 570px) and (max-width: 800px) { /* media queries contenu sur image */
+
+
+    .petite-phrase-accroche{
+
+        font-size: 20px;
+        font-weight: 600;
+
+    }
+
+    .reservation{ /* media queries bouton reservation doré */
+
+        text-align: center;
+        display: table-cell;
+        font-family: Raleway;
+        font-weight: 700;
+        font-size: 2vh;
+        color: white;
+        margin-top: 5%;
+        text-transform: uppercase;
+        background: #D2A532;
+        width: 170px;
+        letter-spacing: 0.5px;
+    }
+
+
+    .bouton-reservation {   /* media queries boutons reservation doré */
+
+        border-radius: 26px;
+        background: #D2A532;
+        padding: 16px;
+        height: 8px;
+        text-decoration: none;
+
+    }
+
+}
+
+
+@media screen and (min-width: 200px) and (max-width: 570px) { /* media queries contenu sur image */
+
+
+    .petite-phrase-accroche{
+        font-size: 19px;
+        font-weight: 600;
+
+    }
+
+
+    .bouton-reservation {   /* media queries boutons reservation doré */
+
+        border-radius: 26px;
+        background: #D2A532;
+        padding: 16px;
+        height: 8px;
+        text-decoration: none;
+
+    }
+
+}
 
 
 /* _____________________________________________________
