@@ -272,18 +272,34 @@ ______________________
         font-family: Raleway;
         font-weight: 500;
         color: black !important;
-        font-size: 3.4vh !important;
+        font-size: 3vh !important;
 
     }
 
 
     .navbar-light .navbar-nav .nav-link:hover{  /* couleur grise foncée survol des bouttons marron */
 
-        color: #3c3636 !important;
-        font-size: 3.4vh !important;
+        color: black !important;
+        font-size: 3vh !important;
         padding: 0 !important;
         margin: 0 !important;
+        background-color: rgba(160, 160, 160, 0.8) !important;
 
+    }
+
+    .chambres, .services{  /* manier couleur chambres service except les 3 blanc a coté */
+
+        padding: 0 !important;
+        color: black !important;
+        font-size: 3.4vh !important;
+    }
+
+    .chambres:hover, .services:hover{  /* manier couleur chambres service except les 3 blanc a coté */
+
+        padding: 0 !important;
+        color: black !important;
+        background-color: rgba(160, 160, 160, 0.8) !important;
+        font-size: 3.4vh !important;
     }
 
     .register, .login, .contact, .deconnexion, .ajouter{ /* qui permet de centrer mes boutons bold au milieu de leur div */
@@ -292,23 +308,33 @@ ______________________
         display: table-cell;
         font-family: Raleway;
         font-weight: 500;
-        margin-top: 15px;
-
+        margin: 0 !important;
 
     }
 
+    .register:hover, .login:hover, .contact:hover, .deconnexion:hover, .ajouter:hover{ /* qui permet de centrer mes boutons bold au milieu de leur div */
 
+        background: white !important;
+        padding: 0 !important;
+    }
     .button {   /* boutons dorés */
 
         border-radius: 0 !important;
-        background: none !important;
         padding: 0 !important;
         width: 0 !important;
         height: 0 !important;
 
     }
 
+    .button:hover {   /* boutons dorés */
 
+        border-radius: 0 !important;
+        padding: 0 !important;
+        width: 0 !important;
+        height: 0 !important;
+        background-color: rgba(160, 160, 160, 0.8) !important;
+
+    }
 
 }
 
@@ -327,13 +353,13 @@ ______________________
     font-weight: 600;
     font-size: 2.5vh;
     text-decoration: none;
+    background: none !important;
 
 }
 
 .navbar-light .navbar-nav .nav-link:hover{  /* couleur grise foncée survol des bouttons marron */
 
     color: #3c3636;
-
 
 }
 
@@ -346,16 +372,6 @@ ______________________
 
 }
 
-@media screen and (min-width: 300px) and (max-width: 992px) {
-
-    .chambres, .services{ /* stylisation des link chambre et service pour menu hamburger */
-
-        font-size: 3.4vh !important;
-
-    }
-
-
-}
 .chambres:hover, .services:hover{  /* manier couleur chambres service except les 3 blanc a coté */
 
     color: #D2A532 !important;
