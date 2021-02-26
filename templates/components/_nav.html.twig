@@ -9,8 +9,8 @@
         <nav class="navbar navbar-expand-lg navbar-light">
             <div class="container-fluid">
                 <a class="navbar-brand titre" href="{{ path('index') }}"><img class="img-fluid logo"
-                                                                        src="{{ asset('assets/image/logo-palace.png') }}"
-                                                                        alt="logo">PALACE CANIN</a>
+                                                                              src="{{ asset('assets/image/logo-palace.png') }}"
+                                                                              alt="logo">PALACE CANIN</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarNavDropdown"
                         aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -21,7 +21,8 @@
                     <div class="navbar-nav me-auto">
                         <a class="nav-link chambres" href="{{ path('default_room') }}">Chambres</a>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle services" href="#" id="navbarDropdownMenuLink" role="button"
+                            <a class="nav-link dropdown-toggle services" href="#" id="navbarDropdownMenuLink"
+                               role="button"
                                data-bs-toggle="dropdown" aria-expanded="false">
                                 Services
                             </a>
@@ -30,7 +31,8 @@
                                 <li><a class="dropdown-item" href="{{ path('default_bien-etre') }}">Bien-être</a></li>
                                 <li><a class="dropdown-item" href="{{ path('default_toilettage') }}">Toilettage</a></li>
                                 <li><a class="dropdown-item" href="{{ path('default_dressage') }}">Dressage</a></li>
-                                <li><a class="dropdown-item" href="{{ path('default_transport-animalier') }}">Transport Animalier</a></li>
+                                <li><a class="dropdown-item" href="{{ path('default_transport-animalier') }}">Transport
+                                        Animalier</a></li>
                                 <li><a class="dropdown-item" href="{{ path('default_boutique') }}">Boutique</a></li>
                             </ul>
                         </li>
@@ -43,7 +45,8 @@
                         </a>
 
                         {% if is_granted('ROLE_ADMIN') %}
-                            <a class="nav-link button ajouter" href="{{ path('booking_create') }}">Ajouter une catégorie de chambre</a>
+                            <a class="nav-link button ajouter" href="{{ path('booking_create') }}">Ajouter une catégorie
+                                de chambre</a>
                         {% endif %}
 
                         <a class="nav-link button deconnexion" href="{{ path('app_logout') }}">Déconnexion</a>
@@ -61,13 +64,13 @@
                             </div>
                             <div class="col-md-1">
                                 <a href="{{ path('index') }}"><img class="img-fluid drapeau-français"
-                                     src="{{ asset('assets/image/drapeau-france.jpg') }}"
-                                     alt="français"></a>
+                                                                   src="{{ asset('assets/image/drapeau-france.jpg') }}"
+                                                                   alt="français"></a>
                             </div>
                             <div class="col-md-1">
                                 <a href="{{ path('index') }}"><img class="img-fluid drapeau-anglais"
-                                     src="{{ asset('assets/image/drapeau-usa-angleterre.jpg') }}"
-                                     alt="anglais"></a>
+                                                                   src="{{ asset('assets/image/drapeau-usa-angleterre.jpg') }}"
+                                                                   alt="anglais"></a>
                             </div>
                         </div>
                     </div>
@@ -79,28 +82,45 @@
 
 
         <!-- DEBUT CONTENU HEADER -->
+        <div class="parent1-texte">
 
-        <div class="row">
-            <div class="col-sm-12 text-center">
-                <span class="phrase-accroche">Bienvenue au Palace Canin</span>
-            </div>
-        </div>
+            <div class="parent-texte d-flex flex-column">
 
-        <div class="row mt-5">
-            <div class="col-md-12 text-center">
-                <span class="petite-phrase-accroche">Là où votre chien sera Roi</span>
-            </div>
-        </div>
+                <div class="row">
 
-        <div class="row">
-            <div class="col-md-12 text-center">
-                <a href="{{ path('booking_reservation') }}"><button class="reservation button">Reservation</button></a>
+                    <div class="col-sm-12 text-center">
+
+                        <span class="phrase-accroche">Bienvenue au Palace Canin</span>
+
+                    </div>
+
+                </div>
+
+                <div class="row mt-5">
+
+                    <div class="col-md-12 text-center">
+
+                        <span class="petite-phrase-accroche">Là où votre chien sera Roi</span>
+
+                    </div>
+                </div>
+
+                <div class="row">
+
+                    <div class="col-md-12 text-center">
+
+                        <a href="{{ path('booking_reservation') }}" class="bouton-reservation">
+                            <button class="reservation">Reservation</button>
+                        </a>
+
+                    </div>
+                </div>
             </div>
         </div>
 
     </div>
 
-        <!-- FIN CONTENU HEADER -->
+    <!-- FIN CONTENU HEADER -->
 </header>
 
 

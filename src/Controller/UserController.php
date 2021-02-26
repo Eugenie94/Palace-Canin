@@ -97,8 +97,8 @@ class UserController extends AbstractController
             $em->flush();
 
 
-            # Redirection
-            return $this->redirectToRoute('index');
+            # Redirection vers la page connexion
+            return $this->redirectToRoute('app_login');
         }
 
         # Passer le formulaire à la vue

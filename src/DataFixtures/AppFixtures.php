@@ -55,6 +55,7 @@ class AppFixtures extends Fixture
         $reservation = new Booking();
         $reservation->setCheckIn(new \DateTime())->setCheckOut(new \DateTime())->setDays(25)->setStatus('disponible')->setTotal(2500)->setCreatedAt(new \DateTime())->setUpdatedAt(new \DateTime())->setDeletedAt(new \DateTime());
 
+
         # Je souhaite sauvegarder dans ma BDD les catégories
         $manager->persist( $chambresuperieure );
         $manager->persist( $chambreprestige );

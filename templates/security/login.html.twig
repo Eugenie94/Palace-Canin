@@ -3,7 +3,28 @@
 {% block title %}Log in!{% endblock %}
 
 {% block body %}
-<form method="post">
+
+    {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+
+
+    <button type="button" id="btn-click" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg" style="display: none;">Large modal</button>
+
+    <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-md">
+            <div class="modal-content">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Felicitations, vous êtes inscrit !<i class="far fa-smile-wink"></i></h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+{% endif %}
+
+    <form method="post">
     {% if error %}
         <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
     {% endif %}

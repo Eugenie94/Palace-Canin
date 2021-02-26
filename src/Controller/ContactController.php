@@ -4,7 +4,6 @@
 namespace App\Controller;
 
 use App\Entity\Contact;
-use App\Entity\User;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
@@ -58,7 +57,7 @@ class ContactController extends AbstractController
                 'label' => "Message",
             ])
             ->add('submit', SubmitType::class, [
-                'label' => "Inscription",
+                'label' => "Valider",
             ])
             ->getForm();
 

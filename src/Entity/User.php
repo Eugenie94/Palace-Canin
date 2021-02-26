@@ -87,6 +87,7 @@ class User implements UserInterface
     private $contacts;
 
 
+
     public function __construct()
     {
         $this->bookings = new ArrayCollection();
@@ -348,5 +349,6 @@ class User implements UserInterface
 
         return $this;
     }
+
 
 }

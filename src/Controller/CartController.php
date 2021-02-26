@@ -3,12 +3,12 @@
 
 namespace App\Controller;
 
+
 use App\Entity\User;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\NumberType;
-use Symfony\Component\Form\Extension\Core\Type\PasswordType;
 use Symfony\Component\Form\Extension\Core\Type\TelType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
@@ -19,28 +19,21 @@ use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\String\Slugger\SluggerInterface;
 
 
-/**
- * @Route("/booking")
- */
-
 class CartController extends AbstractController
 {
 
     /**
-     * Créer un Formulaire de contact
-     * @Route ("/pay", name= "pay", methods={"GET|POST"})
-     * ex. http://localhost:8000/booking/pay
+     * Page Contact
+     * @Route ("/paiement", name="cart_paiement", methods={"GET|POST"})
+     * ex. http://localhost:8000/paiement
      * @param Request $request
      * @return Response
      */
-    public function register(Request $request, SluggerInterface $slugger): Response
+    public function create(Request $request, SluggerInterface $slugger): Response
     {
-
         # Création d'un nouveau user VIDE
         $user = new User();
-        $user->setRoles(['ROLE_USER']);
 
-        # il peut valider le formulaire de paiement seulement si il est user, SINON redirectoRoute inscription puis redirectToRoute paiement
 
         # Création d'un Formulaire de Paiement
         $form = $this->createFormBuilder( $user )
@@ -65,23 +58,22 @@ class CartController extends AbstractController
             ->add('email', EmailType::class, [
                 'label' => "E-mail"
             ])
-            ->add('cardnumber', NumberType::class, [
-                'label' => "Numéro de Carte",
-            ])
-            ->add('cardname', TextType::class, [
-                'label' => "Titulaire de la carte",
-            ])
-            ->add('expireddate', NumberType::class, [
-                'label' => "Date d'expiration",
-            ])
-            ->add('cvv', NumberType::class, [
-                'label' => "CVV",
-            ])
+            # ->add('cardnumber', NumberType::class, [
+              #  'label' => "Numéro de Carte",
+            # ])
+            #->add('cardname', TextType::class, [
+             #   'label' => "Titulaire de la carte",
+            #])
+            #->add('expireddate', NumberType::class, [
+              #  'label' => "Date d'expiration",
+            #])
+            #->add('cvv', NumberType::class, [
+             #   'label' => "CVV",
+            #])
             ->add('submit', SubmitType::class, [
                 'label' => "Payer et finaliser",
             ])
             ->getForm();
-
         # Permet à Symfony de gérer les données saisies par l'utilisateur
         $form->handleRequest( $request );
 
@@ -91,18 +83,17 @@ class CartController extends AbstractController
 
             # Insertion dans la BDD
             $em = $this->getDoctrine()->getManager();
-            $em->persist($user);
+            $em->persist($user );
             $em->flush();
 
 
             # Redirection
-            return $this->redirectToRoute('index'); #alert Votre reservation a bien été effectué vous allez recevoir dans vos mail le récapitulatif de votre reservation
+            return $this->redirectToRoute('index'); #alert message a bien été envoyé
         }
 
         # Passer le formulaire à la vue
-        return $this->render('default/pay.html.twig', [
+        return $this->render('cart/paiement.html.twig', [
             'form' => $form->createView()
         ]);
     }
-
 }
