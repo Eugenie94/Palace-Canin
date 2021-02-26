@@ -128,14 +128,12 @@ class BookingController extends AbstractController
     /**
      * Page afficher un article
      * http://localhost:8000/reservation
-     * @Route("booking/reservation", name="booking_reservation", methods={"GET"})
-     * le alias du dessus agira sur la fonction d'apres
+     * @Route("/booking/reservation", name="booking_reservation", methods={"GET"})
+     * Le alias du dessus agira sur la fonction d'apres
      */
-    public function booking(Booking $booking)
+    public function reservation()
     {
-        return $this->render('booking/reservation.html.twig', [
-            'booking' => $booking
-        ]);
+        return $this->render('booking/reservation.html.twig');
     }
 
 }
