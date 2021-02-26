@@ -232,7 +232,6 @@ _________________________________________________________
     border-radius: 26px;
     background: #D2A532;
     padding: 17px;
-    height: 8px;
 
 }
 
@@ -243,8 +242,12 @@ _________________________________________________________
     font-size: 2vh;
     color: white;
     width: 200px;
+    padding-top: 22px;
+    padding-bottom: 22px;
     margin-top: 4%;
     text-transform: uppercase;
+    align-items: center;
+
 }
 
 

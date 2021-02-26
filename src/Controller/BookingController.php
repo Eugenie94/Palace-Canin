@@ -125,23 +125,17 @@ class BookingController extends AbstractController
         ]);
     }
 
-
-    public function reservation(Request $request, SluggerInterface $slugger): Response #Slug et alias c'est la même chose
+    /**
+     * Page afficher un article
+     * http://localhost:8000/reservation
+     * @Route("booking/reservation", name="booking_reservation", methods={"GET"})
+     * le alias du dessus agira sur la fonction d'apres
+     */
+    public function booking(Booking $booking)
     {
-        /**
-         * Page Reservation: Affiche la page reservation
-         * http://localhost:8000/reservation
-         * @Route("/reservation", name="booking_reservation", methods={"GET"})
-         * le alias du dessus agira sur la fonction d'apres
-         */
-
-
-        # On retourne au client une réponse HTTP.
-        # return new Response("<h1>Page Accueil</h1>");
-        return $this->render('booking/reservation.html.twig');
-
-
+        return $this->render('booking/reservation.html.twig', [
+            'booking' => $booking
+        ]);
     }
-
 
 }

@@ -2,6 +2,7 @@
 
 namespace App\DataFixtures;
 
+use App\Entity\Booking;
 use App\Entity\Category;
 use App\Entity\Room;
 use App\Entity\Service;
@@ -49,6 +50,10 @@ class AppFixtures extends Fixture
         $boutique->setName('Boutique')->setAlias('boutique')->setContent('boutique')->setImage('https://via.placeholder.com/500');
 
 
+        # Création de reservation
+
+        $reservation = new Booking();
+        $reservation->setCheckIn(new \DateTime())->setCheckOut(new \DateTime())->setDays(25)->setStatus('disponible')->setTotal(2500)->setCreatedAt(new \DateTime())->setUpdatedAt(new \DateTime())->setDeletedAt(new \DateTime());
 
         # Je souhaite sauvegarder dans ma BDD les catégories
         $manager->persist( $chambresuperieure );
@@ -64,6 +69,10 @@ class AppFixtures extends Fixture
         $manager->persist( $dressage );
         $manager->persist( $transportanimalier );
         $manager->persist( $boutique);
+
+        # Je souhaite sauvegarder dans ma BDD les reservation
+        $manager->persist( $reservation );
+
 
         # J'execute ma requete d'enregistrement
         $manager->flush();
