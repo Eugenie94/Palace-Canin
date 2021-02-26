@@ -20,12 +20,12 @@ class Booking
     private $id;
 
     /**
-     * @ORM\Column(type="datetime")
+     * @ORM\Column(type="datetime", nullable=true)
      */
     private $checkIn;
 
     /**
-     * @ORM\Column(type="datetime")
+     * @ORM\Column(type="datetime", nullable=true)
      */
     private $checkOut;
 
@@ -61,7 +61,7 @@ class Booking
 
     /**
      * @ORM\ManyToOne(targetEntity=User::class, inversedBy="bookings")
-     * @ORM\JoinColumn(nullable=false)
+     * @ORM\JoinColumn(name="user_id", referencedColumnName="id")
      */
     private $user;
 
