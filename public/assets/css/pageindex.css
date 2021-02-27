@@ -1,0 +1,158 @@
+/****/
+
+.concept-section1{ /*positionnement iframe */
+
+    margin-top:-15%;
+    padding: 10%;
+
+}
+
+.concept-section1 h4{ /*police du titre h4*/
+
+    color: #000000;
+    font-weight: bold;
+    font-size: 30px;
+
+}
+
+.concept-section1 .row { /*margin top  pour ne pas coller le header*/
+
+    margin-top: 10%;
+
+}
+
+.concept-img {  /*pour centrer l'img'*/
+
+    text-align: center;
+
+}
+
+.concept-img img{ /*mettre image a 100%*/
+
+    width: 100%;
+
+}
+
+
+/***SERVICE **/
+
+.pt-100 { /*******************SERVICE ****************/
+
+    padding-top: 100px; /*padding pour ne pas coller le haut de la div qui l'entoure*/
+
+}
+.pb-100 {  /*padding pour ne pas coller le haut de la div qui l'entoure*/
+
+    padding-bottom: 100px;
+
+}
+
+.services-area {  /*espace entre le titre service et les servivces*/
+
+    background-color: #f6f6f6;
+
+}
+
+.section-title {
+
+    margin-bottom: 60px;
+
+}
+
+.section-title p {
+
+    font-family: lato;
+    color: #777;
+    font-size: 16px;
+}
+
+.section-title h4 {
+
+    font-family: lato;
+    text-transform: capitalize;
+    font-size: 40px;
+    position: relative;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    font-weight: 600;
+
+}
+
+iframe{ /* permet de manipuler la video */
+
+    height: 21%;
+    width: 65%;
+    display:block;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 10%;
+
+}
+
+.barre-noire { /* separation noir */
+
+    /* separateur noir */
+    height: 1.1px;
+    width: 40%;
+    color: #D2A53E;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 0.2%;
+    margin-bottom: 8%;
+    background-color: black;
+}
+
+.single-service {  /* gerer les encadrer des services */
+
+    padding: 30px 10px;
+    position: relative;
+    text-align: center;
+    margin-bottom: 30px;
+
+}
+
+.single-service h4 { /*la modification des titres h4*/
+
+    font-family: lato;
+    text-transform: capitalize;
+    font-size: 22px;
+    margin-bottom: 10px;
+    font-weight: 500;
+
+}
+
+button { /* pour le boutton en savoir plus*/
+
+    background:#D2A53E;
+    color: #ffff;
+    border: none;
+    padding: 12px;
+
+}
+
+h4 { /* le titre de la section */
+
+    margin: 10px;
+    padding: 15px;
+    font-family: lato;
+
+}
+
+h6{
+
+}
+
+
+
+.video-section p {
+
+    font-family: lato;
+    text-align: center;
+    font-size: 50px;
+
+}
+
+
+
+
+

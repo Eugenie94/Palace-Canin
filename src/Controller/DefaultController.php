@@ -146,6 +146,36 @@ class DefaultController extends AbstractController
     }
 
 
+    /**
+     * Page confidentialté
+     * http://localhost:8000/confidentialite
+     * @Route("/confidentialite", name="default_confidentialite", methods={"GET"})
+     * le alias du dessus agira sur la fonction d'apres
+     */
+    public function confidentialite()
+    {
+
+        return $this->render('default/confidentialite.html.twig');
+
+
+    }
+
+
+    /**
+     * Page condition
+     * http://localhost:8000/confidentiality
+     * @Route("/condition", name="default_condition", methods={"GET"})
+     * le alias du dessus agira sur la fonction d'apres
+     */
+    public function condition()
+    {
+
+        return $this->render('default/condition.html.twig');
+
+
+    }
+
+
 
 
 }
