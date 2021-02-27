@@ -1,35 +1,154 @@
-footer {
-    background: #F5F5F5;
-    color: rgb(0, 0, 0);
-    padding-top: 10px;
+/* RESET */
+* {
+
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    box-sizing: border-box;
+
 }
 
-footer a {
-    color: #aaa;
+/********************************* DEBUT FOOTER *********************************/
+
+
+.footer{  /* descendre un peu le footer */
+
+    margin-top: 35%;
+
 }
 
 
+h3{  /* titre footer palace canin */
 
-footer h3 {
-    color: #000000;
-    letter-spacing: 1px;
-    margin: 30px 0 20px;
-}
-
-
-footer .copyright {
-    padding: 15px 0;
-    background: #3c3636;
-    margin-top: 20px;
-    font-size: 15px;
-}
-
-footer .copyright span {
-    color: #d2a53e;
-    justify-content: center;
-}
-
-.description {
+    font-family: 'Raleway';
+    font-weight: 700;
+    color: black !important;
+    font-size: 5vh;
+    margin-top: 5%;
     text-align: center;
+    text-transform: uppercase;
+
 }
-sy
+
+.text-footer{  /* texte en dessous du titre PALACE CANIN */
+
+    font-family: lato;
+    font-wieight: 500;
+    font-size: 2.2vh;
+    padding-left: 24%;
+    padding-right: 18%;
+    margin-bottom: 1.2%;
+
+}
+
+
+#map {  /* je gere la taille de mon image iframe map */
+
+    width: 75%;
+    height: 380px;
+    float: right;
+    padding-right: 8%;
+
+}
+
+@media screen and (min-width: 200px) and (max-width: 750px) {
+
+    .parent-pictogrammes{ /* gerer le positionnement des pictogrammes */
+
+        flex-direction: inherit;
+    }
+
+}
+
+
+.parent-pictogrammes{ /* gerer le positionnement des pictogrammes */
+
+    margin-top: -3%;
+    padding-left: 8%;
+    padding-right: 48%;
+    text-align: center;
+
+}
+
+
+.fab{ /* pictogramme */
+
+    font-size: 1.5em;
+    color: #DEA43E;
+    justify-content: space-between;
+    margin-left: 10%;
+
+}
+
+
+
+/* DEBUT BARRE MARRON FOOTER */
+
+
+
+.barre-footer{  /* barre gris foncé footer */
+
+    margin-top: 6%;
+    color: #3c3636;
+    height: 11vh;
+}
+
+
+@media screen and (min-width: 200px) and (max-width: 750px) {
+
+    .barre-footer {        /* copyright */
+
+        height: 13.5vh;
+    }
+
+}
+
+
+.text-barre{
+
+    font-family: Lato;
+    font-weight: 500;
+    font-size: 2.1vh;
+    text-decoration: none;
+    color: #D2A532;
+
+}
+
+
+.text-barre:hover{  /* survol des liens pages annexes du site avec header different */
+
+    color: white;
+
+}
+
+.copyright{
+
+    font-family: Lato;
+    font-weight: 500;
+    font-size: 2.1vh;
+    text-decoration: none;
+    color: #D2A532;
+    float: left;
+    margin-left: 4%;
+
+}
+
+
+@media screen and (min-width: 200px) and (max-width: 750px) {
+
+    .copyright, .text-barre {        /* copyright */
+
+        display: block;
+        font-size: 1.7vh;
+
+    }
+
+}
+
+/* FIN BARRE MARRON FOOTER */
+
+
+
+/********************************* FIN FOOTER *********************************/
