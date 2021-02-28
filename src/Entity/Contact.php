@@ -4,6 +4,7 @@ namespace App\Entity;
 
 use App\Repository\ContactRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass=ContactRepository::class)
@@ -19,31 +20,37 @@ class Contact
 
     /**
      * @ORM\Column(type="string", length=80)
+     * @Assert\NotBlank(message="Vous devez renseigner un prénom.")
      */
     private $firstname;
 
     /**
      * @ORM\Column(type="string", length=80)
+     * @Assert\NotBlank(message="Vous devez renseigner un nom.")
      */
     private $lastname;
 
     /**
      * @ORM\Column(type="string", length=100)
+     * @Assert\NotBlank(message="Vous devez renseigner un e-mail.")
      */
     private $email;
 
     /**
      * @ORM\Column(type="integer")
+     * @Assert\NotBlank(message="Vous devez renseigner un numéro de téléphone.")
      */
     private $telephone;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank(message="Vous devez renseigner le sujet de la demande.")
      */
     private $subject;
 
     /**
      * @ORM\Column(type="text", length=1000)
+     * @Assert\NotBlank(message="Vous devez écrire votre demande.")
      */
     private $message;
 

@@ -3,21 +3,22 @@
 .concept-section1{ /*positionnement iframe */
 
     margin-top:-15%;
-    padding: 10%;
+    padding: 5%;
 
 }
 
 .concept-section1 h4{ /*police du titre h4*/
 
-    color: #000000;
-    font-weight: bold;
-    font-size: 30px;
+    font-family: lato;
+    font-weight: 900;
+    color: black;
+    font-size: 6.5vh;
 
 }
 
 .concept-section1 .row { /*margin top  pour ne pas coller le header*/
 
-    margin-top: 10%;
+    margin-top: 13%;
 
 }
 
@@ -38,7 +39,7 @@
 
 .pt-100 { /*******************SERVICE ****************/
 
-    padding-top: 100px; /*padding pour ne pas coller le haut de la div qui l'entoure*/
+    padding-top: 3%; /*padding pour ne pas coller le haut de la div qui l'entoure*/
 
 }
 .pb-100 {  /*padding pour ne pas coller le haut de la div qui l'entoure*/
@@ -53,44 +54,51 @@
 
 }
 
-.section-title {
+.section-title {   /* espace entre titre service et les services */
 
     margin-bottom: 60px;
 
 }
 
-.section-title p {
+.section-title p {  /* manier le paragraphe les services */
 
     font-family: lato;
     color: #777;
     font-size: 16px;
 }
 
-.section-title h4 {
+.section-title h4 { /* titre de la section Nos services */
 
-    font-family: lato;
+    font-family: Lato;
     text-transform: capitalize;
     font-size: 40px;
     position: relative;
     padding-bottom: 20px;
     margin-bottom: 20px;
-    font-weight: 600;
 
 }
 
 iframe{ /* permet de manipuler la video */
 
-    height: 21%;
+    height: 14%;
     width: 65%;
     display:block;
     margin-right: auto;
     margin-left: auto;
-    margin-bottom: 10%;
 
 }
 
-.barre-noire { /* separation noir */
+@media screen and (min-width: 200px) and (max-width: 992px) { /* manier iframe en dessous de 992 */
 
+
+   .video{ /* permet de manipuler la video */
+
+        height: 4% !important;
+        width: 65% !important;
+
+    }
+
+<<<<<<< HEAD
     /* separateur noir */
     height: 1.1px;
     width: 40%;
@@ -100,6 +108,8 @@ iframe{ /* permet de manipuler la video */
     margin-top: 0.2%;
     margin-bottom: 8%;
     background-color: #D2A53E;
+=======
+>>>>>>> eugenie
 }
 
 .single-service {  /* gerer les encadrer des services */
@@ -113,11 +123,11 @@ iframe{ /* permet de manipuler la video */
 
 .single-service h4 { /*la modification des titres h4*/
 
-    font-family: lato;
-    text-transform: capitalize;
-    font-size: 22px;
+    font-family: Lato;
+    font-weight: 900;
+    font-size: 2.2vh;
+    text-transform: uppercase;
     margin-bottom: 10px;
-    font-weight: 500;
 
 }
 
@@ -132,21 +142,239 @@ button { /* pour le boutton en savoir plus*/
 
 h4 { /* le titre de la section */
 
+    font-family: lato;
     margin: 10px;
     padding: 15px;
-    font-family: lato;
 
 }
-h6 {
-    margin-top: 10%;
+
+
+.image{  /* pour manier les images de services */
+    width: 252%;
+    height: auto;
+
 }
 
 
-.video-section p {
+.video-section p {   /* manier titre l'Essentiel */
 
     font-family: lato;
     text-align: center;
     font-size: 50px;
+    margin-top: 5%;
+
+}
+
+    /* DEBUT RECTANGLE */
+
+.rectangle{  /* encadré noir */
+
+    width: 80%;
+    height: 350px;
+    margin-top: 8%;
+    margin-bottom: 5%;
+    margin-right: auto;
+    margin-left: auto;
+    border: 1px solid #898686;
+
+}
+
+
+@media screen and (min-width: 200px) and (max-width: 1500px) { /* reduire carré noir en dessous de 1200 */
+
+    .rectangle { /* encadré noir */
+
+        height: 250px;
+
+    }
+}
+
+    .confiance{  /* phrase ILS NOUS FONT CONFIANCE */
+
+    font-family: Raleway;
+    font-weight: 400;
+    font-size: 6vh;
+    margin-left: 25%;
+    text-transform: uppercase;
+
+}
+
+@media screen and (min-width: 200px) and (max-width: 992px) { /* manier iframe en dessous de 992 */
+
+
+    .confiance{  /* phrase ILS NOUS FONT CONFIANCE */
+
+        font-size: 2.1vh;
+
+    }
+
+
+}
+
+.confiances{ /* pour gerer hauteur ILS NOUS FONT CONFIANCE car on pouvait pas dans la span du dessus */
+
+    margin-top: 5%;
+
+}
+
+.logo-index{ /* logo PAW */
+
+    width: 40%;
+    height: auto;
+    margin-left: 50%;
+
+}
+
+.image-concept{  /* PHOTO CONCEPT */
+
+    width: 110%;
+    height: auto;
+
+}
+
+.text-muted{ /* texte notre concept */
+
+    padding-left: 10%;
+    padding-right: 10%;
+    margin-left: -5%;
+
+}
+
+.image-services{  /* PHOTO SERVICE */
+
+    width: 90%;
+    height: auto;
+
+}
+<<<<<<< HEAD
+h6 {
+    margin-top: 10%;
+=======
+
+
+.parent-image-entreprise{  /* parent image entreprise */
+
+    padding-left: 7%;
+    padding-right: 14%;
+
+>>>>>>> eugenie
+}
+
+.image-entreprise{ /* tolgate image entreprise */
+
+    width: 58%;
+    height: auto;
+    margin-top: 16%;
+    display: block;
+
+
+}
+
+.image-entreprise1{ /* leading image entreprise */
+
+    width: 58%;
+    height: auto;
+    margin-top: 10%;
+    display: block;
+
+}
+
+.image-entreprise2{ /* forbes image entreprise */
+
+    width: 58%;
+    height: auto;
+    margin-top: 20%;
+    display: block;
+
+}
+
+
+@media screen and (min-width: 200px) and (max-width: 992px) { /* manier iframe en dessous de 992 */
+
+    .parent1-texte { /* englobe mon petit parent */
+
+        display: table-cell;
+        position: absolute;
+        vertical-align: middle;
+        width: 100%;
+        top: 50vh;
+
+    }
+
+<<<<<<< HEAD
+.video-section p {
+=======
+    .parent-texte { /* englobe mes span */
+
+        text-align: center;
+        vertical-align: middle;
+
+    }
+
+
+    /* The typing effect */
+    @keyframes typing {
+        from {
+            width: 0
+        }
+        to {
+            width: 100%
+        }
+    }
+
+    /* The typewriter cursor effect */
+    @keyframes blink-caret {
+        from, to {
+            border-color: transparent
+        }
+        50% {
+            border-color: orange;
+        }
+    }
+
+    .image-entreprise{ /* tolgate image entreprise */
+
+        width: 20%;
+        height: auto;
+        margin-top: 18.5%;
+        position: absolute;
+        margin-left: 22%;
+
+    }
+
+    .image-entreprise1{ /* leading image entreprise */
+
+        width: 20%;
+        height: auto;
+        margin-top: 16.5%;
+        position: absolute;
+        margin-left: -3%;
+
+    }
+
+    .image-entreprise2{ /* forbes image entreprise */
+
+        width: 20%;
+        height: auto;
+        margin-top: 20%;
+        position: absolute;
+        margin-left: 47%;
+
+    }
+}
+
+    /* FIN RECTANGLE */
+
+.hashtag {  /* manier #Le palace canin hashtag */
+>>>>>>> eugenie
+
+    font-family: lato;
+    font-weight: 600;
+    font-size: 2.5vh;
+    color: #626262;
+    margin-top: -80px;
+    text-align: center;
+    margin-bottom: 65px;
 
 }
 
@@ -158,6 +386,7 @@ h6 {
     margin-bottom: 65px;
 }
 
+<<<<<<< HEAD
 .barre-insta {
     height: 1.1px;
     width: 40%;
@@ -169,6 +398,35 @@ h6 {
     background-color: #D2A53E;
 
 }
+=======
+@media screen and (min-width: 200px) and (max-width: 992px) { /* manier hstag palace en dessous de 992 */
 
+    .hashtag {  /* manier #Le palace canin hashtag */
+>>>>>>> eugenie
 
+        margin-top: 1% !important;
+        margin-bottom: 10% !important;
 
+    }
+
+}
+
+    .barre-insta {   /* manipuler la barre au dessus du # */
+
+    height: 2px;
+    width: 40%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 1.2%;
+    margin-bottom: 8%;
+    background-color: #D2A53E;
+
+}
+
+.text-insta{
+    font-family: Lato;
+    font-weight: 700;
+    font-size: 4.5vh;
+    text-transform: uppercase
+;
+}

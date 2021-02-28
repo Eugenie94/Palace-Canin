@@ -6,6 +6,7 @@ use App\Repository\RoomRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass=RoomRepository::class)
@@ -21,21 +22,25 @@ class Room
 
     /**
      * @ORM\Column(type="string", length=120)
+     * @Assert\NotBlank(message="Vous devez renseigner un nom.")
      */
     private $name;
 
     /**
      * @ORM\Column(type="text", length=500)
+     * @Assert\NotBlank(message="Vous devez renseigner une description.")
      */
     private $content;
 
     /**
      * @ORM\Column(type="integer")
+     * @Assert\NotBlank(message="Vous devez renseigner un prix.")
      */
     private $price;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank(message="Vous devez choisir une image.")
      */
     private $image;
 

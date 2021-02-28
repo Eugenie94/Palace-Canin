@@ -40,13 +40,12 @@
                     <div class="navbar-nav ms-auto">
                         {% if is_granted('IS_AUTHENTICATED_FULLY') %}
 
-                        <a class="nav-link" href="#">
+                        <a class="nav-link bonjour" href="#">
                             Bonjour {{ app.user.firstname }} {{ app.user.lastname }}
                         </a>
 
                         {% if is_granted('ROLE_ADMIN') %}
-                            <a class="nav-link button ajouter" href="{{ path('booking_create') }}">Ajouter une catégorie
-                                de chambre</a>
+                            <a class="nav-link button ajouter" href="{{ path('booking_create') }}">Ajouter</a>
                         {% endif %}
 
                         <a class="nav-link button deconnexion" href="{{ path('app_logout') }}">Déconnexion</a>
@@ -62,9 +61,9 @@
                             <div class="col-md-3">
                                 <a class="nav-link button contact" href="{{ path('user_contact') }}">Contact</a>
 
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
         </nav>
 
         <!-- FIN NAVBAR -->

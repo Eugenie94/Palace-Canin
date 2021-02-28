@@ -1,0 +1,103 @@
+/************************************** DEBUT POLITIQUE ET CONFIDENTIALITE **************************************/
+
+.titre-politique { /* TITRE DE LA PAGE */
+    text-transform: uppercase;
+    font-size: 6vh;
+    font-family: Raleway;
+    font-weight: 700;
+    text-align: center;
+
+}
+
+
+.sommaire{ /* Titre Sommaire */
+
+    color: #D2A53E !important;
+    text-align: left;
+    font-size: 3vh;
+    margin-bottom: 2%;
+
+}
+
+.or-titre { /* Sous titre */
+
+    color: #D2A53E;
+    font-size: 3vh;
+    font-family: Raleway;
+    font-weight: 700;
+    margin-bottom: 1%;
+
+}
+
+.text-titre{  /* texte politique confidentialité */
+
+    margin-bottom: 4%;
+
+}
+
+
+.barre-politique { /* trait en or */
+
+    height: 5.1px;
+    width: 40%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 1.2%;
+    margin-bottom: 8%;
+    background-color: #D2A53E;
+
+}
+
+
+/************************************** FIN POLITIQUE ET CONFIDENTIALITE **************************************/
+
+
+
+
+/************************************** DEBUT CONDITIONS GENERALES **************************************/
+
+
+.titre-condition{  /* Titre conditions générales */
+
+    font-family: Raleway;
+    font-weight: 700;
+    color: black;
+    font-size: 6vh;
+    text-transform: uppercase;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 4%;
+
+}
+
+
+.text-condition-generale{ /* Texte conditions générales */
+
+    font-family: Raleway;
+    color: black;
+    font-size: 2vh;
+
+    text-align: justify;
+
+}
+
+.container{
+
+    margin-bottom: -19%;
+
+}
+
+
+.barre-termes { /*trait en or*/
+    height: 5.1px;
+    width: 40%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 2.8%;
+    margin-bottom: 8%;
+    background-color: #D2A53E;
+
+}
+
+
+/************************************** FIN CONDITIONS GENERALES **************************************/
