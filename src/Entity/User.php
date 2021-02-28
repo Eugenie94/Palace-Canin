@@ -7,6 +7,7 @@ use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\UserInterface;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass=UserRepository::class)
@@ -22,7 +23,9 @@ class User implements UserInterface
 
     /**
      * @ORM\Column(type="string", length=180, unique=true)
+     * @Assert\NotBlank(message="Vous devez renseigner un e-mail.")
      */
+
     private $email;
 
     /**
@@ -33,41 +36,50 @@ class User implements UserInterface
     /**
      * @var string The hashed password
      * @ORM\Column(type="string")
+     * @Assert\NotBlank(message="Vous devez renseigner un mot de passe.")
      */
+
     private $password;
 
     /**
      * @ORM\Column(type="string", length=80)
+     * @Assert\NotBlank(message="Vous devez renseigner un prénom.")
      */
     private $firstname;
 
     /**
      * @ORM\Column(type="string", length=80)
+     * @Assert\NotBlank(message="Vous devez renseigner un nom.")
      */
     private $lastname;
 
     /**
      * @ORM\Column(type="string", length=120)
+     * @Assert\NotBlank(message="Vous devez renseigner une adresse postale.")
      */
     private $address;
 
     /**
      * @ORM\Column(type="string", length=50)
+     * @Assert\NotBlank(message="Vous devez renseigner une ville.")
      */
     private $city;
 
     /**
      * @ORM\Column(type="integer")
+     * @Assert\NotBlank(message="Vous devez renseigner un code postal.")
      */
     private $zipcode;
 
     /**
      * @ORM\Column(type="integer")
+     * @Assert\NotBlank(message="Vous devez renseigner un numéro de téléphone.")
      */
     private $telephone;
 
     /**
      * @ORM\Column(type="string", length=50)
+     * @Assert\NotBlank(message="Vous devez renseigner le nom de votre chien.")
      */
     private $dog_name;
 
