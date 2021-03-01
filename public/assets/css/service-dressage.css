@@ -1,0 +1,142 @@
+.conteneur-dressage{ /* pour reduire le padding de mon contenu comme afficher sur maquette */
+
+    padding-left: 15%;
+    padding-right: 15%;
+    margin-bottom: -17%;
+
+}
+
+
+h1  /* titre bien-être */{
+
+    font-family: Lato;
+    text-transform: uppercase;
+    font-size: 40px;
+    margin-top: 2%;
+    margin-bottom: 280px;
+    text-align: center;
+
+}
+
+
+@media screen and (min-width: 200px) and (max-width: 992px) {
+
+    h1  /* titre complexe */{
+
+        font-size: 3.5vh;
+        margin-top: 12%;
+
+    }
+
+}
+
+
+.card{ /* pour retirer les cadre gris par defaut */
+
+    border: none !important;
+
+}
+
+.barre-doree { /* nouvelle barre dorée adapté a bien-etre */
+
+    height: 2px;
+    width: 40%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 1.2%;
+    background-color: #D2A53E;
+
+}
+
+
+.image-chien { /* gérer positionnement image transporteur */
+
+    width: 48%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3%;
+    margin-bottom: 7%;
+
+}
+
+.text-chien{ /* texte sous titre service bien etre */
+
+    font-family: lato;
+    font-weight: 700;
+    font-size: 2.4vh;
+    text-indent: 0 !important;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 4%;
+    margin-top: 2%;
+
+}
+
+.titre-technique{ /* titre technique d'apprentissage */
+
+    font-family: Lato;
+    text-transform: uppercase;
+    font-size: 40px;
+    margin-top: 2%;
+    margin-bottom: 280px;
+    text-align: center;
+
+}
+
+
+
+.card-title{ /*titre texte photo */
+
+    font-family: lato;
+    font-weight: 700;
+    font-size: 3vh;
+    margin-bottom: 7%;
+    margin-left: -16%;
+    margin-top: 11%;
+    text-transform: none !important;
+
+}
+
+
+.card-text{ /* texte a cote image */
+
+    font-family: lato;
+    font-weight: 500;
+    font-size: 2vh;
+    margin-bottom: 7%;
+    margin-top: 8%;
+    padding-right: 5%;
+    padding-left: 5%;
+
+}
+
+
+.titre-leurre{ /* titre massage */
+
+    margin-left: -68%;
+
+}
+
+.titre-dormir{ /* titre thalasso */
+
+    margin-left: -43%;
+
+}
+
+.titre-enfant{ /* titre viande */
+
+    margin-left: -36%;
+
+}
+
+
+.images-dressage{  /* image bien-être */
+
+    width: 90%;
+    height: auto;
+    margin-top: 10%;
+    margin-bottom: 5%;
+
+}
+

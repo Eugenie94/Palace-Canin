@@ -16,6 +16,17 @@
 
 }
 
+
+@media screen and (min-width: 200px) and (max-width: 992px) { /* gerer taille titre Notre Concept en dessous de 992 */
+
+    .concept-section1 h4{
+
+        font-size: 3.5vh;
+
+    }
+
+}
+
 .concept-section1 .row { /*margin top  pour ne pas coller le header*/
 
     margin-top: 13%;
@@ -78,6 +89,16 @@
 
 }
 
+@media screen and (min-width: 200px) and (max-width: 992px) { /* gerer taille titre nos services en dessous de 992 */
+
+    .section-title h4 {
+
+        font-size: 3.5vh;
+
+    }
+
+}
+
 iframe{ /* permet de manipuler la video */
 
     height: 14%;
@@ -85,6 +106,7 @@ iframe{ /* permet de manipuler la video */
     display:block;
     margin-right: auto;
     margin-left: auto;
+    margin-top: 6%;
 
 }
 
@@ -146,10 +168,25 @@ h4 { /* le titre de la section */
 
 .video-section p {   /* manier titre l'Essentiel */
 
-    font-family: lato;
+    font-family: Lato;
+    text-transform: capitalize;
+    font-size: 40px;
+    position: relative;
+    margin-top: 6%;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
     text-align: center;
-    font-size: 50px;
-    margin-top: 5%;
+
+
+}
+
+@media screen and (min-width: 200px) and (max-width: 992px) { /* gerer taille titre essentiel en dessous de 992 */
+
+    .video-section p {
+
+        font-size: 3.5vh;
+
+    }
 
 }
 
@@ -274,43 +311,6 @@ h4 { /* le titre de la section */
 
 @media screen and (min-width: 200px) and (max-width: 992px) { /* manier iframe en dessous de 992 */
 
-    .parent1-texte { /* englobe mon petit parent */
-
-        display: table-cell;
-        position: absolute;
-        vertical-align: middle;
-        width: 100%;
-        top: 50vh;
-
-    }
-
-    .parent-texte { /* englobe mes span */
-
-        text-align: center;
-        vertical-align: middle;
-
-    }
-
-
-    /* The typing effect */
-    @keyframes typing {
-        from {
-            width: 0
-        }
-        to {
-            width: 100%
-        }
-    }
-
-    /* The typewriter cursor effect */
-    @keyframes blink-caret {
-        from, to {
-            border-color: transparent
-        }
-        50% {
-            border-color: orange;
-        }
-    }
 
     .image-entreprise{ /* tolgate image entreprise */
 
@@ -351,7 +351,7 @@ h4 { /* le titre de la section */
     font-weight: 600;
     font-size: 2.5vh;
     color: #626262;
-    margin-top: -80px;
+    margin-top: 60px;
     text-align: center;
     margin-bottom: 65px;
 
@@ -362,6 +362,7 @@ h4 { /* le titre de la section */
 
     .hashtag {  /* manier #Le palace canin hashtag */
 
+        font-size: 2vh;
         margin-top: 1% !important;
         margin-bottom: 10% !important;
 
@@ -369,22 +370,51 @@ h4 { /* le titre de la section */
 
 }
 
-    .barre-insta {   /* manipuler la barre au dessus du # */
+
+.barre-service{
+
+    height: 2px;
+    width: 55%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 1.2%;
+    margin-bottom: 6%;
+    background-color: #D2A53E;
+
+}
+
+.barre-doree{ /* nouvelle barre dorée adapté a NOS SERVICES */
 
     height: 2px;
     width: 40%;
     margin-right: auto;
     margin-left: auto;
     margin-top: 1.2%;
-    margin-bottom: 8%;
+    margin-bottom: 4%;
     background-color: #D2A53E;
 
 }
 
+
 .text-insta{
     font-family: Lato;
-    font-weight: 700;
-    font-size: 4.5vh;
-    text-transform: uppercase
-;
+    text-transform: capitalize;
+    font-size: 40px;
+    position: relative;
+    margin-top: 6%;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+
+}
+
+@media screen and (min-width: 200px) and (max-width: 992px) { /* gerer taille titre INSTA en dessous de 992 */
+
+
+    .text-insta{
+
+        font-size: 3.5vh;
+
+    }
+
 }

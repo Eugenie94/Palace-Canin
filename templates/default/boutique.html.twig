@@ -1,0 +1,136 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Palace Canin | Boutique {% endblock %}
+
+
+{% block css %}
+
+    <link rel="stylesheet" href="{{ asset('assets/css/service-boutique.css') }}">
+
+{% endblock %}
+
+
+
+{% block body %}
+
+
+    <h1>Service boutique</h1>
+
+    <div class="conteneur-boutique"></div>
+
+    <div class="barre-doree"></div>
+    <div class="row">
+
+        <div class="col-md-12 text-center">
+
+            <img src="{{ asset('assets/image/boutique1.jpg') }}" class="card-img-top image-chien"
+                 alt="transport">
+
+        </div>
+
+    </div>
+
+
+    <div class="row">
+
+        <div class="col-md-12 text-center">
+
+            <span class="titre-technique">« Ne repartez du Palace Canin sans faire un ultime cadeau à votre compagnon »</span>
+
+            <div class="barre-doree"></div>
+
+        </div>
+    </div>
+
+
+    <div class="row justify-content-center">
+
+        <div class="col-md-6 text-chien">
+
+            <span class="text-chien">Bienvenue dans la boutique chien de zooplus! Nous vous proposons un large choix d' accessoires pour chien et de croquettes pour chien. Choisissez parmi plus de 30 marques de nourriture et 1 500 accessoires pour chien tels que niche pour chien, cage de transport et tondeuse pour chien. Bons achats dans la boutique chien!
+                .<br><br>
+                Le chien se tient aux côtés de l'homme depuis plus de mille ans. En France, le nombre de propriétaires de chien se compte en millions, et non sans raison : un chien, c'est bien plus qu'un simple animal de compagnie. Il est un amusant compagnon de jeux, un doux confident, un véritable compagnon de vie. C'est bien connu, le chien est le meilleur ami de l'homme. </span>
+
+        </div>
+    </div>
+
+
+
+    <div class="container conteneur-boutique">
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+
+                        <h3 class="card-title titre-nourriture">Comment choisir sa nourriture?</h3>
+                        <p class="card-text">Le chien se tient aux côtés de l'homme depuis plus de mille ans. En France, le nombre de propriétaires de chien se compte en millions, et non sans raison : un chien, c'est bien plus qu'un simple animal de compagnie. Il est un amusant compagnon de jeux, un doux confident, un véritable compagnon de vie.
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        <img src="{{ asset('assets/image/boutique2.jpg') }}" class="card-img-top images-boutique"
+                             alt="boutique">
+                        <h5 class="card-title"></h5>
+                        <p class="card-text"></p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        <img src="{{ asset('assets/image/boutique3.jpg') }}" class="card-img-top images-boutique"
+                             alt="boutique">
+                        <h5 class="card-title"></h5>
+                        <p class="card-text">
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title titre-accessoires">Quels sont les meilleurs accessoires pour chien ?
+                        </h3>
+                        <p class="card-text accessoires">Parmi la grande variété de gamelles pour chien disponibles sur notre boutique, chaque chien pourra y trouver son compte. Il en existe non seulement de différentes tailles, mais aussi de différents matériaux : acier inoxydable, céramique ou encore plastique.</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title titre-pourquoi">Pourquoi acheter à la boutique  ? </h3>
+                        <p class="card-text pourquoi">Parmi la gamme de produits pour chien de zooplus, vous trouverez un très large choix de produits relatifs aux besoins en alimentation et en accessoires pour chien. Des produits de base jusqu'aux produits les plus spécifiques, nous disposons d'une vaste gamme d'articles pour chien.</p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        <img src="{{ asset('assets/image/boutique4.jpg') }}" class="card-img-top images-boutique"
+                             alt="transport">
+                        <h5 class="card-title"></h5>
+                        <p class="card-text"></p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+{% endblock %}

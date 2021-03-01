@@ -1,0 +1,141 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Palace Canin | Bien-être{% endblock %}
+
+
+{% block css %}
+
+    <link rel="stylesheet" href="{{ asset('assets/css/service-bienetre.css') }}">
+
+{% endblock %}
+
+
+{% block body %}
+
+
+    <h1>Service Bien-être</h1>
+
+    <div class="conteneur-bienetre"></div>
+
+
+    <div class="barre-doree"></div>
+
+    <div class="container conteneur-bienetre">
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+
+                        <h3 class="card-title titre-viande">Viande Label Rouge Certifée</h3>
+                        <p class="card-text">Nous sommes en partenariat avec 8
+                            agriculteurs de ferme biologique et vérifié
+                            par le ministre de la santé. Nous nous
+                            procurons uniquement dans la catégorie
+                            label-rouge pour le bien-être de vos
+                            compagnons adorés. Nous voulons la
+                            meilleure alimentation possible pour leur
+                            permettre de s'épanouir convenablement
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        <img src="{{ asset('assets/image/bienetre3.jpg') }}" class="card-img-top images-bienetre"
+                             alt="transport">
+                        <h5 class="card-title"></h5>
+                        <p class="card-text"></p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        <img src="{{ asset('assets/image/bienetre2.jpg') }}" class="card-img-top images-bienetre"
+                             alt="transport">
+                        <h5 class="card-title"></h5>
+                        <p class="card-text">
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title titre-massage">Le Massage</h3>
+                        <p class="card-text charte-securite">Il permet d’améliorer la circulation sanguine.
+                            Il apporte du tonus.
+                            Il soulage les douleurs musculaires.
+                            Il permet d’apaiser les toutous stressés en
+                            leur faisant prendre conscience de leur corps.
+                            Il permet d’éliminer les points de tension.
+                            C’est une source de bien-être.</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title titre-thalasso">Le voyage, tout en gaité </h3>
+                        <p class="card-text voyage">Votre chien aura à sa disposition plusieurs agréments durant
+                            son voyage jusqu'à vous.
+                            Un coussin 100% pur fourrure de vison
+                            Un doudou qui lui sera confié et qu'il pourra garder en
+                            repartant avec vous.
+                            Des jouet i-tech dernier crie qui lui permet d'apprendre les
+                            gestes d'obéissance
+                            De la musique Beethoven, Mozart, ou encore Chopin pour
+                            développer sa culture musicale.</p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        <img src="{{ asset('assets/image/bienetre1.jpg') }}" class="card-img-top images-bienetre"
+                             alt="transport">
+                        <h5 class="card-title"></h5>
+                        <p class="card-text"></p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="barre-doree"></div>
+        <div class="row">
+
+            <div class="col-md-12 text-center">
+
+                <img src="{{ asset('assets/image/bienetre4.jpg') }}" class="card-img-top image-psy"
+                     alt="transport">
+
+            </div>
+
+        </div>
+
+
+        <div class="row">
+
+            <div class="col-md-12 text-center">
+                <span class="text-psy">A l'aide de Stéphane Kowalski, nous avons mis en œuvre une technique révolutionnaire pour que le chien se sente apaisé et calme. Nos méthodes sont l'écoute, la compréhension, le dialogue ainsi que des test de logique pour que votre toutou se sente serein lors de son séjour à l'hôpital. Ce service est disponible uniquement dans notre Hôtel. </span>
+                <span class="text-psy-jaune">Réservation du service au moins 3 mois à l'avance.</span>
+
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}

@@ -1,0 +1,115 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Palace Canin | Toilettage{% endblock %}
+
+
+{% block css %}
+
+    <link rel="stylesheet" href="{{ asset('assets/css/service-toilettage.css') }}">
+
+{% endblock %}
+
+
+{% block body %}
+
+
+    <h1>Service Toilettage</h1>
+
+    <div class="conteneur-toilettage"></div>
+
+
+    <div class="barre-doree"></div>
+
+    <div class="container conteneur-toilettage">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card">
+                    <div class="card-body">
+
+                        <h3 class="card-title titre-douche">Nos soins capillaires et bien-être</h3>
+                        <p class="card-text">DORLOTEZ VOTRE ANIMAL DE COMPAGNIE CHIC DANS NOTRE
+                            LUXUEUX SALON & SPA DU POSH PET HOTEL.
+                            Notre personnel Posh possède une expérience avec toutes les
+                            races d'animaux de compagnie se spécialisant dans les coupes
+                            standard et d'exposition. Nos stylistes et baigneurs chics savent
+                            comment fournir la baignoire spa parfaite pour les coupes de
+                            cheveux spécifiques à la race, les paw-dicures pour compléter
+                            les relookings, laissant votreanimal bien-aimé plus frais et plus
+                            heureux que jamais!
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <img src="{{ asset('assets/image/toilettage1.png') }}" class="card-img-top image-douche"
+                                 alt="transport">
+                            <h5 class="card-title"></h5>
+                            <p class="card-text"></p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="barre-doree"></div>
+
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col">
+                <div class="card">
+                    <img src="{{ asset('assets/image/toilettage6.jpg') }}" class="card-img-top images-toilettage"
+                         alt="toilettage">
+                    <div class="card-body">
+
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img src="{{ asset('assets/image/toilettage4.png') }}" class="card-img-top images-toilettage"
+                         alt="toilettage">
+                    <div class="card-body">
+
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img src="{{ asset('assets/image/toilettage7.png') }}" class="card-img-top images-toilettage"
+                         alt="toilettage">
+                    <div class="card-body">
+
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="container">
+            <h3>Service Spa</h3>
+
+            <div class="barre-doree"></div>
+            <ul class="list">
+                <li><i class="fas fa-check"></i>Baignade</li>
+                <li><i class="fas fa-check"></i>Coupes spécifiques à la race</li>
+                <li><i class="fas fa-check"></i>Coupe brésilienne</li>
+                <li><i class="fas fa-check"></i>Patte-dicures</li>
+                <li><i class="fas fa-check"></i>Traitement de blanchiment des yeux</li>
+                <li><i class="fas fa-check"></i>Soins du visage</li>
+                <li><i class="fas fa-check"></i>Démêler</li>
+                <li><i class="fas fa-check"></i>De-Shedding</li>
+                <li><i class="fas fa-check"></i>Pochoir / paillettes</li>
+                <li><i class="fas fa-check"></i>Mourir de fourrure</li>
+                <li><i class="fas fa-check"></i>Bains d'aromathérapie</li>
+            </ul>
+        </div>
+
+
+    </div>
+
+
+{% endblock %}

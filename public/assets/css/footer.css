@@ -67,14 +67,7 @@ h3{  /* titre footer palace canin */
     }
 }
 
-@media screen and (min-width: 200px) and (max-width: 750px) {
 
-    .parent-pictogrammes{ /* gerer le positionnement des pictogrammes */
-
-        flex-direction: inherit;
-    }
-
-}
 
 
 .parent-pictogrammes{ /* gerer le positionnement des pictogrammes */
@@ -101,6 +94,7 @@ h3{  /* titre footer palace canin */
     .fab{ /* pictogramme */
 
         display: none;
+
     }
 
 }

@@ -1,0 +1,156 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Palace Canin | Dressage {% endblock %}
+
+
+{% block css %}
+
+    <link rel="stylesheet" href="{{ asset('assets/css/service-dressage.css') }}">
+
+{% endblock %}
+
+
+
+{% block body %}
+
+
+    <h1>Service Dressage</h1>
+
+    <div class="conteneur-dressage"></div>
+
+    <div class="barre-doree"></div>
+    <div class="row">
+
+        <div class="col-md-12 text-center">
+
+            <img src="{{ asset('assets/image/dressage1.jpg') }}" class="card-img-top image-chien"
+                 alt="transport">
+
+        </div>
+
+    </div>
+
+
+    <div class="row">
+
+        <div class="col-md-12 text-center">
+
+            <span class="titre-technique">Nos techniques d'apprentissage</span>
+
+            <div class="barre-doree"></div>
+
+        </div>
+    </div>
+
+
+    <div class="row justify-content-center">
+
+        <div class="col-md-6 text-chien">
+
+            <span class="text-chien">Nos compétences de dressage sont reconnues dans le monde entier de part le niveau d'expériences de nos dresseur. Nous avons également travaillé pour des personnalités très fortunés. De ce fait nous serons à l'écoute de votre compagnon à chaque instant de la journée.<br><br>
+                Nos équipes se composent de diplomés de grande université vétérinaire et
+dressage et de spécialiste du comportement animal. Nous souhaitons offrir
+le meilleur à votre toutou preferé. Dans notre hotel, votre chient acquiert
+une meilleure obeissance et contrôle de lui-même. Nos techniques ont été
+approuvé par le meilleur dresseur au monde Thomas Durand.</span>
+
+        </div>
+    </div>
+
+
+
+    <div class="container conteneur-dressage">
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+
+                        <h3 class="card-title titre-leurre">Le leurre</h3>
+                        <p class="card-text">Nous sommes en partenariat avec 8
+                            agriculteurs de ferme biologique et vérifié
+                            par le ministre de la santé. Nous nous
+                            procurons uniquement dans la catégorie
+                            label-rouge pour le bien-être de vos
+                            compagnons adorés. Nous voulons la
+                            meilleure alimentation possible pour leur
+                            permettre de s'épanouir convenablement
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        <img src="{{ asset('assets/image/dressage2.jpg') }}" class="card-img-top images-dressage"
+                             alt="transport">
+                        <h5 class="card-title"></h5>
+                        <p class="card-text"></p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        <img src="{{ asset('assets/image/dressage3.jpg') }}" class="card-img-top images-dressage"
+                             alt="transport">
+                        <h5 class="card-title"></h5>
+                        <p class="card-text">
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title titre-dormir">Où le faire dormir?
+                        </h3>
+                        <p class="card-text dormir">La place de son panier est une question très
+                            importante. Mal placé, il risque d'être source de
+                            difficulté au quotidien. En effet le sommeil de
+                            votre chien est précieux. Ainsi, évitez les sources
+                            sonores, les lieux de passage ou les sources de
+                            chaleur/froid</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title titre-enfant">Le chien et les enfants</h3>
+                        <p class="card-text enfant">La relation entre le chiot et l'enfant et souvent
+                            extraordinaire et site intuitive ! Cependant, des
+                            difficultés de communication peut parfois paraitre.
+                            Il est donc primordial de les comprendre, et de les
+                            désamorcer au plus vite, qu'il s'agisse du bien-être
+                            de votre enfant ou même de ce petit chiot.</p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        <img src="{{ asset('assets/image/dressage4.jpg') }}" class="card-img-top images-dressage"
+                             alt="transport">
+                        <h5 class="card-title"></h5>
+                        <p class="card-text"></p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+{% endblock %}
