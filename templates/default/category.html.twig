@@ -1,4 +1,4 @@
-{% extends 'base.html.twig' %}
+{% extends "base.html.twig" %}
 
 {% block title %}Palace Canin | Nos chambres{% endblock %}
 
@@ -9,8 +9,9 @@
 
 {% endblock %}
 
-{% block body %}
 
+
+{% block body %}
 
     <div class="p-3 mx-auto text-center">
         <h1 class="display-4">{{ category.name }}</h1>
@@ -27,7 +28,7 @@
                                 <h5 class="card-title">{{ room.name }}</h5>
                                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                                 <a href="{{ path('default_category', {
-                                    'category' : room.category.alias,
+                                    'category' : room.category.0.alias,
                                     'alias' : room.alias,
                                     'id' : room.id
                                 }) }}"  class="btn btn-primary">Go somewhere</a>

@@ -7,6 +7,7 @@ namespace App\Controller;
 use App\Entity\Category;
 use App\Entity\Room;
 
+use App\Repository\CategoryRepository;
 use App\Repository\ServiceRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
@@ -23,10 +24,7 @@ class DefaultController extends AbstractController
     public function index()
     {
 
-        # Récupérer depuis notre model (entité) les articles de la BDD.
-        # $rooms = $this->getDoctrine()
-           # ->getRepository(Room::class)
-           # ->findAll();
+
 
         # On retourne au client une réponse HTTP.
         # return new Response("<h1>Page Accueil</h1>");
@@ -38,13 +36,13 @@ class DefaultController extends AbstractController
      * http://localhost:8000/category
      * @Route("/category", name="default_category", methods={"GET"})
      */
-    public function category(Category $category, Room $room)
+    public function category(CategoryRepository $categoryRepository)
     {
-        return $this->render('default/category.html.twig', [
-            'category' => $category,
-            'room' => $room
 
+        return $this->render('default/category.html.twig', [
+            'category' => $categoryRepository->findAll()
         ]);
+
     }
 
 

@@ -1,0 +1,49 @@
+h1 { /* titre chambres */
+
+    font-family: Lato;
+    text-transform: uppercase;
+    font-size: 40px;
+    position: relative;
+    margin-top: 3.1%;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+
+}
+
+
+.barre-doree { /* nouvelle barre dorée adapté a bien-etre */
+
+    height: 2px;
+    width: 40%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: -1.4%;
+    background-color: #D2A53E;
+}
+
+.text-detail { /* paragraphe en dessous du titre*/
+    margin-top: 50px;
+    margin-bottom: 60px;
+}
+
+.btn-primary { /*pour la couleur des bouttons*/
+
+    background-color: #D2A53E !important;
+    border: none !important;
+}
+
+.chambre { /*pour la disposition des images*/
+
+    width: 181px;
+    height: 127px;
+    margin-top: 50%;
+}
+
+.card-body { /*padding pour resserer le texte*/
+
+    padding: 15px;
+}
+
+
+
