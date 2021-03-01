@@ -1,15 +1,22 @@
 #form{
+
     margin-bottom: -70%;
+
 }
 
-.barre-doree{   /* manipuler la barre au dessus du # */
+.bg-light{
+
+    background: none !important;
+}
+
+.barre-doree {   /* manipuler la barre au dessus du # */
 
     height: 2px;
     width: 40%;
     margin-right: auto;
     margin-left: auto;
-    margin-top: 1.2%;
-    margin-bottom: -2%;
+    margin-top: -1%;
+    margin-bottom: 1%;
     background-color: #D2A53E;
 
 }
@@ -29,7 +36,6 @@
     font-size: 2.3vh;
     margin-bottom: 2%;
     margin-top: 3%;
-
 }
 
 
@@ -56,6 +62,7 @@
     width: 172px !important;
     display: block;
     margin : auto;
+    margin-top: 13%;
 
 }
 
@@ -75,10 +82,28 @@
 
 
 
-
 .py-5{ /* pour gerer le formulaire */
 
     width: 70%;
     margin-right: auto;
     margin-left: auto;
+    margin-bottom: -15%;
+}
+
+
+.form-group {  /* regroupe les class des champs */
+
+    margin-top: 1rem;
+
+}
+
+.badge-danger { /* color de mon badge error si besoin est */
+
+    color: red;
+
+}
+
+.ck .ck-content { /* modifier taille area description */
+
+    height: 200px;
 }

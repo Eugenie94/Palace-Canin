@@ -8,6 +8,7 @@ use App\Entity\Room;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
+use Symfony\Component\Form\Extension\Core\Type\NumberType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
@@ -53,13 +54,17 @@ class BookingController extends AbstractController
                 'choice_label' => 'name',
             ])
             ->add('content', TextareaType::class, [
-                'label' => false,
+                'label'  => "Renseignez une description",
+                'attr' => ['class' => 'demande']
             ])
             ->add('image', FileType::class, [
                 'label' => "Choisissez votre image d'illustration",
             ])
+            ->add('price', NumberType::class, [
+                'label' => "Renseigner un prix",
+            ])
             ->add('submit', SubmitType::class, [
-                'label' => "Publier ma chambre",
+                'label' => "Publier",
             ])
             ->getForm();
 
@@ -106,11 +111,11 @@ class BookingController extends AbstractController
 
 
             # Notification de confirmation
-            $this->addFlash('success', 'Félicitation, votre chambre est en ligne.');
+            $this->addFlash('success', 'Félicitations, votre chambre est en ligne.');
 
 
             # Redirection vers la nouvelle chambre
-            return $this->redirectToRoute('booking_create', [
+            return $this->redirectToRoute('default_category', [
                 'category' => $room->getCategory()->getAlias(),
                 'alias' => $room->getAlias(),
                 'id' => $room->getId()
@@ -134,4 +139,7 @@ class BookingController extends AbstractController
         return $this->render('booking/reservation.html.twig');
     }
 
+
 }
+
+

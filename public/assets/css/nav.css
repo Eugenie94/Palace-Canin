@@ -110,6 +110,16 @@ ______________________
 }
 
 
+@media screen and (min-width: 200px) and (max-width: 992px) {
+
+    #navbarNavDropdown {
+
+        width: 100% !important;
+
+    }
+
+}
+
 .navbar { /* NAVBAR arriere blanc de navbar */
 
     background-color: rgba(232, 232, 230, 0.6); /* 0.5 - semi-transparent */
@@ -354,6 +364,14 @@ ______________________
 
     }
 
+    .lien-responsive:hover{
+
+        background: #D2A532;
+        color: white;
+
+    }
+
+
     .register:hover, .login:hover, .contact:hover, .deconnexion:hover, .ajouter:hover { /* qui permet de centrer mes boutons bold au milieu de leur div */
 
         padding: 0 !important;
@@ -361,6 +379,11 @@ ______________________
 
     }
 
+    .nav-link:hover{
+
+        background: #D2A532!important;
+
+    }
 
     .button { /* boutons dorés */
 
@@ -370,6 +393,13 @@ ______________________
         background: none !important;
         padding: 0 !important;
         margin: 0 !important;
+
+    }
+
+    .lien-responsive:hover{ /* lien noir bcg dorée */
+
+        color: white;
+        background-color: #D2A532;
 
     }
 

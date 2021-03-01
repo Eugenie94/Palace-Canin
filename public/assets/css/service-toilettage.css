@@ -117,9 +117,30 @@ h3{ /* titre service spa */
 
 }
 
+@media screen and (min-width: 200px) and (max-width: 992px) {
+
+    h3  /* titre complexe */{
+
+        font-size: 3.5vh;
+        margin-top: 12%;
+
+    }
+
+}
+
+
+
 .list { /* retirer liste a puces pour service spa liste */
 
-    text-align: center;
+    padding-left: 30%;
+    padding-right: 30%;
     list-style: none;
+    text-align: center;
+}
+
+.fas{ /* icone checked */
+
+    color: #D2A532;
+    margin-right: 1.5%;
 
 }

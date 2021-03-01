@@ -1,17 +1,84 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Palace Canin | Ajouter une chambre{% endblock %}
+{% block title %}Palace Canin | Création de chambres{% endblock %}
+
+
+{% block ckeditor %}
+    {{ parent() }}
+    <script src="https://cdn.ckeditor.com/ckeditor5/25.0.0/classic/ckeditor.js"></script>
+    <script>
+        ClassicEditor.create(document.querySelector('.demande'));
+    </script>
+{% endblock %}
+
+
+{% block css %}
+
+    <link rel="stylesheet" href="{{ asset('assets/css/create.css') }}">
+
+{% endblock %}
+
 
 {% block body %}
+
+    {% for label, messages in app.flashes %}
+        {% for message in messages %}
+            <div class="alert alert-{{ label }}">
+                {{ message }}
+            </div>
+        {% endfor %}
+    {% endfor %}
+
     <div class="p-3 mx-auto text-center">
-        <h1 class="display-4">Création de chambre</h1>
+        <h1 class="display-4">Création de chambres</h1>
     </div>
+
+    <div class="barre-doree"></div>
 
     <div class="py-5 bg-light">
         <div class="container">
             <div class="row">
                 <div class="col-10 mx-auto">
-                    {{ form(form, {attr: {novalidate: 'novalidate'}}) }}
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            {{ form_start(form, {attr: {novalidate: 'novalidate'}}) }}
+
+                            {{ form_row(form.name) }}
+                            {{ form_row(form.category) }}
+
+
+                        </div>
+
+                        <div class="col-md-6">
+
+                            {{ form_row(form.image) }}
+                            {{ form_row(form.price) }}
+
+                        </div>
+
+                        <div class="row">
+
+                            <div class="col-md-12">
+
+                                {{ form_row(form.content) }}
+
+                            </div>
+
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12">
+
+                                {{ form_row(form.submit) }}
+
+                                {{ form_end(form) }}
+
+                            </div>
+                        </div>
+
+                    </div>
+
                 </div>
             </div>
         </div>

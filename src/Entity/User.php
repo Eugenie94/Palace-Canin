@@ -25,7 +25,6 @@ class User implements UserInterface
      * @ORM\Column(type="string", length=180, unique=true)
      * @Assert\NotBlank(message="Vous devez renseigner un e-mail.")
      */
-
     private $email;
 
     /**
@@ -36,11 +35,9 @@ class User implements UserInterface
     /**
      * @var string The hashed password
      * @ORM\Column(type="string")
-     * @Assert\NotBlank(message="Vous devez renseigner un mot de passe.")
+     * @Assert\NotBlank(message="Vous devez renseigner un mot de passe")
      */
-
     private $password;
-
     /**
      * @ORM\Column(type="string", length=80)
      * @Assert\NotBlank(message="Vous devez renseigner un prénom.")

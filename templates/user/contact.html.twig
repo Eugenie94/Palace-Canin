@@ -2,16 +2,97 @@
 
 {% block title %}Palace Canin | Contact{% endblock %}
 
+
+{% block ckeditor %}
+    {{ parent() }}
+    <script src="https://cdn.ckeditor.com/ckeditor5/25.0.0/classic/ckeditor.js"></script>
+    <script>
+        ClassicEditor.create(document.querySelector('.demande'));
+    </script>
+{% endblock %}
+
+
+{% block css %}
+
+    <link rel="stylesheet" href="{{ asset('assets/css/contact.css') }}">
+
+{% endblock %}
+
+
 {% block body %}
+
+    {% for label, messages in app.flashes %}
+        {% for message in messages %}
+            <div class="alert alert-{{ label }}">
+                {{ message }}
+            </div>
+        {% endfor %}
+    {% endfor %}
+
     <div class="p-3 mx-auto text-center">
         <h1 class="display-4">Laissez nous un message</h1>
     </div>
+
+    <div class="barre-doree"></div>
 
     <div class="py-5 bg-light">
         <div class="container">
             <div class="row">
                 <div class="col-10 mx-auto">
-                    {{ form(form, {attr: {novalidate: 'novalidate'}}) }}
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            {{ form_start(form, {attr: {novalidate: 'novalidate'}}) }}
+
+                            {{ form_row(form.firstname) }}
+                            {{ form_row(form.email) }}
+
+
+                        </div>
+
+                        <div class="col-md-6">
+
+                            {{ form_row(form.lastname) }}
+                            {{ form_row(form.telephone) }}
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="row">
+
+                        <div class="col-md-12">
+
+                            {{ form_row(form.subject) }}
+
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+
+                        <div class="col-md-12">
+
+                            {{ form_row(form.message) }}
+
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+
+                        <div class="col-md-12">
+
+                            {{ form_row(form.submit) }}
+
+                            {{ form_end(form) }}
+
+                        </div>
+
+                    </div>
+
                 </div>
             </div>
         </div>
