@@ -113,25 +113,13 @@ iframe{ /* permet de manipuler la video */
 @media screen and (min-width: 200px) and (max-width: 992px) { /* manier iframe en dessous de 992 */
 
 
-   .video{ /* permet de manipuler la video */
+    .video{ /* permet de manipuler la video */
 
         height: 4% !important;
         width: 65% !important;
 
     }
 
-<<<<<<< HEAD
-    /* separateur noir */
-    height: 1.1px;
-    width: 40%;
-
-    margin-right: auto;
-    margin-left: auto;
-    margin-top: 0.2%;
-    margin-bottom: 8%;
-    background-color: #D2A53E;
-=======
->>>>>>> eugenie
 }
 
 .single-service {  /* gerer les encadrer des services */
@@ -202,7 +190,7 @@ h4 { /* le titre de la section */
 
 }
 
-    /* DEBUT RECTANGLE */
+/* DEBUT RECTANGLE */
 
 .rectangle{  /* encadré noir */
 
@@ -226,7 +214,7 @@ h4 { /* le titre de la section */
     }
 }
 
-    .confiance{  /* phrase ILS NOUS FONT CONFIANCE */
+.confiance{  /* phrase ILS NOUS FONT CONFIANCE */
 
     font-family: Raleway;
     font-weight: 400;
@@ -283,10 +271,6 @@ h4 { /* le titre de la section */
     height: auto;
 
 }
-<<<<<<< HEAD
-h6 {
-    margin-top: 10%;
-=======
 
 
 .parent-image-entreprise{  /* parent image entreprise */
@@ -294,7 +278,6 @@ h6 {
     padding-left: 7%;
     padding-right: 14%;
 
->>>>>>> eugenie
 }
 
 .image-entreprise{ /* tolgate image entreprise */
@@ -328,49 +311,6 @@ h6 {
 
 @media screen and (min-width: 200px) and (max-width: 992px) { /* manier iframe en dessous de 992 */
 
-<<<<<<< HEAD:public/assets/css/pageindex.css
-    .parent1-texte { /* englobe mon petit parent */
-
-        display: table-cell;
-        position: absolute;
-        vertical-align: middle;
-        width: 100%;
-        top: 50vh;
-
-    }
-
-<<<<<<< HEAD
-.video-section p {
-=======
-    .parent-texte { /* englobe mes span */
-
-        text-align: center;
-        vertical-align: middle;
-
-    }
-
-
-    /* The typing effect */
-    @keyframes typing {
-        from {
-            width: 0
-        }
-        to {
-            width: 100%
-        }
-    }
-
-    /* The typewriter cursor effect */
-    @keyframes blink-caret {
-        from, to {
-            border-color: transparent
-        }
-        50% {
-            border-color: orange;
-        }
-    }
-=======
->>>>>>> eugenie:public/assets/css/index.css
 
     .image-entreprise{ /* tolgate image entreprise */
 
@@ -403,10 +343,9 @@ h6 {
     }
 }
 
-    /* FIN RECTANGLE */
+/* FIN RECTANGLE */
 
 .hashtag {  /* manier #Le palace canin hashtag */
->>>>>>> eugenie
 
     font-family: lato;
     font-weight: 600;
@@ -418,31 +357,10 @@ h6 {
 
 }
 
-/**INSTAGRAM**/
 
-.hashtag {
-    margin-top: -80px;
-    text-align: center;
-    margin-bottom: 65px;
-}
-
-<<<<<<< HEAD
-.barre-insta {
-    height: 1.1px;
-    width: 40%;
-    color: #D2A53E;
-    margin-right: auto;
-    margin-left: auto;
-    margin-top: 1.2%;
-    margin-bottom: 8%;
-    background-color: #D2A53E;
-
-}
-=======
 @media screen and (min-width: 200px) and (max-width: 992px) { /* manier hstag palace en dessous de 992 */
 
     .hashtag {  /* manier #Le palace canin hashtag */
->>>>>>> eugenie
 
         font-size: 2vh;
         margin-top: 1% !important;
