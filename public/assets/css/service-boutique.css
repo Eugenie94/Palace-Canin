@@ -112,6 +112,20 @@ h1  /* titre boutique */{
 
 }
 
+.titre-technique{
+
+    font-family: lato;
+    font-weight: 700;
+    font-size: 3vh;
+    margin-bottom: 7%;
+    margin-top: 8%;
+    padding-right: 5%;
+    padding-left: 5%;
+
+
+}
+
+
 
 .titre-nourriture{ /* titre choisir sa nourriture */
 

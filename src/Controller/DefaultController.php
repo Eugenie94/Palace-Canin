@@ -6,16 +6,17 @@ namespace App\Controller;
 # Mettre curseur sur Response et import et le lien qui a en bas
 use App\Entity\Category;
 use App\Entity\Room;
-use App\Repository\CategoryRepository;
+
 use App\Repository\ServiceRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 class DefaultController extends AbstractController
+
 {
 
     /**
+     * @Route ("/", name="default_index", methods={"GET"})
      * Page d'Accueil
      * http://localhost:8000/
      */
@@ -34,13 +35,15 @@ class DefaultController extends AbstractController
 
     /**
      * Page category : Affiche les catégories de chambre
-     * http://localhost:8000/room
-     * @Route("/room", name="default_room", methods={"GET"})
+     * http://localhost:8000/category
+     * @Route("/category", name="default_category", methods={"GET"})
      */
-    public function category(CategoryRepository $categoryRepository)
+    public function category(Category $category, Room $room)
     {
         return $this->render('default/category.html.twig', [
-            'categories' => $categoryRepository->findAll()
+            'category' => $category,
+            'room' => $room
+
         ]);
     }
 

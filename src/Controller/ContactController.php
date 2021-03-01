@@ -5,6 +5,7 @@ namespace App\Controller;
 
 use App\Entity\Contact;
 
+use App\Entity\User;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\TelType;
@@ -14,7 +15,7 @@ use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
-use Symfony\Component\String\Slugger\SluggerInterface;
+
 
 
 /**
@@ -31,7 +32,7 @@ class ContactController extends AbstractController
      * @param Request $request
      * @return Response
      */
-    public function create(Request $request, SluggerInterface $slugger): Response
+    public function create(Request $request): Response
     {
         # Création d'un nouveau user VIDE
         $contact = new Contact();
@@ -55,6 +56,7 @@ class ContactController extends AbstractController
             ])
             ->add('message', TextType::class, [
                 'label' => "Message",
+                'attr' => ['class' => 'demande']
             ])
             ->add('submit', SubmitType::class, [
                 'label' => "Valider",
@@ -68,15 +70,23 @@ class ContactController extends AbstractController
         if($form->isSubmitted() && $form->isValid()) {
 
 
+            $contact->setCreatedAt(new \DateTime);
+
             # Insertion dans la BDD
             $em = $this->getDoctrine()->getManager();
             $em->persist($contact);
             $em->flush();
 
 
+            # Notification de confirmation
+            $this->addFlash('success', 'Félicitations, votre message nous a bien ete transmis.');
+
+
             # Redirection
-            return $this->redirectToRoute('index'); #alert message a bien été envoyé
+            # TODO faire redirect to route vers la page PROFIL qu'on va creer apres
+            return $this->redirectToRoute('user_contact'); #alert message a bien été envoyé
         }
+
 
         # Passer le formulaire à la vue
         return $this->render('user/contact.html.twig', [

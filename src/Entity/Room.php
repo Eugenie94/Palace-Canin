@@ -61,7 +61,7 @@ class Room
 
     /**
      * @ORM\ManyToOne(targetEntity=User::class, inversedBy="rooms")
-     * @ORM\JoinColumn(nullable=false)
+     * @ORM\JoinColumn(nullable=true)
      */
     private $user;
 
