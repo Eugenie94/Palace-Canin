@@ -1,0 +1,82 @@
+#form{
+    margin-bottom: -70%;
+}
+
+.barre-insta {   /* manipuler la barre au dessus du # */
+
+    height: 2px;
+    width: 40%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 1.2%;
+    margin-bottom: -2%;
+    background-color: #D2A53E;
+
+}
+
+.display-4{ /* Titre enregistrez vous */
+
+    font-family: Lato;
+    font-size: 7vh;
+    margin-bottom: 2%;
+
+}
+
+.required{ /* nom des champs */
+
+    font-family: Lato;
+    font-weight: 500;
+    font-size: 2.3vh;
+    margin-top: 5%;
+
+}
+
+.form-group{ /* champs */
+
+    color: #D2A532;
+
+}
+
+#form_telephone{ /* me permet de manier telephone champs pour creer un espace entre lui meme et le bouton inscription */
+
+    margin-bottom: 10%;
+
+}
+
+.btn-primary {  /* bouton inscription */
+
+    font-family: Lato;
+    font-weight: 500;
+    font-size: 2.8vh;
+    border: 1px solid #D2A532;
+    border-radius: 26px !important;
+    background-color: #D2A532;
+    width: 172px !important;
+    display: block;
+    margin : auto;
+
+}
+
+
+.btn-primary:hover {  /* survol bouton inscription */
+
+    font-family: Lato;
+    font-weight: 500;
+    font-size: 2.8vh;
+    border: 1px solid #D2A532;
+    border-radius: 26px !important;
+    background-color: #D2A532;
+    width: 172px !important;
+    display: block;
+    margin : auto;
+
+}
+
+
+
+.py-5{ /* pour gerer le formulaire */
+
+    width: 40%;
+    margin-right: auto;
+    margin-left: auto;
+}

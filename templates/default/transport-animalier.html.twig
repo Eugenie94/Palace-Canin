@@ -1,0 +1,173 @@
+{% extends 'base.html.twig' %}
+
+
+{% block title %}Palace Canin | Transport Animalier{% endblock %}
+
+{% block css %}
+
+    <link rel="stylesheet" href="{{ asset('assets/css/service-transport.css') }}">
+
+{% endblock %}
+
+
+
+{% block body %}
+
+
+
+
+    <h1>Service Transport Animalier</h1>
+
+    <div class="conteneur-transport"></div>
+
+
+    <div class="barre-doree"></div>
+
+    <div class="row justify-content-center">
+
+        <div class="col-md-6 text-center text-transport">
+
+              <span class="text-transport">Nous assurons le deplacement de votre animal canin d’un point A à un point B en toute
+sécurité et confort pour que vous soyez totalement libre de vos mouvements
+</span>
+
+        </div>
+    </div>
+
+    <div class="container conteneur-transport">
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+
+                        <h3 class="card-title titre-methode">Nos méthodes de transports</h3>
+                        <p class="card-text">Notre personnel Posh possède une expérience avec toutes les
+                            races d'animaux de compagnie se spécialisant dans les coupes
+                            standard et d'exposition. Nos stylistes et baigneurs chics savent
+                            comment fournir la baignoire spa parfaite pour les coupes de
+                            cheveux spécifiques à la race, les paw-dicures pour compléter
+                            les relookings, laissant votre animal bien-aimé plus frais et plus
+                            heureux que jamais!
+                            Nos véhicules sont équipés d'une climatisation et un chauffage
+                            i-tech ainsi que des sièges cuir 100% véritable.</p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        <img src="{{ asset('assets/image/taxi_animalier.jpg') }}" class="card-img-top images-transport"
+                             alt="transport">
+                        <h5 class="card-title"></h5>
+                        <p class="card-text"></p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        <img src="{{ asset('assets/image/chien-dort.jpg') }}" class="card-img-top images-transport"
+                             alt="transport">
+                        <h5 class="card-title"></h5>
+                        <p class="card-text">
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title titre-charte">Notre charte sécurité</h3>
+                        <p class="card-text charte-securite">Nous utilisons plusieurs méthodes très sécurisées pour
+                            le transport de vos êtres précieux
+                            Le harnais pour chien ( 35 kg - 55 kg )
+                            Ceinture de sécurité pour chien ( 15 kg - 35 kg )
+                            Le siège auto pour chien ( 2 kg - 15 kg )</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title titre-voyage">Le voyage, tout en gaité</h3>
+                        <p class="card-text voyage">Votre chien aura à sa disposition plusieurs agréments durant
+                            son voyage jusqu'à vous.
+                            Un coussin 100% pur fourrure de vison
+                            Un doudou qui lui sera confié et qu'il pourra garder en
+                            repartant avec vous.
+                            Des jouet i-tech dernier crie qui lui permet d'apprendre les
+                            gestes d'obéissance
+                            De la musique Beethoven, Mozart, ou encore Chopin pour
+                            développer sa culture musicale.</p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        <img src="{{ asset('assets/image/chien-voiture.jpg') }}" class="card-img-top images-transport"
+                             alt="transport">
+                        <h5 class="card-title"></h5>
+                        <p class="card-text"></p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="barre-doree"></div>
+
+        <div class="row">
+
+            <div class="col-md-12 text-center">
+
+                <img src="{{ asset('assets/image/transporteur.jpg') }}" class="card-img-top image-transporteur"
+                     alt="transport">
+
+            </div>
+
+        </div>
+
+
+        <div class="row">
+
+            <div class="col-md-12 text-left">
+                <span class="text-transporteur-titre">NOS TRANSPORTEURS CANIN ONT L'OBLIGATION D'AVOIR 10 ANS D'EXPERIENCES
+                AU PERMIS AFIN DE POUVOIR POSTULER DANS NOTRE HOTEL.
+                </span>
+
+
+            </div>
+        </div>
+
+        <div class="row mt-5">
+
+            <div class="col-md-12 text-left">
+                <span class="text-transporteur">La sécurité de vos matou sont notre priorité. Nous faisant tout notre possible
+                afin qu'ils puissent effectué un voyage agréable et en toute sécurité.
+                Ceux qui comptent pour vous, compte pour nous. C'est pour cela que nous
+                accordons le plus grand soin au bon déroulement du transport de votre animal
+                auprès de vous, et ce, dans les meilleurs délais. Nous aimons à rappeler que
+                    notre service client à été élue service client de l'année 2020 et 2021.</span>
+
+
+            </div>
+        </div>
+    </div>
+
+
+
+{% endblock %}

@@ -1,0 +1,92 @@
+{% extends 'base.html.twig' %}
+
+
+{% block title %}Palace Canin | Complexe{% endblock %}
+
+{% block css %}
+
+    <link rel="stylesheet" href="{{ asset('assets/css/service-complexe.css') }}">
+
+{% endblock %}
+
+{% block body %}
+
+    <div class="container">
+        <h1>Complexe</h1>
+
+        <div class="barre-doree"></div>
+
+        <div class="p1"><img src="{{ asset('assets/image/chien-complexe-4.jpg') }}" alt=""></div>
+
+
+
+        <article class="articlee">Bienvenue au Palace Canin, le seul hôtel de luxe 5 étoiles où la sécurité et le
+            bien-être de votre animal sont nos principales priorités.
+            Situé dans le Triangle d'or, à deux pas des Champs Elysées, le complexe
+            possède tous les attributs d'un établissement d'exception :32 chambres et 12
+            suites, dont la Suite Impériale de 150m2, un restaurant 3 étoiles, un Spa avec une
+            piscine, une salle de jeux, un salon de massage, un salon de toilettage, et bien
+            sûr des services sur-mesure. <br><br>
+
+            Le Palace Canin est un lieu affectionné par les maîtres désirant voyager avec
+            leurs chiens mais qui ne peuvent pas les choyer pendant leur séjour dans la
+            capitale.Soucieux du bien-être de leurs animaux de compagnie,
+            ils souhaitent les confier auprès de professionnels.
+            Associant luxe et confort, le Palace Canin s’engage à offrir les soins, traitements
+            et attentions à votre animal durant votre absence.
+            Nous sommes guidés par la conviction que les animaux qui nous sont confiés ne
+            sont jamais simplement que des chiens. Ce sont nos hôtes et des membres de votre famille
+            et doivent être traités en conséquence
+
+        </article>
+
+    <div class="barre-doree"></div>
+
+        <div class="p1"><img class="image-nature" src="{{ asset('assets/image/complexe-nature.png') }}" alt=""></div>
+
+        <article>Le Palace Canin est situé dans un bâtiment historique de 1904 qui était autrefois une maternité au centre de Cidade Matarazzo, un complexe d’élégants bâtiments préservés qui ont été construits au début du 20ème siècle. L’hôtel comprendra 151 chambres et 122 suites, situées dans un parc vertical créé par Jean Nouvel. Deux restaurants, dont l’un situé dans une véranda donnant sur les jardins luxuriants de l’hôtel, seront complétés par un bar et un salon de caviar. Deux piscines (une sur le toit) et un grand spa avec six salles de soins et un espace de remise en forme. Les clients de l’hôtel pourront également accéder à un studio de musique attenant, à une salle de projection et à des magasins de détail haut de gamme.
+
+
+        </article>
+
+        <h1>Nos Engagements</h1>
+
+        <div class="barre-doree"></div>
+        <!--manque logo patte chien-->
+
+
+        <div class="row row-cols-1 row-cols-md-3 g-4 parent-image-ronde">
+            <div class="col">
+                <div class="card">
+                    <img src="{{ asset('assets/image/chien-complexe.jpg') }}" class="card-img-top image-ronde" alt="securite">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">Securité</h5>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img src="{{ asset('assets/image/chien-complexe2.jpg') }}" class="card-img-top image-ronde" alt="flexibilite">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">Flexibilité</h5>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img src="{{ asset('assets/image/chien-complexe3.jpg') }}" class="card-img-top image-ronde" alt="commodite">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">Commodité</h5>
+
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+
+{% endblock %}

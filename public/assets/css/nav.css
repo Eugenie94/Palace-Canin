@@ -118,6 +118,43 @@ ______________________
 
 }
 
+.parent1-texte { /* englobe mon petit parent */
+
+    display: table-cell;
+    position: absolute;
+    vertical-align: middle;
+    width: 100%;
+    top: 50vh;
+
+}
+
+.parent-texte { /* englobe mes span */
+
+    text-align: center;
+    vertical-align: middle;
+
+}
+
+
+/* The typing effect */
+@keyframes typing {
+    from {
+        width: 0
+    }
+    to {
+        width: 100%
+    }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+    from, to {
+        border-color: transparent
+    }
+    50% {
+        border-color: orange;
+    }
+}
 
 @media screen and (min-width: 750px) and (max-width: 800px) {
     /* media queries margin-bottom navbar pour décaler texte contenu image en bas grace a margin bottom ca nous evite creer plusieur margin top sur chacun de nos element dans contenu */
@@ -258,7 +295,7 @@ ______________________
 
 @media screen and (min-width: 200px) and (max-width: 992px) {
 
-    /* JUSQUA 1200 LE TEXTE EST CENTRER ET IL Y A DES MARGIN */
+
     .navbar-light .navbar-nav .nav-link { /* permet de colorer en black quand les 3 passent en menu hamburger car fond blanc */
 
         color: black !important;
@@ -267,23 +304,34 @@ ______________________
         margin: 0 !important;
 
     }
+    .navbar-light .navbar-nav .nav-link:hover { /* permet de colorer en black quand les 3 passent en menu hamburger car fond blanc */
 
-
-    .navbar-light .navbar-nav .nav-link:hover { /* couleur grise foncée survol des bouttons marron */
-
-        color: black !important;
+        background-color: #D2A532;
+        width: 100% !important;
         font-size: 3vh !important;
         padding: 0 !important;
         margin: 0 !important;
-
     }
+
+    .navbar-nav .col-md-3 {
+        width: 100%;
+    }
+
+    .image-index {
+        padding-top: 0 !important;
+    }
+
+}
+
+@media screen and (min-width: 200px) and (max-width: 992px) {
+
 
     .chambres, .services { /* manier couleur chambres service except les 3 blanc a coté */
 
-        padding: 0 !important;
         color: black !important;
         font-size: 3.4vh !important;
         margin: 0 !important;
+        padding: 0 !important;
 
     }
 
@@ -308,8 +356,11 @@ ______________________
 
     .register:hover, .login:hover, .contact:hover, .deconnexion:hover, .ajouter:hover { /* qui permet de centrer mes boutons bold au milieu de leur div */
 
+        padding: 0 !important;
+        margin: 0 !important;
 
     }
+
 
     .button { /* boutons dorés */
 
@@ -328,24 +379,12 @@ ______________________
         width: 0 !important;
         height: 0 !important;
 
-    }
-
-
-    .parent-drapeau { /* cette div m'a permis de reunir mes deux drapeau et d'y mettre un display flex pour que les deux drapeau soient alignés et non en display block */
-
-        display: flex;
 
     }
 
-    .drapeau-france {
-
-        margin-right: 2%;
-
-    }
 
     .navbar-light .navbar-nav .nav-link { /* me permet de mettre en blanc mes buttons marron  cette nav est pour touts les liens*/
 
-        color: white;
         font-family: Raleway;
         font-weight: 600;
         font-size: 2.5vh;
@@ -356,12 +395,33 @@ ______________________
 }
 
 
+@media screen and (max-width: 1200px) {
+
+
+    .navbar-nav a.button { /* c'est ce qui me permet d'enlever le padding menu hamburger */
+
+        width: 0 !important;
+        height: 0 !important;
+
+    }
+
+}
 /* **** FIN DE TOUT CE QUI CONCERNE LE MENU HAMBURGER **** */
 
 
 .navbar-light .navbar-nav .nav-link { /* me permet de mettre en blanc mes buttons marron  cette nav est pour touts les liens*/
 
-    color: black;
+    color: white;
+    font-family: Raleway;
+    font-weight: 600;
+    font-size: 2.7vh;
+
+
+}
+
+.navbar-light .navbar-nav .nav-link:hover { /* me permet de mettre en blanc mes buttons marron  cette nav est pour touts les liens*/
+
+    color: white;
     font-family: Raleway;
     font-weight: 600;
     font-size: 2.7vh;
@@ -377,13 +437,17 @@ ______________________
 
 }
 
-.navbar-light .navbar-nav .nav-link:hover
+.nav-link .chambres{ /* permet de forcer le black sur la nav link chambre */
+
+    color: black !important;
+}
+
 .chambres, .services { /* manier couleur chambres service except les 3 blanc a coté */
 
     font-family: Raleway;
     font-weight: 800;
-    color: black !important;
     font-size: 2.8vh !important;
+    color: black !important;
 
 }
 
@@ -419,7 +483,7 @@ ______________________
     background-image: url('../image/image-index.jpg');
     background-size: cover !important;
     width: 100%;
-    height: 100%;
+    height: 107%;
     opacity: 0.9;
     padding-top: 1%;
     margin-bottom: 5%;
@@ -441,7 +505,7 @@ _________________________________________________________
 .phrase-accroche { /* Bienvenue au Palace Canin */
 
     color: white;
-    font-size: 67px;
+    font-size: 7vh;
     text-transform: uppercase;
     font-family: Raleway;
     font-weight: 700;
@@ -451,6 +515,7 @@ _________________________________________________________
 
 
 }
+
 
 
 @media screen and (min-width: 800px) and (max-width: 1100px) {
@@ -562,7 +627,7 @@ _________________________________________________________
     font-weight: 600;
     font-size: 2vh;
     color: white;
-    margin-top: 5%;
+    margin-top: 3%;
     text-transform: uppercase;
     background: #D2A532;
     width: 200px;
