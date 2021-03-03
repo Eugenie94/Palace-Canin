@@ -17,16 +17,16 @@ class AppFixtures extends Fixture
         # Création des categories
 
         $chambresuperieure = new Category();
-        $chambresuperieure->setName('Chambre supérieure')->setAlias('chambresuperieure');
+        $chambresuperieure->setName('Chambre Supérieure')->setAlias('chambresuperieure')->setImage('category1.jpg')->setContent('Chambre superieure confortable')->setPrice(2000);
 
         $chambreprestige = new Category();
-        $chambreprestige->setName('Chambre Prestige')->setAlias('chambreprestige');
+        $chambreprestige->setName('Chambre Prestige')->setAlias('chambreprestige')->setImage('category2.jpg')->setContent('Chambre superieure confortable')->setPrice(2500);
 
         $suitedeluxe = new Category();
-        $suitedeluxe->setName('Suite de luxe')->setAlias('suitedeluxe');
+        $suitedeluxe->setName('Suite Deluxe')->setAlias('suitedeluxe')->setImage('category3.jpg')->setContent('Chambre superieure confortable')->setPrice(3000);
 
         $penthouse = new Category();
-        $penthouse->setName('Penthouse')->setAlias('penthouse');
+        $penthouse->setName('Penthouse')->setAlias('penthouse')->setImage('category4.jpg')->setContent('Chambre superieure confortable')->setPrice(4000);
 
 
         # Création des services

@@ -10,33 +10,46 @@
 {% endblock %}
 
 
-
 {% block body %}
 
-    <div class="p-3 mx-auto text-center">
-        <h1 class="display-4">{{ category.name }}</h1>
-    </div>
+<div class="p-3 mx-auto text-center">
+    <h1 class="display-4">Nos Chambres</h1>
 
-    <div class="py-5 bg-light">
-        <div class="container">
-            <div class="row">
-                {% for room in category.rooms %}
-                    <div class="col-md-4 mt-4">
-                        <div class="card">
-                            <img src="{{ asset('uploads/images/' ~ room.image ) }}" class="card-img-top" alt="{{ room.name }}">
-                            <div class="card-body">
-                                <h5 class="card-title">{{ room.name }}</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="{{ path('default_category', {
-                                    'category' : room.category.0.alias,
-                                    'alias' : room.alias,
-                                    'id' : room.id
-                                }) }}"  class="btn btn-primary">Go somewhere</a>
-                            </div>
-                        </div>
+    <div class="barre-doree"></div>
+
+</div>
+    <div class="card mt-4">
+        <div class="row g-0">
+            {% for category in categories %}
+
+                <div class="col-md-5 mb">
+                    <img src="{{ asset('uploads/images/' ~ category.image ) }}" class="card-img-top" alt="{{ category.name }}">
+                </div>
+                <div class="col-md-6 mb">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ category.name }}</h5>
+                        <p class="card-prix">{{ category.price }} €</p>
+                        <p class="card-text">Ces chambres spacieuses sont baignées de lumière avec leurs grandes fenêtres qui, une fois ouvertes, permettent de profiter d'une brise rafraîchissante, depuis l'un des fauteuils ou dans le confort exceptionnel du lit.
+                        </p>
+                        <ul>
+                            <li><i class="fas fa-check checkdoree"></i>50 m² de surface</li>
+                            <li><i class="fas fa-check checkdoree"></i>Lit King Size</li>
+                            <li><i class="fas fa-check checkdoree"></i>Vue paisible sur la cour intérieure de l’Hôtel</li>
+                            <li><i class="fas fa-check checkdoree"></i>Salle de bain en marbre Statuario</li>
+                            <li><i class="fas fa-check checkdoree"></i>Parquet en chêne teinté</li>
+                            <li><i class="fas fa-check checkdoree"></i>Système de divertissement complet dans la chambre</li>
+                            <li><i class="fas fa-check checkdoree"></i>Produits d’accueil Doggy</li>
+
+                        </ul>
                     </div>
-                {% endfor %}
-            </div>
+                </div>
+                <div class="col-md-1 fond-doree d-flex flex-column text-center">
+
+                    <a href="{{ path('booking_reservation') }}" class="btn btn-primary align-self-center justify-self-center"><i class="fas fa-arrow-right fleche-doree"></i></a>
+
+                </div>
+
+            {% endfor %}
         </div>
     </div>
 {% endblock %}

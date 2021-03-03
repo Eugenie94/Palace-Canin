@@ -1,7 +1,7 @@
 .conteneur-toilettage{ /* pour reduire le padding de mon contenu comme afficher sur maquette */
 
-    padding-left: 15%;
-    padding-right: 15%;
+    padding-left: 5%;
+    padding-right: 5%;
     margin-bottom: -17%;
 
 }
@@ -41,6 +41,17 @@ h1  /* titre bien-être */{
 
     height: 2px;
     width: 40%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 1.2%;
+    background-color: #D2A53E;
+
+}
+
+.barre-doree-spa { /* nouvelle barre dorée adapté a bien-etre */
+
+    height: 2px;
+    width: 70%;
     margin-right: auto;
     margin-left: auto;
     margin-top: 1.2%;
@@ -132,10 +143,18 @@ h3{ /* titre service spa */
 
 .list { /* retirer liste a puces pour service spa liste */
 
+
+    font-family: Lato;
+    text-transform: uppercase;
+    font-size: 2vh;
+    margin-top: 10%;
+    margin-bottom: 2%;
+    text-align: center;
     padding-left: 30%;
     padding-right: 30%;
     list-style: none;
     text-align: center;
+    line-height: 35px;
 }
 
 .fas{ /* icone checked */

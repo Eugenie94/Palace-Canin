@@ -1,3 +1,4 @@
+
 {% extends 'base.html.twig' %}
 
 
@@ -14,15 +15,21 @@
             <div class="col-md-6">
                 <h4>Notre Concept</h4>
 
+<<<<<<< HEAD
                 <p class="text-muted">Un palace canin à Vincennes ? Ne vous faîtes plus de soucis pour partir en
                     vacances
                     sans votre chien… Voici un véritable hôtel de luxe pour chiens : espace de jeux, piscine, jacuzzi,
                     salon
+=======
+                <p class="text-muted">Un palace canin à Vincennes ? Ne vous faîtes plus de soucis pour partir en vacances
+                    sans votre chien… Voici un véritable hôtel de luxe pour chiens : espace de jeux, piscine, jacuzzi, salon
+>>>>>>> eugenie
                     de massage et de toilettage, suite de luxe, restaurant à la carte, salle de télé, tapis de course…
 
                     Toutou aura sa chambre de 9m2 pour lui… Et surtout le Bois de Vincennes n’est pas loin pour ces
                     nombreuses balades quotidiennes incluses…
 
+<<<<<<< HEAD
                     Une bagatelle ? La nuitée est à partir de 40 euros par jour. La taille de votre Maurice pourra
                     également
                     être prise en compte et vous pourrez ajouter des options.
@@ -34,11 +41,110 @@
                      alt="">
 
             </div>
-
-
+=======
+                    Une bagatelle ? La nuitée est à partir de 40 euros par jour. La taille de votre Maurice pourra également
+                    être prise en compte et vous pourrez ajouter des options.
+                </p>
+            </div>
+            <div class="col-md-6 how-img">
+                <img class="img-fluid image-concept" src="{{ asset('assets/image/chien-chambre.jpg') }}" width="300"
+                     height="400" alt="">
+            </div>
         </div>
 
 
+    </div>
+
+
+    <section class="services-area pt-100 pb-70" id="services">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-8 mx-auto text-center">
+                    <div class="section-title">
+                        <h4>NOS SERVICES</h4>
+
+                        <div class="barre-service"></div>
+
+                        <p class="text-service">UN HÔTEL DE LUXE 5 ÉTOILES CONÇU SUR MESURE POUR RÉPONDRE AUX BESOINS UNIQUES DE VOTRE
+                            ANIMAL.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-service">
+                        <img class="img-fluid image-services" src="{{ asset('assets/image/service1.jpg') }}" alt="">
+                        <h4>Complexe</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui quaerat fugit quas veniam
+                            perferendis repudiandae sequi. </p>
+                        <a href="{{ path('default_complexe') }}"><button>En savoir plus</button></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-service">
+                        <img class="img-fluid image-services" src="{{ asset('assets/image/service2.jpg') }}" alt="">
+                        <h4>Bien-être</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui quaerat fugit quas veniam
+                            perferendis repudiandae sequi. </p>
+                        <a href="{{ path('default_bien-etre') }}"><button>En savoir plus</button></a>
+
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-service">
+                        <img class="img-fluid image-services" src="{{ asset('assets/image/service3.jpg') }}" alt="">
+                        <h4>Toilettage</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui quaerat fugit quas veniam
+                            perferendis repudiandae sequi. </p>
+                        <a href="{{ path('default_toilettage') }}"><button>En savoir plus</button></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-service">
+                        <img class="img-fluid image-services" src="{{ asset('assets/image/service4.jpg') }}" alt="">
+                        <h4>Dressage</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui quaerat fugit quas veniam
+                            perferendis repudiandae sequi. </p>
+                        <a href="{{ path('default_dressage') }}"><button>En savoir plus</button></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-service">
+                        <img class="img-fluid image-services" src="{{ asset('assets/image/service5.jpg') }}" alt="">
+                        <h4>Transport animalier</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui quaerat fugit quas veniam
+                            perferendis repudiandae sequi. </p>
+                        <a href="{{ path('default_transport-animalier') }}"><button>En savoir plus</button></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-service">
+                        <img class="img-fluid image-services" src="{{ asset('assets/image/service6.jpg') }}" alt="">
+                        <h4>Boutique</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui quaerat fugit quas veniam
+                            perferendis repudiandae sequi. </p>
+                        <a href="{{ path('default_boutique') }}"><button>En savoir plus</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VIDEOS -->
+    <div class="container">
+        <section class="content-section video-section">
+            <p>L'ESSENTIEL</p>
+
+            <div class="barre-doree"></div>
+>>>>>>> eugenie
+
+
+            <iframe class="video" src="https://www.youtube.com/embed/0Skj24mxHnM" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+
+
+<<<<<<< HEAD
         <section class="services-area pt-100 pb-70" id="services">
             <div class="container">
                 <div class="row">
@@ -137,10 +243,74 @@
                 <iframe class="video" src="https://www.youtube.com/embed/0Skj24mxHnM" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowfullscreen></iframe>
+=======
+        </section>
+    </div>
+
+
+
+    <!-- INSTAGRAM -->
+    <div class="container">
+
+        <h1 class="font-weight-light text-center text-lg-left mt-4 mb-0 text-insta">Le Palace Canin sur Instagram</h1>
+
+        <div class="barre-doree"></div>
+
+        <p class="hashtag">#LePapalaceCanin</p>
+
+
+        <div class="row text-center text-lg-left">
+
+            <div class="col-lg-3 col-md-4 col-6">
+                <a href="#" class="d-block mb-4 h-100">
+                    <img class="img-fluid image-services" src="{{ asset('assets/image/chien1.jpg') }}" width="300" height="400"
+                         alt="">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-6">
+                <a href="#" class="d-block mb-4 h-100">
+                    <img class="img-fluid image-services" src="{{ asset('assets/image/chien2.jpg') }}" width="300" height="400"
+                         alt="">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-6">
+                <a href="#" class="d-block mb-4 h-100">
+                    <img class="img-fluid image-services" src="{{ asset('assets/image/chien3.jpg') }}" width="300" height="400"
+                         alt="">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-6">
+                <a href="#" class="d-block mb-4 h-100">
+                    <img class="img-fluid image-services" src="{{ asset('assets/image/chien4.jpg') }}" width="300" height="400"
+                         alt="">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-6">
+                <a href="#" class="d-block mb-4 h-100">
+                    <img class="img-fluid image-services" src="{{ asset('assets/image/chien8.jpg') }}" alt="">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-6">
+                <a href="#" class="d-block mb-4 h-100">
+                    <img class="img-fluid image-services" src="{{ asset('assets/image/chien6.jpg') }}" alt="">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-6">
+                <a href="#" class="d-block mb-4 h-100">
+                    <img class="img-fluid image-services" src="{{ asset('assets/image/chien9.jpg') }}" alt="">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-6">
+                <a href="#" class="d-block mb-4 h-100">
+                    <img class="img-fluid image-services" src="{{ asset('assets/image/chien10.jpg') }}" alt="">
+                </a>
+            </div>
+>>>>>>> eugenie
 
 
             </section>
         </div>
+<<<<<<< HEAD
 
 
         <!-- INSTAGRAM -->
@@ -215,3 +385,10 @@
     </div>
 
 {% endblock %}
+=======
+    </div>
+
+
+
+{% endblock %}
+>>>>>>> eugenie

@@ -25,7 +25,7 @@ ______________________
     height: 120px;
     width: auto;
     margin-right: 7%;
-    margin-left: 3%;
+    margin-left: 5%;
 
 }
 
@@ -37,6 +37,7 @@ ______________________
     color: black !important;
     font-size: 3.5vh;
     margin-right: 5%;
+    margin-top: 0.5%;
 
 }
 
@@ -395,8 +396,7 @@ ______________________
 
     border-radius: 26px !important;
     padding: 13px ! important;
-    width: 170px !important;
-    height: 8px !important;
+    width: 210px !important;
     background: #D2A532;
 
 }
@@ -411,6 +411,14 @@ ______________________
 
 
 
+.bonjour{ /* Bonjour user */
+
+    margin-top: 1.4%;
+    font-size: 2.3vh !important;
+    color: black !important;
+
+}
+
 .image-index { /* image qui dépasse sur la navbar */
 
     background-image: url('../image/nav2.png');
@@ -420,4 +428,11 @@ ______________________
     padding-top: 1%;
     margin-bottom: 5%;
 
+}
+
+.fas{ /* gerer logo user pour profil */
+
+    color: #3c3636;
+    font-size: 1.5rem !important;
+    margin-top: 30% !important;
 }

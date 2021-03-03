@@ -2,11 +2,14 @@
 
 namespace App\Controller;
 
+use App\Entity\Booking;
 use App\Entity\Category;
 use App\Entity\Room;
 
+use App\Repository\BookingRepository;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\Form\Extension\Core\Type\DateType;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\Extension\Core\Type\NumberType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
@@ -34,27 +37,18 @@ class BookingController extends AbstractController
     {
 
         # Création d'un nouvel article VIDE
-        $room = new Room();
-        $room->setCreatedAt(new \DateTime());
-        $room->setUpdatedAt(new \DateTime());
-
-        # Attribution d'un Auteur à un article
-        # Remplacer par l'utilisateur connecté
-        $room->setUser( $this->getUser() );
+        $category = new Category();
+        $category->setCreatedAt(new \DateTime());
+        $category->setUpdatedAt(new \DateTime());
 
 
         # Création d'un Formulaire de Création de chambre
-        $form = $this->createFormBuilder( $room )
+        $form = $this->createFormBuilder($category)
             ->add('name', TextType::class, [
-                'label' => "Nom de la chambre"
-            ])
-            ->add('category', EntityType::class, [
-                'label' => "Choisissez une catégorie",
-                'class' => Category::class,
-                'choice_label' => 'name',
+                'label' => "Nom de la catégorie"
             ])
             ->add('content', TextareaType::class, [
-                'label'  => "Renseignez une description",
+                'label' => "Renseignez une description",
                 'attr' => ['class' => 'demande']
             ])
             ->add('image', FileType::class, [
@@ -69,10 +63,10 @@ class BookingController extends AbstractController
             ->getForm();
 
         # Permet à Symfony de gérer les données saisies par l'utilisateur
-        $form->handleRequest( $request );
+        $form->handleRequest($request);
 
         # Si le formulaire est soumis et valide => C'est comme en procédural quand on écrit if Post(empty)
-        if($form->isSubmitted() && $form->isValid()) {
+        if ($form->isSubmitted() && $form->isValid()) {
 
             /** @var UploadedFile $image */
             $image = $form->get('image')->getData();
@@ -80,7 +74,7 @@ class BookingController extends AbstractController
             if ($image) {
                 $originalFilename = pathinfo($image->getClientOriginalName(), PATHINFO_FILENAME);
                 $safeFilename = $slugger->slug($originalFilename);
-                $newFilename = $safeFilename.'-'.uniqid().'.'.$image->guessExtension();
+                $newFilename = $safeFilename . '-' . uniqid() . '.' . $image->guessExtension();
 
                 try {
                     $image->move(
@@ -91,22 +85,22 @@ class BookingController extends AbstractController
                     $this->addFlash('danger', 'Une erreur est survenue durant le chargement de votre image.');
                 }
 
-                $room->setImage($newFilename);
+                $category->setImage($newFilename);
 
             } // endif image
 
 
             # Génération de l'alias à partir du titre
-            $room->setAlias(
+            $category->setAlias(
                 $slugger->slug(
-                    $room->getName()
+                    $category->getName()
                 )
             );
 
 
             # Insertion dans la BDD
             $em = $this->getDoctrine()->getManager();
-            $em->persist($room);
+            $em->persist($category);
             $em->flush();
 
 
@@ -115,10 +109,10 @@ class BookingController extends AbstractController
 
 
             # Redirection vers la nouvelle chambre
-            return $this->redirectToRoute('default_category', [
-                'category' => $room->getCategory()->getAlias(),
-                'alias' => $room->getAlias(),
-                'id' => $room->getId()
+            return $this->redirectToRoute('booking_create', [
+                #'category' => $category->getCategory()->getAlias(),
+                'alias' => $category->getAlias(),
+                'id' => $category->getId()
             ]);
 
         }
@@ -128,19 +122,71 @@ class BookingController extends AbstractController
             'form' => $form->createView()
         ]);
     }
+
+
     /**
      * Page Reservation
      * http://localhost:8000/reservation
      * @Route("/reservation", name="booking_reservation", methods={"GET"})
      * Le alias du dessus agira sur la fonction d'apres
-     */
-    public function reservation()
+     */ # ON LA FAIT HIER DEMANDER A MOHAMED
+    public function booking(Request $request, SluggerInterface $slugger): Response #Slug et alias c'est la même chose
     {
-        return $this->render('booking/reservation.html.twig');
+
+        # Création d'un nouvel article VIDE
+        $booking = new Booking();
+
+        # Attribution d'un Auteur à un article
+        # Remplacer par l'utilisateur connecté
+        $booking->setUser($this->getUser());
+
+
+        # Création d'un Formulaire de Reservation
+        $form = $this->createFormBuilder($booking)
+            ->add('checkIn', DateType::class, [
+                'label' => "Arrivée"
+            ])
+            ->add('checkOut', DateType::class, [
+                'label' => "Départ",
+            ])
+            ->add('total', NumberType::class, [
+                'label' => "Total",
+            ])
+            ->add('submit', SubmitType::class, [
+                'label' => "Poursuivre vers le paiement",
+            ])
+            ->getForm();
+
+
+        # Permet à Symfony de gérer les données saisies par l'utilisateur
+        $form->handleRequest($request);
+
+        # Si le formulaire est soumis et valide => C'est comme en procédural quand on écrit if Post(empty) etc etc
+        if ($form->isSubmitted() && $form->isValid()) {
+
+
+            # Insertion dans la BDD
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($booking);
+            $em->flush();
+
+
+
+            # Redirection vers la page connexion
+            return $this->redirectToRoute('cart_paiement');
+        }
+
+        # Passer le formulaire à la vue
+        return $this->render('booking/reservation.html.twig', [
+            'form' => $form->createView()
+        ]);
     }
 
+<<<<<<< HEAD
+
+}
+=======
+>>>>>>> eugenie
 
 
 }
-
-

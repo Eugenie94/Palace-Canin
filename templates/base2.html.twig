@@ -16,16 +16,17 @@
         <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@800&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Raleway:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
         <!-- FONT AWESOME ICONS -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/brands.min.css" integrity="sha512-dBL5cY4qTt42J1cfabCHTYR7KMztyd+n4t2GhD6EH/MKWJIIHuEYckJ1nHEpTwIaiDkrjzbc6WyiSkdLP+3INQ==" crossorigin="anonymous" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/fontawesome.min.css" integrity="sha512-shT5e46zNSD6lt4dlJHb+7LoUko9QZXTGlmWWx0qjI9UhQrElRb+Q5DM7SVte9G9ZNmovz2qIaV7IWv0xQkBkw==" crossorigin="anonymous" />
+        <script src="https://kit.fontawesome.com/a3b3ad3be6.js" crossorigin="anonymous"></script>
         <!-- CSS -->
         <link rel="stylesheet" href="{{ asset('assets/css/nav2.css') }}">
-        <link rel="stylesheet" href="{{ asset('assets/css/footer.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets/css/footer2.css') }}">
         <link rel="stylesheet" href="{{ asset('assets/css/condition-politique.css') }}">
         <link rel="stylesheet" href="{{ asset('assets/js/header.js') }}">
 
 
     {% endblock %}
-    {% block final_stylesheets %}{% endblock %}
+
 </head>
 <body>
 {% include 'components/_nav2.html.twig' %}
@@ -37,7 +38,7 @@
     </div> <!-- /.row -->
 </div> <!-- /.container-fluid -->
 
-{% include 'components/_footer.html.twig' %}
+{% include 'components/_footer2.html.twig' %}
 
 {% block javascripts %}
     <!-- JavaScript Bundle with Popper -->

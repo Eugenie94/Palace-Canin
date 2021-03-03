@@ -1,3 +1,8 @@
+.alert{ /* centrer message alerte */
+
+    text-align: center;
+
+}
 
 .bg-light{
 
@@ -81,8 +86,8 @@
 .py-5{ /* pour gerer le formulaire */
 
     width: 70%;
-    margin-right: auto;
-    margin-left: auto;
+    margin-left: 15%;
+    margin-right: 15%;
     margin-bottom: -8%;
 
 }

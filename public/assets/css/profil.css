@@ -1,0 +1,65 @@
+.well{ /* cible fond color grey clair */
+
+    background: none !important;
+    border: none !important;
+
+}
+
+.conteneur-profil{ /* conteneur profil*/
+
+    margin-left: 33% !important;
+
+}
+
+.row-conteneur{
+
+    margin-bottom: -20% !important;
+}
+.barre-doree{   /* manipuler la barre au dessus du # */
+
+    height: 2px;
+    width: 40%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 2%;
+    margin-bottom: 4%;
+    background-color: #D2A53E;
+
+}
+
+.display-4{ /* Titre votre espace personnel*/
+
+    font-family: Lato;
+    font-size: 7vh;
+    margin-bottom: 2%;
+
+}
+
+h2{  /* informations client */
+
+    font-family: Lato;
+    font-weight: 400;
+    color: #D2A532 !important;
+    text-transform: uppercase;
+    font-size: 20px !important;
+    margin-bottom: 3% !important;
+
+}
+
+
+.card-title{  /* cible texte infos */
+
+    text-wrap: normal;
+    font-family: Lato;
+    font-weight: 500;
+    color: #3c3636;
+    font-size: 16px !important;
+
+}
+
+.fas{  /* picto edit */
+
+    font-size: 1.5rem !important;
+    color: #3c3636;
+
+}

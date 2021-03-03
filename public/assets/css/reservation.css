@@ -1,6 +1,6 @@
-#form{
+.alert{ /* centrer message alerte */
 
-    margin-bottom: -70%;
+    text-align: center;
 
 }
 
@@ -12,14 +12,14 @@
 .barre-doree {   /* manipuler la barre au dessus du # */
 
     height: 2px;
-    width: 100%;
+    width: 40%;
     margin-right: auto;
     margin-left: auto;
-    margin-top: 6%;
-    margin-bottom: 14%;
+    margin-top: -1%;
+    margin-bottom: 1%;
     background-color: #D2A53E;
-}
 
+}
 
 .display-4{ /* Titre enregistrez vous */
 
@@ -39,9 +39,15 @@
 
 }
 
-#form_telephone{ /* me permet de manier telephone champs pour creer un espace entre lui meme et le bouton inscription */
+#form_price{ /* manipuler price */
 
-    margin-bottom: 10%;
+    margin-top: 2%;
+    padding-top: -10%;
+}
+
+.form-group{ /* champs */
+
+    color: #D2A532;
 
 }
 
@@ -56,7 +62,8 @@
     width: 172px !important;
     display: block;
     margin : auto;
-    margin-top: 13%;
+    margin-top: 9%;
+    margin-bottom: -70% !important;
 
 }
 
@@ -78,18 +85,22 @@
 
 .py-5{ /* pour gerer le formulaire */
 
-    width: 30%;
-    margin-right: auto;
-    margin-left: auto;
-    margin-bottom: -17%;
+    width: 70%;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-bottom: 21%;
 
 }
 
+.form-control{ /* champ price  reduire width */
+
+    width: 93% !important;
+
+}
 
 .form-group {  /* regroupe les class des champs */
 
     margin-top: 1rem;
-    color: #D2A532;
 
 }
 
@@ -99,20 +110,10 @@
 
 }
 
-.ck .ck-toolbar .ck-toolbar_grouping{  /* on va gerer taille champ ckeditor */
 
-    min-height: 20vh !important;
+.ck .ck-content{ /* modifier taille area description */
 
-}
-
-#inputEmail{ /* permet de gerer espace champs et label */
-
-    margin-top: 3%;
+    height: 110px;
 
 }
 
-#inputPassword{ /* permet de gerer espace champs et label */
-
-    margin-top: 3%;
-
-}

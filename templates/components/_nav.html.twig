@@ -1,5 +1,4 @@
-<!-- DEBUT HEADER -->
-
+<!-- FIN HEADER -->
 <header>
 
     <!-- Image fond Hotel qui prend tout LE HEADER -->
@@ -7,63 +6,67 @@
 
         <!-- DEBUT NAVBAR -->
         <nav class="navbar navbar-expand-lg navbar-light">
-                <a class="navbar-brand titre" href="{{ path('index') }}"><img class="img-fluid logo"
-                                                                              src="{{ asset('assets/image/logo-palace.png') }}"
-                                                                              alt="logo">PALACE CANIN</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarNavDropdown"
-                        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+            <a class="navbar-brand titre" href="{{ path('index') }}"><img class="img-fluid logo"
+                                                                          src="{{ asset('assets/image/logo-palace.png') }}"
+                                                                          alt="logo">PALACE CANIN</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavDropdown"
+                    aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-                <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                    <div class="navbar-nav me-auto">
-                        <a class="nav-link chambres" href="{{ path('default_category') }}">Chambres</a>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle services" href="#" id="navbarDropdownMenuLink"
-                               role="button"
-                               data-bs-toggle="dropdown" aria-expanded="false">
-                                Services
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <li><a class="dropdown-item" href="{{ path('default_complexe') }}">Complexe</a></li>
-                                <li><a class="dropdown-item" href="{{ path('default_bien-etre') }}">Bien-être</a></li>
-                                <li><a class="dropdown-item" href="{{ path('default_toilettage') }}">Toilettage</a></li>
-                                <li><a class="dropdown-item" href="{{ path('default_dressage') }}">Dressage</a></li>
-                                <li><a class="dropdown-item" href="{{ path('default_transport-animalier') }}">Transport
-                                        Animalier</a></li>
-                                <li><a class="dropdown-item" href="{{ path('default_boutique') }}">Boutique</a></li>
-                            </ul>
-                        </li>
-                    </div>
-                    <div class="navbar-nav ms-auto">
-                        {% if is_granted('IS_AUTHENTICATED_FULLY') %}
-
-                        <a class="nav-link bonjour" href="#">
-                            Bonjour {{ app.user.firstname }} {{ app.user.lastname }}
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <div class="navbar-nav me-auto">
+                    <a class="nav-link chambres" href="{{ path('default_category') }}">Chambres</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle services" href="#" id="navbarDropdownMenuLink"
+                           role="button"
+                           data-bs-toggle="dropdown" aria-expanded="false">
+                            Services
                         </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="{{ path('default_complexe') }}">Complexe</a></li>
+                            <li><a class="dropdown-item" href="{{ path('default_bien-etre') }}">Bien-être</a></li>
+                            <li><a class="dropdown-item" href="{{ path('default_toilettage') }}">Toilettage</a></li>
+                            <li><a class="dropdown-item" href="{{ path('default_dressage') }}">Dressage</a></li>
+                            <li><a class="dropdown-item" href="{{ path('default_transport-animalier') }}">Transport
+                                    Animalier</a></li>
+                            <li><a class="dropdown-item" href="{{ path('default_boutique') }}">Boutique</a></li>
+                        </ul>
+                    </li>
+                </div>
+                <div class="navbar-nav ms-auto">
+                    {% if is_granted('IS_AUTHENTICATED_FULLY') %}
 
-                        {% if is_granted('ROLE_ADMIN') %}
-                            <a class="nav-link button ajouter lien-responsive" href="{{ path('booking_create') }}">Ajouter</a>
+                    <a class="nav-link bonjour" href="#">
+                        Bonjour {{ app.user.firstname }} {{ app.user.lastname }}
+                    </a>
+
+                    <a class="nav-link profil" href="{{ path('user_profil') }}">
+                        <i class="fas fa-user"></i>
+                    </a>
+
+                    {% if is_granted('ROLE_ADMIN') %}
+                        <a class="nav-link button ajouter lien-responsive" href="{{ path('booking_create') }}">Gestion</a>
+                    {% endif %}
+
+                    <a class="nav-link button deconnexion lien-responsive" href="{{ path('app_logout') }}">Déconnexion</a>
+                    {% else %}
+                    <div class="row justify-content-center align-items-center">
+                        <div class="col-md-3 lien-responsive">
+                            <a class="nav-link button register" href="{{ path('user_register') }}">Inscription</a>
+                        </div>
+                        <div class="col-md-3 lien-responsive">
+                            <a class="nav-link button login" href="{{ path('app_login') }}">Connexion</a>
+                        </div>
                         {% endif %}
+                        <div class="col-md-3 lien-responsive">
+                            <a class="nav-link button contact" href="{{ path('user_contact') }}">Contact</a>
 
-                        <a class="nav-link button deconnexion lien-responsive" href="{{ path('app_logout') }}">Déconnexion</a>
-                        {% else %}
-                        <div class="row justify-content-center align-items-center">
-                            <div class="col-md-3 lien-responsive">
-                                <a class="nav-link button register" href="{{ path('user_register') }}">Inscription</a>
-                            </div>
-                            <div class="col-md-3 lien-responsive">
-                                <a class="nav-link button login" href="{{ path('app_login') }}">Connexion</a>
-                            </div>
-                            {% endif %}
-                            <div class="col-md-3 lien-responsive">
-                                <a class="nav-link button contact" href="{{ path('user_contact') }}">Contact</a>
-
-                            </div>
                         </div>
                     </div>
                 </div>
+            </div>
         </nav>
 
         <!-- FIN NAVBAR -->
@@ -78,7 +81,7 @@
 
                     <div class="col-sm-12 text-center">
 
-                        <span class="phrase-accroche">Bienvenue au Palace Canin</span>
+                        <span class="phrase-accroche tx">Bienvenue au Palace Canin</span>
 
                     </div>
 
@@ -88,7 +91,7 @@
 
                     <div class="col-md-12 text-center">
 
-                        <span class="petite-phrase-accroche">Là où votre chien sera Roi</span>
+                        <span class="petite-phrase-accroche tx">Là où votre chien sera Roi</span>
 
                     </div>
                 </div>

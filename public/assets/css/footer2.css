@@ -12,6 +12,7 @@
 
 /********************************* DEBUT FOOTER *********************************/
 
+
 .scroll-btn{  /* conteneur fleche scroll */
 
     float: right;
@@ -21,8 +22,8 @@
 .fas{ /* fleche scroll-up */
 
     font-size: 2rem;
-
 }
+
 
 .fa-arrow-up:before { /* gerer ma fleche dorée */
 
@@ -34,6 +35,8 @@
 .bouton-scroll{ /* permet de stylisé notre bouton scroll */
 
     background: #3c3636;
+    color: #D2A532;
+    padding: 12px;
 
 }
 
@@ -96,23 +99,12 @@ h3{  /* titre footer palace canin */
 
 .parent-pictogrammes{ /* gerer le positionnement des pictogrammes */
 
-    margin-top: -15%;
+    margin-top: -1%;
     padding-left: 8%;
     padding-right: 54%;
     text-align: center;
 
 }
-
-
-@media screen and (min-width: 1115px) and (max-width: 1400px) {
-
-    .parent-pictogrammes { /* gerer le positionnement des pictogrammes */
-
-        margin-top: -8%;
-
-    }
-}
-
 
 
 .fab{ /* pictogramme */
@@ -124,7 +116,9 @@ h3{  /* titre footer palace canin */
 
 }
 
-@media screen and (min-width: 200px) and (max-width: 1115px) {
+
+
+@media screen and (min-width: 200px) and (max-width: 880px) {
 
     .fab{ /* pictogramme */
 
@@ -148,12 +142,11 @@ h3{  /* titre footer palace canin */
 }
 
 
-@media screen and (min-width: 200px) and (max-width: 950px) {
+@media screen and (min-width: 200px) and (max-width: 750px) {
 
-    .barre-footer { /* copyright */
+    .barre-footer {        /* copyright */
 
         height: 13.5vh;
-        margin-top: 15%;
     }
 
 }
@@ -199,6 +192,7 @@ h3{  /* titre footer palace canin */
 
     .copyright, .text-barre {        /* copyright */
 
+        display: block !important;
         font-size: 1.7vh;
         margin-top: 5% !important;
 

@@ -2,8 +2,7 @@
 
 .concept-section1{ /*positionnement iframe */
 
-    margin-top:-15%;
-    padding: 5%;
+    margin-top: -5%;
 
 }
 
@@ -29,7 +28,14 @@
 
 .concept-section1 .row { /*margin top  pour ne pas coller le header*/
 
-    margin-top: 13%;
+    margin-left: 8%;
+    margin-top: 10%;
+
+}
+
+#services{ /* manier bloc service */
+
+    margin-top: 5%;
 
 }
 
@@ -107,6 +113,7 @@ iframe{ /* permet de manipuler la video */
     margin-right: auto;
     margin-left: auto;
     margin-top: 6%;
+    margin-bottom: 15%;
 
 }
 
@@ -165,7 +172,20 @@ h4 { /* le titre de la section */
 
 }
 
+.image-concept{ /* image concept */
 
+    width: 80%;
+    height: auto;
+    margin-bottom: 13%;
+
+}
+
+.text-muted{
+
+    margin-left: 4%;
+    margin-right: 10%;
+
+}
 .video-section p {   /* manier titre l'Essentiel */
 
     font-family: Lato;
@@ -190,6 +210,7 @@ h4 { /* le titre de la section */
 
 }
 
+<<<<<<< HEAD
 /* DEBUT RECTANGLE */
 
 .rectangle{  /* encadré noir */
@@ -344,6 +365,8 @@ h4 { /* le titre de la section */
 }
 
 /* FIN RECTANGLE */
+=======
+>>>>>>> eugenie
 
 .hashtag {  /* manier #Le palace canin hashtag */
 

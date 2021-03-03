@@ -19,7 +19,7 @@
 
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
                     <div class="navbar-nav me-auto">
-                        <a class="nav-link chambres" href="{{ path('default_room') }}">Chambres</a>
+                        <a class="nav-link chambres" href="{{ path('default_category') }}">Chambres</a>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle services" href="#" id="navbarDropdownMenuLink"
                                role="button"
@@ -40,9 +40,14 @@
                     <div class="navbar-nav ms-auto">
                         {% if is_granted('IS_AUTHENTICATED_FULLY') %}
 
-                        <a class="nav-link" href="#">
+                        <a class="nav-link bonjour" href="#">
                             Bonjour {{ app.user.firstname }} {{ app.user.lastname }}
                         </a>
+
+                        <a class="nav-link profil" href="{{ path('user_profil') }}">
+                            <i class="fas fa-user"></i>
+                        </a>
+
 
                         {% if is_granted('ROLE_ADMIN') %}
                             <a class="nav-link button ajouter" href="{{ path('booking_create') }}">Ajouter une catégorie

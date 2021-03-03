@@ -73,6 +73,7 @@ class Booking
     public function __construct()
     {
         $this->rooms = new ArrayCollection();
+        $this->category = new ArrayCollection();
     }
 
 
@@ -218,4 +219,5 @@ class Booking
 
         return $this;
     }
+
 }

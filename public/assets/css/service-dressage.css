@@ -1,19 +1,23 @@
 .conteneur-dressage{ /* pour reduire le padding de mon contenu comme afficher sur maquette */
 
-    padding-left: 15%;
-    padding-right: 15%;
+    padding-left: 8%;
+    padding-right: 3%;
     margin-bottom: -17%;
 
 }
 
 
+<<<<<<< HEAD
 h1{
+=======
+h1{  /* titre bien-être */
+>>>>>>> eugenie
 
     font-family: Lato;
     text-transform: uppercase;
     font-size: 40px;
     margin-top: 2%;
-    margin-bottom: 280px;
+    margin-bottom: 340px;
     text-align: center;
 
 }
@@ -43,7 +47,6 @@ h1{
     width: 40%;
     margin-right: auto;
     margin-left: auto;
-    margin-top: 1.2%;
     background-color: #D2A53E;
 
 }
@@ -56,7 +59,7 @@ h1{
     margin-left: auto;
     margin-right: auto;
     margin-top: 3%;
-    margin-bottom: 7%;
+    margin-bottom: 10%;
 
 }
 
@@ -79,7 +82,6 @@ h1{
     text-transform: uppercase;
     font-size: 40px;
     margin-top: 2%;
-    margin-bottom: 280px;
     text-align: center;
 
 }
@@ -105,9 +107,8 @@ h1{
     font-weight: 500;
     font-size: 2vh;
     margin-bottom: 7%;
-    margin-top: 8%;
-    padding-right: 5%;
-    padding-left: 5%;
+    padding-right: 9%;
+    padding-left: 6%;
 
 }
 
@@ -133,10 +134,9 @@ h1{
 
 .images-dressage{  /* image bien-être */
 
-    width: 90%;
+    width: 80%;
     height: auto;
-    margin-top: 10%;
-    margin-bottom: 5%;
+    margin-top: 6% !important;
 
 }
 

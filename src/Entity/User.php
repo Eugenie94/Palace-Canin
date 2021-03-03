@@ -33,11 +33,11 @@ class User implements UserInterface
     private $roles = [];
 
     /**
-     * @var string The hashed password
-     * @ORM\Column(type="string")
-     * @Assert\NotBlank(message="Vous devez renseigner un mot de passe")
+     * @ORM\Column(type="string", length=100)
+     * @Assert\NotNull(message="Vous devez renseigner un mot de passe")
      */
     private $password;
+
     /**
      * @ORM\Column(type="string", length=80)
      * @Assert\NotBlank(message="Vous devez renseigner un prénom.")

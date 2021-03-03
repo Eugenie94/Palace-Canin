@@ -2,20 +2,48 @@
 
 {% block title %}Palace Canin | Réservation{% endblock %}
 
+
+
+{% block css %}
+
+    <link rel="stylesheet" href="{{ asset('assets/css/reservation.css') }}">
+
+{% endblock %}
+
+
+
 {% block body %}
     <div class="p-3 mx-auto text-center">
-        <h1 class="display-4">Reservation de chambre</h1>
+        <h1 class="display-4">Réservation</h1>
     </div>
+
+    <div class="barre-doree"></div>
 
     <div class="py-5 bg-light">
         <div class="container">
             <div class="row">
                 <div class="col-10 mx-auto">
+                    {{ form_start(form, {attr: {novalidate: 'novalidate'}}) }}
+                    <div class="row">
+                        <div class="col-md-6">
 
+                            {{ form_row(form.checkIn) }}
+                            {{ form_row(form.checkOut) }}
+
+
+                        </div>
+
+                        <div class="col-md-6">
+
+                            {{ form_row(form.total) }}
+
+
+                    {{ form_end(form) }}
+                </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-
-
 {% endblock %}
+

@@ -6,6 +6,7 @@ use App\Repository\CategoryRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass=CategoryRepository::class)
@@ -21,6 +22,7 @@ class Category
 
     /**
      * @ORM\Column(type="string", length=80)
+     * @Assert\NotBlank(message="Vous devez renseigner un nom de gamme.")
      */
     private $name;
 
@@ -49,9 +51,33 @@ class Category
      */
     private $rooms;
 
+    /**
+     * @ORM\Column(type="string", length=500)
+     * @Assert\NotBlank(message="Vous devez ajouter une description.")
+     */
+    private $content;
+
+    /**
+     * @ORM\Column(type="integer")
+     * @Assert\NotBlank(message="Vous devez renseigner un prix.")
+     */
+    private $price;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank(message="Vous devez télécharger une image.")
+     */
+    private $image;
+
+    /**
+     * @ORM\ManyToMany(targetEntity=Booking::class, mappedBy="category")
+     */
+    private $bookings;
+
     public function __construct()
     {
         $this->rooms = new ArrayCollection();
+        $this->bookings = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -148,4 +174,69 @@ class Category
 
         return $this;
     }
+
+    public function getContent(): ?string
+    {
+        return $this->content;
+    }
+
+    public function setContent(string $content): self
+    {
+        $this->content = $content;
+
+        return $this;
+    }
+
+    public function getPrice(): ?int
+    {
+        return $this->price;
+    }
+
+    public function setPrice(int $price): self
+    {
+        $this->price = $price;
+
+        return $this;
+    }
+
+    public function getImage(): ?string
+    {
+        return $this->image;
+    }
+
+    public function setImage(string $image): self
+    {
+        $this->image = $image;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Booking[]
+     */
+    public function getBookings(): Collection
+    {
+        return $this->bookings;
+    }
+
+    public function addBooking(Booking $booking): self
+    {
+        if (!$this->bookings->contains($booking)) {
+            $this->bookings[] = $booking;
+            $booking->addCategory($this);
+        }
+
+        return $this;
+    }
+
+    public function removeBooking(Booking $booking): self
+    {
+        if ($this->bookings->removeElement($booking)) {
+            $booking->removeCategory($this);
+        }
+
+        return $this;
+    }
+
+
 }

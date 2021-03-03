@@ -1,0 +1,54 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Palace Canin | Espace client{% endblock %}
+
+
+{% block css %}
+
+    <link rel="stylesheet" href="{{ asset('assets/css/profil.css') }}">
+
+{% endblock %}
+
+
+
+{% block body %}
+
+    <div class="p-3 mx-auto text-center">
+        <h1 class="display-4">Votre espace personnel</h1>
+
+        <div class="barre-doree"></div>
+
+    </div>
+
+
+    <div class="container well span6 conteneur-profil">
+        <div class="row">
+            <h2>Informations du client</h2>
+        </div>
+    </div>
+
+
+    <div class="container well span6 conteneur-profil">
+        <div class="row row-conteneur">
+
+            <div class="col-md-4">
+                <h5 class="card-title"><b>Nom du client : </b>{{ app.user.lastname }} {{ app.user.firstname }}</h5>
+                <h5 class="card-title"><b>ID client : </b>{{ app.user.id }}</h5>
+                <h5 class="card-title"><b>Identifiant : </b>{{ app.user.email }}</h5>
+                <h5 class="card-title"><b>Mot de passe : </b>**********</h5>
+                <h5 class="card-title"><b>Adresse complète
+                        : </b>{{ app.user.address }} {{ app.user.city }} {{ app.user.zipcode }}</h5>
+                <h5 class="card-title"><b>Coordonnée téléphonique : </b>{{ app.user.telephone }}</h5>
+                <h5 class="card-title"><b>Nom du chien : </b>{{ app.user.dogname }}</h5>
+            </div>
+
+
+            <div class="col-md-2">
+            <a href="{{ path('user_edit') }}"><i class="fas fa-edit"></i></a>
+            </div>
+
+        </div>
+
+    </div>
+
+{% endblock %}
