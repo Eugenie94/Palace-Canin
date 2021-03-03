@@ -1,8 +1,8 @@
 
 .conteneur-boutique{ /* pour reduire le padding de mon contenu comme afficher sur maquette */
 
-    padding-left: 15%;
-    padding-right: 15%;
+    padding-left: 8%;
+    padding-right: 5%;
     margin-bottom: -17%;
 
 }
@@ -14,7 +14,7 @@ h1  /* titre boutique */{
     text-transform: uppercase;
     font-size: 40px;
     margin-top: 2%;
-    margin-bottom: 280px;
+    margin-bottom: 340px;
     text-align: center;
 
 }
@@ -52,7 +52,7 @@ h1  /* titre boutique */{
 
 .image-chien { /* gérer positionnement image transporteur */
 
-    width: 48%;
+    width: 43%;
     height: auto;
     margin-left: auto;
     margin-right: auto;
@@ -151,7 +151,7 @@ h1  /* titre boutique */{
 
     width: 90%;
     height: auto;
-    margin-top: 10%;
+    margin-top: 7%;
     margin-bottom: 5%;
 
 }

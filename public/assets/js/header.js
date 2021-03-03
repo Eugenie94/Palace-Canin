@@ -1,3 +1,8 @@
+/* POP UP JS */
+(document).ready(function() {
+    $('#btn-click').click()
+})
+
 
 /* CODE TEXTILATE */
 $( function ( ) {
@@ -37,3 +42,12 @@ $( function ( ) {
     });
 });
 
+
+/* CODE JS POUR ROW SCROLL */
+
+document.querySelector('.scroll-btn').addEventListener('click',() => {
+    document.querySelector('html').style.scrollBehavior='smooth';
+    setTimeout(()=>{
+        document.querySelector('html').style.scrollBehavior='unset';
+    },1000)
+});

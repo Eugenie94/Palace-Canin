@@ -1,7 +1,7 @@
 .conteneur-bienetre{ /* pour reduire le padding de mon contenu comme afficher sur maquette */
 
-    padding-left: 15%;
-    padding-right: 15%;
+    padding-left: 5%;
+    padding-right: 5%;
     margin-bottom: -17%;
 
 }
@@ -13,7 +13,7 @@ h1  /* titre bien-être */{
     text-transform: uppercase;
     font-size: 40px;
     margin-top: 2%;
-    margin-bottom: 280px;
+    margin-bottom: 340px;
     text-align: center;
 
 }
@@ -75,20 +75,20 @@ h1  /* titre bien-être */{
 
 .titre-viande{ /* titre viande */
 
-    margin-left: -20%;
+    margin-left: -23%;
 
 }
 
 .titre-massage{ /* titre massage */
 
-    margin-left: -62%;
+    margin-left: -65%;
     margin-top: 17%;
 
 }
 
 .titre-thalasso{ /* titre thalasso */
 
-    margin-left: -32%;
+    margin-left: -35%;
 
 }
 

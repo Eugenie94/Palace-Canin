@@ -3,15 +3,6 @@
 {% block title %}Palace Canin | Contact{% endblock %}
 
 
-{% block ckeditor %}
-    {{ parent() }}
-    <script src="https://cdn.ckeditor.com/ckeditor5/25.0.0/classic/ckeditor.js"></script>
-    <script>
-        ClassicEditor.create(document.querySelector('.demande'));
-    </script>
-{% endblock %}
-
-
 {% block css %}
 
     <link rel="stylesheet" href="{{ asset('assets/css/contact.css') }}">
@@ -39,10 +30,9 @@
         <div class="container">
             <div class="row">
                 <div class="col-10 mx-auto">
-
+                    {{ form_start(form, {attr: {novalidate: 'novalidate'}}) }}
                     <div class="row">
                         <div class="col-md-6">
-                            {{ form_start(form, {attr: {novalidate: 'novalidate'}}) }}
 
                             {{ form_row(form.firstname) }}
                             {{ form_row(form.email) }}
@@ -58,7 +48,6 @@
                         </div>
 
                     </div>
-
 
 
                     <div class="row">
@@ -87,12 +76,11 @@
 
                             {{ form_row(form.submit) }}
 
-                            {{ form_end(form) }}
 
                         </div>
 
                     </div>
-
+                    {{ form_end(form) }}
                 </div>
             </div>
         </div>

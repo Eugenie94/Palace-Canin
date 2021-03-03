@@ -24,8 +24,8 @@ ______________________
 
     height: 120px;
     width: auto;
-    margin-right: 7%;
-    margin-left: 3%;
+    margin-right: 5%;
+    margin-left: 6%;
 
 }
 
@@ -37,6 +37,7 @@ ______________________
     color: black !important;
     font-size: 3.5vh;
     margin-right: 5%;
+    margin-top: 2px;
 
 }
 
@@ -367,7 +368,7 @@ ______________________
     .lien-responsive:hover{
 
         background: #D2A532;
-        color: white;
+        color: white !important;
 
     }
 
@@ -376,6 +377,7 @@ ______________________
 
         padding: 0 !important;
         margin: 0 !important;
+        color: white !important;
 
     }
 
@@ -446,7 +448,6 @@ ______________________
     font-weight: 600;
     font-size: 2.7vh;
 
-
 }
 
 .navbar-light .navbar-nav .nav-link:hover { /* me permet de mettre en blanc mes buttons marron  cette nav est pour touts les liens*/
@@ -456,20 +457,21 @@ ______________________
     font-weight: 600;
     font-size: 2.7vh;
 
-
 }
 
 
 .bonjour{ /* Bonjour user */
 
     margin-top: 1.4%;
-    font-size: 1.8vh !important;
+    font-size: 2.3vh !important;
+    color: black !important;
 
 }
 
 .nav-link .chambres{ /* permet de forcer le black sur la nav link chambre */
 
     color: black !important;
+
 }
 
 .chambres, .services { /* manier couleur chambres service except les 3 blanc a coté */
@@ -492,7 +494,7 @@ ______________________
 
     border-radius: 26px !important;
     padding: 13px ! important;
-    width: 220px !important;
+    width: 210px !important;
     height: 54px !important;
     background: #D2A532;
 
@@ -520,6 +522,14 @@ ______________________
 
 }
 
+.fas{ /* gerer logo user pour profil */
+
+    color: #3c3636;
+    font-size: 3rem !important;
+    margin-top: 30% !important;
+
+}
+
 /* _________________________________________________________________________________________________________
 FIN NAVBAR
 ____________________________________________________________________________________________________________
@@ -542,6 +552,7 @@ _________________________________________________________
     letter-spacing: 2px;
     text-align: center;
     margin-top: 28%;
+
 
 
 }

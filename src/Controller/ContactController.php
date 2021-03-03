@@ -5,7 +5,6 @@ namespace App\Controller;
 
 use App\Entity\Contact;
 
-use App\Entity\User;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\TelType;
@@ -52,11 +51,11 @@ class ContactController extends AbstractController
                 'label' => "Téléphone",
             ])
             ->add('subject', TextType::class, [
-                'label' => "Sujet",
+                'label' => "Objet de votre demande",
             ])
             ->add('message', TextType::class, [
                 'label' => "Message",
-                'attr' => ['class' => 'demande']
+                'attr' => ['class' => 'mytextearea']
             ])
             ->add('submit', SubmitType::class, [
                 'label' => "Valider",

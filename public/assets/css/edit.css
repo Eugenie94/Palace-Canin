@@ -1,25 +1,18 @@
 #form{
-
     margin-bottom: -70%;
-
 }
 
-.bg-light{
-
-    background: none !important;
-}
-
-.barre-doree {   /* manipuler la barre au dessus du # */
+.barre-doree{   /* manipuler la barre au dessus du # */
 
     height: 2px;
-    width: 100%;
+    width: 40%;
     margin-right: auto;
     margin-left: auto;
-    margin-top: 6%;
-    margin-bottom: 14%;
+    margin-top: 1.2%;
+    margin-bottom: 2%;
     background-color: #D2A53E;
-}
 
+}
 
 .display-4{ /* Titre enregistrez vous */
 
@@ -39,6 +32,13 @@
 
 }
 
+
+.form-group{ /* champs */
+
+    color: #D2A532;
+
+}
+
 #form_telephone{ /* me permet de manier telephone champs pour creer un espace entre lui meme et le bouton inscription */
 
     margin-bottom: 10%;
@@ -55,8 +55,9 @@
     background-color: #D2A532;
     width: 172px !important;
     display: block;
-    margin : auto;
-    margin-top: 13%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 8%;
 
 }
 
@@ -76,43 +77,12 @@
 
 
 
+
 .py-5{ /* pour gerer le formulaire */
 
-    width: 30%;
+    width: 70%;
     margin-right: auto;
     margin-left: auto;
-    margin-bottom: -17%;
-
-}
-
-
-.form-group {  /* regroupe les class des champs */
-
-    margin-top: 1rem;
-    color: #D2A532;
-
-}
-
-.badge-danger { /* color de mon badge error si besoin est */
-
-    color: red;
-
-}
-
-.ck .ck-toolbar .ck-toolbar_grouping{  /* on va gerer taille champ ckeditor */
-
-    min-height: 20vh !important;
-
-}
-
-#inputEmail{ /* permet de gerer espace champs et label */
-
-    margin-top: 3%;
-
-}
-
-#inputPassword{ /* permet de gerer espace champs et label */
-
-    margin-top: 3%;
+    margin-bottom: -15%;
 
 }

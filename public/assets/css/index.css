@@ -2,8 +2,7 @@
 
 .concept-section1{ /*positionnement iframe */
 
-    margin-top:-15%;
-    padding: 5%;
+    margin-top: -5%;
 
 }
 
@@ -29,7 +28,14 @@
 
 .concept-section1 .row { /*margin top  pour ne pas coller le header*/
 
-    margin-top: 13%;
+    margin-left: 8%;
+    margin-top: 10%;
+
+}
+
+#services{ /* manier bloc service */
+
+    margin-top: 5%;
 
 }
 
@@ -107,6 +113,7 @@ iframe{ /* permet de manipuler la video */
     margin-right: auto;
     margin-left: auto;
     margin-top: 6%;
+    margin-bottom: 15%;
 
 }
 
@@ -165,7 +172,20 @@ h4 { /* le titre de la section */
 
 }
 
+.image-concept{ /* image concept */
 
+    width: 80%;
+    height: auto;
+    margin-bottom: 13%;
+
+}
+
+.text-muted{
+
+    margin-left: 4%;
+    margin-right: 10%;
+
+}
 .video-section p {   /* manier titre l'Essentiel */
 
     font-family: Lato;
@@ -190,160 +210,6 @@ h4 { /* le titre de la section */
 
 }
 
-    /* DEBUT RECTANGLE */
-
-.rectangle{  /* encadré noir */
-
-    width: 80%;
-    height: 350px;
-    margin-top: 8%;
-    margin-bottom: 5%;
-    margin-right: auto;
-    margin-left: auto;
-    border: 1px solid #898686;
-
-}
-
-
-@media screen and (min-width: 200px) and (max-width: 1500px) { /* reduire carré noir en dessous de 1200 */
-
-    .rectangle { /* encadré noir */
-
-        height: 250px;
-
-    }
-}
-
-    .confiance{  /* phrase ILS NOUS FONT CONFIANCE */
-
-    font-family: Raleway;
-    font-weight: 400;
-    font-size: 6vh;
-    margin-left: 25%;
-    text-transform: uppercase;
-
-}
-
-@media screen and (min-width: 200px) and (max-width: 992px) { /* manier iframe en dessous de 992 */
-
-
-    .confiance{  /* phrase ILS NOUS FONT CONFIANCE */
-
-        font-size: 2.1vh;
-
-    }
-
-
-}
-
-.confiances{ /* pour gerer hauteur ILS NOUS FONT CONFIANCE car on pouvait pas dans la span du dessus */
-
-    margin-top: 5%;
-
-}
-
-.logo-index{ /* logo PAW */
-
-    width: 40%;
-    height: auto;
-    margin-left: 50%;
-
-}
-
-.image-concept{  /* PHOTO CONCEPT */
-
-    width: 110%;
-    height: auto;
-
-}
-
-.text-muted{ /* texte notre concept */
-
-    padding-left: 10%;
-    padding-right: 10%;
-    margin-left: -5%;
-
-}
-
-.image-services{  /* PHOTO SERVICE */
-
-    width: 90%;
-    height: auto;
-
-}
-
-
-.parent-image-entreprise{  /* parent image entreprise */
-
-    padding-left: 7%;
-    padding-right: 14%;
-
-}
-
-.image-entreprise{ /* tolgate image entreprise */
-
-    width: 58%;
-    height: auto;
-    margin-top: 16%;
-    display: block;
-
-
-}
-
-.image-entreprise1{ /* leading image entreprise */
-
-    width: 58%;
-    height: auto;
-    margin-top: 10%;
-    display: block;
-
-}
-
-.image-entreprise2{ /* forbes image entreprise */
-
-    width: 58%;
-    height: auto;
-    margin-top: 20%;
-    display: block;
-
-}
-
-
-@media screen and (min-width: 200px) and (max-width: 992px) { /* manier iframe en dessous de 992 */
-
-
-    .image-entreprise{ /* tolgate image entreprise */
-
-        width: 20%;
-        height: auto;
-        margin-top: 18.5%;
-        position: absolute;
-        margin-left: 22%;
-
-    }
-
-    .image-entreprise1{ /* leading image entreprise */
-
-        width: 20%;
-        height: auto;
-        margin-top: 16.5%;
-        position: absolute;
-        margin-left: -3%;
-
-    }
-
-    .image-entreprise2{ /* forbes image entreprise */
-
-        width: 20%;
-        height: auto;
-        margin-top: 20%;
-        position: absolute;
-        margin-left: 47%;
-
-    }
-}
-
-    /* FIN RECTANGLE */
 
 .hashtag {  /* manier #Le palace canin hashtag */
 

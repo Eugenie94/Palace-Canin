@@ -1,8 +1,19 @@
+.card { /* permet de manier le contenu des cattegory */
+
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+    border: none !important;
+    margin-bottom: -18% !important;
+
+}
+
+
 h1 { /* titre chambres */
 
     font-family: Lato;
+    font-size: 40px !important;
     text-transform: uppercase;
-    font-size: 40px;
     position: relative;
     margin-top: 3.1%;
     padding-bottom: 20px;
@@ -16,34 +27,95 @@ h1 { /* titre chambres */
 
     height: 2px;
     width: 40%;
-    margin-right: auto;
-    margin-left: auto;
     margin-top: -1.4%;
     background-color: #D2A53E;
 }
 
-.text-detail { /* paragraphe en dessous du titre*/
-    margin-top: 50px;
-    margin-bottom: 60px;
+
+ul{ /* enlever les puces noires */
+
+    list-style: none;
+
 }
+
+.card-img-top{ /* manier la photo */
+
+    width: 108%;
+    height: auto;
+
+}
+
+.card-title{ /* permet de gerer les titres */
+
+    font-family: Raleway;
+    font-weight: 700;
+    font-size: 23px !important;
+    text-transform: uppercase;
+    position: relative;
+    color: #D2A532;
+    margin-top: -3%;
+
+
+}
+
+.card-body{ /* permet de gerer les textes dans les cards */
+
+    margin-left: 7%;
+    margin-right: 17%;
+
+}
+
+.card-prix { /* permet de manier prix */
+
+    font-family: Raleway;
+    font-weight: 700;
+    font-size: 28px !important;
+    color: #D2A532;
+
+}
+
+
+.checkdoree{ /* picto check doree */
+
+    font-size: 1rem;
+    color: #D2A532;
+    margin-right: 3%;
+    margin-left: -7%;
+
+}
+
+.mb{ /* gerer margin de limage et texte */
+
+    margin-bottom: 8%;
+
+}
+
+/* DEBUT FLECHES DOREES REVERSATION */
 
 .btn-primary { /*pour la couleur des bouttons*/
 
     background-color: #D2A53E !important;
     border: none !important;
-}
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
 
-.chambre { /*pour la disposition des images*/
-
-    width: 181px;
-    height: 127px;
-    margin-top: 50%;
-}
-
-.card-body { /*padding pour resserer le texte*/
-
-    padding: 15px;
 }
 
 
+.fleche-doree{  /* couleur fleche reservation */
 
+    color: #3c3636;
+
+}
+
+.fond-doree{  /* gerer margin de la fleche fond dorée */
+
+    background: #D2A532 !important;
+    margin-bottom: 9%;
+    position: relative;
+
+}
+
+/* FIN FLECHES DOREES RESERVATION */

@@ -1,3 +1,10 @@
+.conteneur-complexe{ /* pour reduire le padding de mon contenu comme afficher sur maquette */
+
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-bottom: -17%;
+
+}
 
 /******************** DEBUT BLOC COMPLEXE ********************/
 
