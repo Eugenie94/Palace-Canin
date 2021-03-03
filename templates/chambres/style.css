@@ -1,0 +1,21 @@
+.barre-doree { /* nouvelle barre dorée adapté a bien-etre */
+
+    height: 2px;
+    width: 40%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 1.2%;
+    background-color: #D2A53E;
+
+}
+
+.btn-primary {
+ background-color: #D2A53E !important;
+ border:none !important;
+}
+
+.chambre {
+    width: 150px;
+    height: 150px;
+}
+

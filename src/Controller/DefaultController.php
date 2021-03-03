@@ -6,9 +6,9 @@ namespace App\Controller;
 # Mettre curseur sur Response et import et le lien qui a en bas
 use App\Entity\Category;
 use App\Entity\Room;
-
 use App\Repository\CategoryRepository;
 use App\Repository\ServiceRepository;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 
@@ -21,9 +21,8 @@ class DefaultController extends AbstractController
      * Page d'Accueil
      * http://localhost:8000/
      */
-    public function index()
+    public function index(): Response
     {
-
 
 
         # On retourne au client une réponse HTTP.
@@ -40,7 +39,7 @@ class DefaultController extends AbstractController
     {
 
         return $this->render('default/category.html.twig', [
-            'category' => $categoryRepository->findAll()
+            'categories' => $categoryRepository->findAll()
         ]);
 
     }
@@ -175,8 +174,6 @@ class DefaultController extends AbstractController
 
 
     }
-
-
 
 
 }
